@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+div{
+    
+}
+span{
+    background-image: url("../images/icon_login.jpg");
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+    background-size: contain;
+    position: absolute;
+    border-radius: 50%;
+ }
+
+.login{
+    text-align: center;
+    width: 25%;
+    height: 25%;
+    position: relative;
+    margin: auto;
+    margin-top: 20%;
+}
+
+input{
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin:20px 0;
+}

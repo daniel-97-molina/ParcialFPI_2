@@ -3,18 +3,26 @@
   <head>
     <title>Regístrate</title>
     <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/estiloGeneral.css">
+
   </head>
   <body>
-      <p>Unete al blog</p>
-      
-<form>
+
+      <div id="divRegistro" class="shadow">
+                <p >Unete al blog</p>
+
+      <form class="formRegistro">
 <input type="text" name="txtRegistroUsuario" placeholder="Nombre de Usuario" required>
 <input type="email" name="txtRegistroCorreo" placeholder="Correo electrónico" required>
 <input type="password" name="txtRegistroPassword" placeholder="Contraseña" required>
 <input type="radio" name="genero" value="Masculino" checked>
-<input type="radio" name="genero" value="Femenino">
+<label>Masculino</label>
+<input type="radio" name="genero" value="Femenino"> 
+<label>Femenino</label>
+
 <input type="submit" value="Registrarme" >
 
       </form>
+      </div>
   </body>
 </html>

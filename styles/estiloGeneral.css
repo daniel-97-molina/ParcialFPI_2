@@ -1,33 +1,98 @@
 *{
     box-sizing: border-box;
 }
-
-div{
-    
-}
-span{
+.divImage{
     background-image: url("../images/icon_login.jpg");
-    background-repeat: no-repeat;
     height: 150px;
     width: 150px;
-    background-size: contain;
-    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 50%;
- }
-
+    margin: auto;
+}
+input[type="submit"]{
+    border-radius: 25px;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+}
+input[type="submit"]:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+#parrafoLogin{
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+    margin: auto;
+    margin-top: 20px;
+}
+.formLogin{
+    padding:5%;
+    width: 90%;
+    height: auto;
+}
 .login{
     text-align: center;
-    width: 25%;
-    height: 25%;
-    position: relative;
+    width: 300px;
+    height: 350px;
+    padding-top: 10px;
     margin: auto;
-    margin-top: 20%;
+    margin-top: 8%;
+}
+.shadow{
+        box-shadow: 1px 1px 20px 2px #ccc;
+
+}
+input:focus{
+    border: 1px solid teal;
+}
+.formLogin input{
+  
+    padding: 5%;
+    margin:5%;
+}
+input{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: block;
+      width: 100%;
+      
 }
 
-input{
-    display: block;
-    width: 100%;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin:20px 0;
+
+
+#divRegistro{
+    
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+    width: 350px;
+    height: 350px;
+    padding-top: 10px;
 }
+.formRegistro{
+    width: 90%;
+    margin: auto;
+}
+.formRegistro input{
+    padding: 3%;
+   margin:5% 0;
+}
+.formRegistro input[type="radio"]{
+    
+    width: auto;
+    display: inline-block;
+}
+
+#divRegistro > p{
+    font-weight: bold;
+    font-size: 20px;
+}
+#divRegistro label{
+    padding-right: 20px;
+}
+
+
+

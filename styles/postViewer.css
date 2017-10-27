@@ -1,0 +1,100 @@
+
+body{
+    background-color: #f9f9f9;
+}
+li{
+    
+   display: inline;
+   text-align: center;
+   margin: 0 10px 0 0;
+   background-color: #ccc;
+}
+ul{
+  
+    height: 100%;
+    margin: 0;
+}
+li a{
+padding: 5px 10px 5px 10px;
+   color: #666;
+   background-color: #eeeeee;
+   border: 1px solid #ccc;
+
+}
+li a:hover{
+    background-color: teal;
+   color: #fff;
+   cursor: pointer;
+}
+
+html,body{
+    height: 100%;
+}
+*{
+    box-sizing: border-box;
+} 
+#all{
+    width: 70%;
+    height: 100%;
+    
+    margin: auto;
+}
+main{
+    width: 65%;
+    
+    float: left;
+    margin: 20px;
+   
+    
+}
+#sectionContenido{
+    height: 100%;
+}
+#sideBar{
+     
+    margin: 20px;
+    width: 25%;
+    height: 90%;
+    float: left;
+
+}
+#tituloPost{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0; 
+    
+}
+#contenido{
+        padding: 20px;
+
+    
+}
+#contenido p{
+    line-height: 20px;
+}
+.block{
+    border-radius: 10px;
+     background-color: #fff;
+}
+#puntaje{
+    height: 60px;
+    margin: 20px 0;
+    padding: 20px;
+    
+    
+}
+#puntajeBox{
+    width: 75%;
+    height: 70%;
+    float: left;
+
+}
+.cajaPuntos{
+    width: 25%;
+ float: left;
+
+}
+
+#comentarios{
+    
+}

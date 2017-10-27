@@ -4,27 +4,22 @@
     <title>Iniciar Sesión</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/estiloGeneral.css">
+    
   </head>
   <body >
-      <header></header>      
+      <header></header>
       <div class="login shadow">
           <div class="divImage"></div>
-          <form class="formLogin">
+      <form class="formLogin" id="formulario">
           <input type="text" name="txtUsuario" placeholder="Usuario o correo" required>
-          <input type="password" name="txtPassword" placeholder="Contraseña" required="">
+          <input type="password" name="txtPassword" placeholder="Contraseña" required>
           <input type="submit" name="btnIniciar" value="Iniciar Sesión">
-          
       </form>
       </div>
-     
-      <p id="parrafoLogin">¿Nuevo en el Blog? <a href="">Regístrate</a></p>
-     
-      
-      
-      
-      
-      
-      
-      
+
+      <p id="parrafoLogin">¿Nuevo en el Blog? <a href="registro.html">Regístrate</a></p>
+      <script src="scripts/generales.js"></script>
+      <script src="scripts/login.js"></script>
+
   </body>
 </html>

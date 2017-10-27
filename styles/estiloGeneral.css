@@ -49,7 +49,7 @@ input:focus{
     border: 1px solid teal;
 }
 .formLogin input{
-  
+
     padding: 5%;
     margin:5%;
 }
@@ -58,13 +58,13 @@ input{
     border-radius: 10px;
     display: block;
       width: 100%;
-      
+
 }
 
 
 /*css para registro*/
 #divRegistro{
-    
+
     text-align: center;
     margin: auto;
     margin-top: 10%;
@@ -81,18 +81,29 @@ input{
    margin:5% 0;
 }
 .formRegistro input[type="radio"]{
-    
+
     width: auto;
     display: inline-block;
 }
 
-#divRegistro > p{
+/*#divRegistro > p{
     font-weight: bold;
     font-size: 20px;
-}
+}*/
 #divRegistro label{
     padding-right: 20px;
 }
 
+
 /*css para postMaager*/
 
+#parrafoLogin a {
+    text-decoration: none;
+
+
+}
+
+#parrafoLogin a:hover{
+    text-decoration: underline;
+
+}

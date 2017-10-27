@@ -1,7 +1,6 @@
 var formulario = $("#formRegistro");
 
 formulario.btnRegistrarme.onclick = function(){validar();};
-formulario.oninput = function(event){event.preventDefault();validar();};
 
 function validar(){
 
@@ -30,12 +29,6 @@ function cargarXML() {
 function procesar(xml) {
   var x, i, xmlDoc, txt;
   xmlDoc = xml.responseXML;
-  //txt = "";
   xmlDoc.getElementsByTagName("nombre")[0].childNodes[0].nodeValue = "otroNombre";
-  // for (i = 0; i< x.length; i++) {
-  //   txt += x[i].childNodes[0].nodeValue + "<br>";
-  //
-  // }
-  //console.log(txt);
-  // document.getElementById("demo").innerHTML = txt;
+  console.log(xmlDoc.toString());
 }

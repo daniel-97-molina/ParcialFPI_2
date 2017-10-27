@@ -1,0 +1,78 @@
+* {font-family: Ubuntu !important;}
+ header{
+   height: 60px;
+   background-color: teal;
+   background-repeat: repeat-x;
+   border: 1px solid rgb(5, 119, 126);
+   color: inherit;
+   font-size: 18px;
+ }
+ #logo{
+   height: 60px;
+   border: none;
+   width: 60px;
+   position: relative;
+   top: -1px;
+   margin: 0 20px;
+   background-image: url("../images/logo.jpg");
+   background-size: contain;
+   background-repeat: no-repeat;
+   float: left;
+ }
+ header > ul > li{
+   padding: 10px 0;
+   float: left;
+   position: relative;
+ }
+ header > ul > li > ul{
+   display: none;
+   position: absolute;
+   top: 58px;
+   font-size: 15px;
+   transition: all 2s;
+ }
+
+ header > ul > li > ul > li {
+  background-color: teal;
+  padding: 0px ;
+ }
+ header > ul > li > ul > li:hover {
+  background-color: rgb(20, 93, 98);
+ }
+header > ul > li:hover > ul{
+  display: block;
+
+}
+header li > ul a{
+  padding: 18px;
+}
+header li > a {
+   display: block;
+   color: rgb(255, 255, 255);
+   opacity: 0.8;
+   text-decoration: none;
+   padding: 10px 20px;
+ }
+ header a:hover{
+   opacity: 1;
+ }
+ header div{
+   float: right;
+   position: relative;
+ }
+header input{
+  position: relative;
+  top: -11px;
+  display: inline;
+  height: 40px;
+  width: 100px;
+  background-color: rgb(4, 93, 98);
+  color: white;
+  border: none;
+  opacity: 0.8;
+  border-radius: 5px;
+}
+header input:hover{
+  cursor: pointer;
+  opacity: 1;
+}

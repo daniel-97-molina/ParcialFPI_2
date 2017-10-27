@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Usuarios</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/postManager.css">
+
+  </head>
+  <body>
+      
+      <div class="contenedor">
+          <div class="contenidoPrincipal">
+              <label>Titulo</label><br>
+          <input type="text" id="txtTitulo" placeholder="Escribe el titulo del post">
+          
+          <label>Cuerpo</label>
+          <textarea name="contenido" rows="8" cols="45" placeholder="Escribe el contenido de tu post, puedes usar etiquetas html para dar formato (negrita,cursiva,h1,h2,etc)."></textarea>          
+          </div>
+          
+          <aside>
+              
+              <label>Categoría</label>
+              <select>
+                  <option>Deportes</option>
+                  <option>Programación</option>
+                  <option>Politica</option>
+                  <option>Farándula</option>
+                  <option>Tecnología</option>
+                  <option>Antropología</option>
+              </select>
+              
+              <div class="contenedorAside">
+                  <label>Imagen en miniatura</label>
+                  <div class="contenedorImagen"></div>
+                  <p>Esta imagen servirá de vista previa de tu posteo en los listados de posts.</p>
+              </div>
+              <button id="btnRealizado">Hecho</button>
+          </aside>
+      
+      </div>
+      
+      
+  </body>
+</html>

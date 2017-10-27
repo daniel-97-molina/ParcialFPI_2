@@ -1,3 +1,5 @@
+/*PARA PAGINA login.html*/
+
 *{
     box-sizing: border-box;
 }
@@ -42,14 +44,14 @@ input[type="submit"]:hover{
     margin-top: 8%;
 }
 .shadow{
-        box-shadow: 1px 1px 20px 2px #ccc;
+    box-shadow: 1px 1px 20px 2px #ccc;
 
 }
 input:focus{
     border: 1px solid teal;
 }
 .formLogin input{
-  
+
     padding: 5%;
     margin:5%;
 }
@@ -57,14 +59,14 @@ input{
     border: 1px solid #ccc;
     border-radius: 10px;
     display: block;
-      width: 100%;
-      
+    width: 100%;   
 }
 
 
+/*PARA PAGINA registro.html*/
 
 #divRegistro{
-    
+
     text-align: center;
     margin: auto;
     margin-top: 10%;
@@ -78,10 +80,10 @@ input{
 }
 .formRegistro input{
     padding: 3%;
-   margin:5% 0;
+    margin:5% 0;
 }
 .formRegistro input[type="radio"]{
-    
+
     width: auto;
     display: inline-block;
 }
@@ -96,11 +98,175 @@ input{
 
 #parrafoLogin a {
     text-decoration: none;
-    
+
 }
 
 #parrafoLogin a:hover{
     text-decoration: underline;
-    
+
 }
+
+
+/*PARA PAGINA usuario.html*/
+
+body{
+    background: #f9f9f9;
+}
+
+.divUsuario{
+    width: 75%;
+    height: 180px;
+    padding-top: 10px;
+    margin: auto;
+    background: #f0f3f9;
+    text-align: center;
+}
+
+#imagenUsuario{
+    background-image: url("../images/user.png");
+    height: 150px;
+    width: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px 1px #ccc
+
+}
+
+#datosUsuario{
+    width: 50%;
+    height: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+    /*border: 2px solid activecaption;*/
+    padding: 5px 5px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.ubicarDivsUsuario{
+    display: inline-block;
+}
+
+.ubicarPuntosPosts{
+    width: 150px;
+    height: 65px;
+    border: 1.5px solid teal;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    /*    box-shadow: 1px 1px 10px 1px #ccc;*/
+    font-size: 18px;
+    background: #fff;
+}
+
+#puntosUsuario{
+    margin-bottom: 20px;
+}
+#divPuntosPosts{
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    text-align: center;
+}
+
+#divEntradasUsuario{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+}
+
+/*#divEntradasUsuario > div{
+    background-image: url("../images/user.png");
+    width: 30%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    box-shadow: 1px 1px 20px 2px #ccc;
+    display: inline-block;
+    margin-top: 30px;
+}   */
+
+
+
+
+#post1{
+    border: 1px solid #000;
+    margin-top: 30px;
+    width: 30%; 
+    text-align: center;
+    /*background: #f0f3f9;*/
+}
+
+#post1 > div{
+    display: block;
+    width: 95%;
+    /*border: 1px solid #000;*/
+    margin: auto;
+}
+
+.image{ 
+    position: relative; 
+/*    width: 100%; */
+    background-image: url("../images/user.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    /*border: 1px solid #000;*/
+    height: 250px;
+}
+h2{ 
+    position: absolute; 
+    top: 70%; 
+    left: 0; 
+    width: 100%; 
+}
+h2 span{ 
+    color: white; 
+    font: bold 20px Helvetica, Sans-Serif;  
+/*    background: rgb(0, 0, 0); */
+    background: rgba(0, 0, 0, 0.3); 
+    padding: 1px; 
+}
+
+.divDatosPost{
+    background: #f0f3f9;
+    height: 25px;
+}
+
+.datosPost{
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#iconoCategoria{
+    background-image: url("../images/iconoCategoria.png");
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#iconoFecha{
+    background-image: url("../images/iconoFecha.png");
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#iconoPuntos{
+    background-image: url("../images/iconoPuntaje.jpg");
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#iconoAutor{
+    background-image: url("../images/iconoUsuario.png");
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 

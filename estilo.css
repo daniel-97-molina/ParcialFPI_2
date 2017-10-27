@@ -1,134 +1,74 @@
-/*PARA PAGINA login.html*/
 
 *{
     box-sizing: border-box;
 }
-.divImage{
-    background-image: url("../images/icon_login.jpg");
-    height: 150px;
-    width: 150px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;
-    margin: auto;
-}
-input[type="submit"]{
-    border-radius: 25px;
-    background-color: teal;
-    color: white;
-    font-weight: bold;
-}
-input[type="submit"]:hover{
-    transform: scale(1.05);
-    cursor: pointer;
-}
-#parrafoLogin{
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    width: 300px;
-    margin: auto;
-    margin-top: 20px;
-}
-.formLogin{
-    padding:5%;
-    width: 90%;
-    height: auto;
-}
-.login{
-    text-align: center;
-    width: 300px;
-    height: 350px;
-    padding-top: 10px;
-    margin: auto;
-    margin-top: 7%;
-}
-.shadow{
-    box-shadow: 1px 1px 20px 2px #ccc;
-
-}
-input:focus{
-    border: 1px solid teal;
-}
-.formLogin input{
-
-    padding: 5%;
-    margin:5%;
-}
-input{
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    display: block;
-    width: 100%;   
-}
-
-
-/*PARA PAGINA registro.html*/
-
-/*css para registro*/
-#divRegistro{
-
-    text-align: center;
-    margin: auto;
-    margin-top: 7%;
-    width: 350px;
-    height: 350px;
-    padding-top: 10px;
-}
-.formRegistro{
-    width: 90%;
-    margin: auto;
-}
-.formRegistro input{
-    padding: 3%;
-    margin:5% 0;
-}
-.formRegistro input[type="radio"]{
-
-    width: auto;
-    display: inline-block;
-}
-
-/*#divRegistro > p{
-    font-weight: bold;
-    font-size: 20px;
-}*/
-#divRegistro label{
-    padding-right: 20px;
-}
-
-
-#parrafoLogin a {
-    text-decoration: none;
-
-}
-
-#parrafoLogin a:hover{
-    text-decoration: underline;
-}
 
 
 /*PARA PAGINA perfil.html*/
-
 body{
-    background: #f9f9f9;
+        background: #e0e3e4;
+}
+
+#contenedorUsuario{
+
+    width: 90%;
+    margin: auto;
+}
+
+main{
+    width: 72%;
+    /*border: 1.5px solid teal;*/
+    border-radius: 10px;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    background: #fff;
+
+}
+
+aside{
+    width: 25%;
+    /*border: 1.5px solid teal;*/
+    border-radius: 10px;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    background: #fff
+}
+
+#spanTitulo1{
+    width: 90%;
+    font-size: 25px;
+    color: #1D5A72;
+    font-weight: bold;
+    margin-left: 5%;
+    display: block;
+    margin: auto;
+    margin-top: 2%;
+    background: #CBE6DE;
+    height: 40px;
+    padding: 7px;
+    border-radius: 10px;
+    /*padding-left: 15px;*/
 }
 
 .divUsuario{
-    width: 65%;
+    background-image: url("images/imagen1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 75%;
     height: 180px;
     padding-top: 10px;
     margin: auto;
-    background: #f0f3f9;
     /*padding-left: 15px;*/
-    text-align: right; 
+    text-align: left; 
     /*position: relative*/
+    border-radius: 10px 10px 0px 0px;
 
 }
 
-
 #imagenUsuario{
-    background-image: url("../images/user.png");
+    background-image: url("images/login_icon.png");
     height: 150px;
     width: 150px;
     margin-top: 5px;
@@ -139,51 +79,102 @@ body{
     border-radius: 50%;
     box-shadow: 1px 1px 10px 1px #ccc;
     position: relative;
+    display: block;
 
 }
 
 #datosUsuario{
     width: 40%;
     height: 150px;
-    margin-left: 20px;
+    margin-left: 25px;
     margin-right: 20px;
     /*border: 2px solid activecaption;*/
     padding: 5px 5px;
     font-size: 18px;
     text-align: left;
+    color: #fff;
+}
+
+#divPuntosPosts{
+    width: 75%;
+    height: 60px;
+    text-align: center;
+    margin: auto;
+    background: #f0f3f9;
+    /*display: block;*/
+    /*margin-top: 10px;*/
+    /*position: absolute;*/
+    border-radius: 0px 0px 10px 10px
 }
 
 .ubicarDivsUsuario{
-    display: inline-block;
-    /*position: absolute;*/
+    /*display: inline-block;*/
     float: left;
 }
 
 .ubicarPuntosPosts{
     width: 150px;
-    height: 65px;
-    /*border: 1.5px solid teal;*/
-    padding: 10px;
-    /*text-align: center;*/
-    display: block;
-    /*    box-shadow: 1px 1px 10px 1px #ccc;*/
+    height: 60px;
+    display: inline-block;
+    padding: 8px;
     font-size: 18px;
-    background: #A2D2C3;
-    float: right;   
-        
+    color: #1D5A72;
+    float: left; 
 }
 
 #puntosUsuario{
     margin-bottom: 20px;
+    /*border-radius: 0px 0px 0px 10px;*/
+    border-right: 0.2px solid teal;
 }
-#divPuntosPosts{
-    width: 150px;
-    height: 150px;
-    display: inline-block;
-    text-align: center;
-    margin-right: 15px;
-    /*position: absolute;*/
+
+#postsUsuario{
+    /*border-radius: 0px 0px 10px 0px;*/
 }
+
+#spanTitulo2{
+    font-size: 18px;
+    color: #1D5A72;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+hr{
+    height: 3px;
+    background: teal;
+    border-style: inset;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+#postsRelavantesUsuario{
+    display: block;
+    font-size: 18px;
+    color: #1D5A72;
+    font-weight: bold;
+    margin-left: 5%;
+    margin-bottom: 10px;
+}
+
+#contenedorUsuario > header{
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #divEntradasUsuario{
     width: 95%;
@@ -192,9 +183,9 @@ body{
     /*height: 30px;*/
 }
 
-/*#divEntradasUsuario > div{
-    background-image: url("../images/user.png");
-    width: 30%;
+#divEntradasUsuario > div{
+    background-image: url("images/user.png");
+    width: 40%;
     height: 300px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -202,7 +193,23 @@ body{
     box-shadow: 1px 1px 20px 2px #ccc;
     display: inline-block;
     margin-top: 30px;
-}   */
+    border-radius: 10px;
+}   
+
+.agregarImagen{
+    background-image: url("images/user.png");
+    width: 90%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px; 
+}
+
+
+
+
+
+
 
 
 
@@ -225,7 +232,7 @@ body{
 .image{ 
     position: relative; 
     width: 95%;
-    background-image: url("../images/user.png");
+    background-image: url("images/user.png");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 10px;
@@ -296,26 +303,5 @@ h2 span{
     background-size: cover;
 }
 
-#spanTitulo1{
-    font-size: 25px;
-    color: #1D5A72;
-    font-weight: bold;
-    margin-left: 10%;
-    display: block;
-    margin-top: 2%;
-}
 
-#spanTitulo2{
-    font-size: 18px;
-    color: #1D5A72;
-    font-weight: bold;
-    margin-left: 10%;
-}
 
-hr{
-    height: 5px;
-    background: teal;
-    border-style: inset;
-    margin-left: 10%;
-    margin-right: 10%;
-}

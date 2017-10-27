@@ -1,4 +1,6 @@
-* {font-family: Ubuntu !important;}
+* {font-family: Ubuntu !important;
+  box-sizing: border-box;
+}
  header{
    height: 60px;
    background-color: teal;
@@ -59,10 +61,10 @@ header li > a {
  header div{
    float: right;
    position: relative;
+   top: 8px;
+   margin-right: 10px;
  }
 header input{
-  position: relative;
-  top: -11px;
   display: inline;
   height: 40px;
   width: 100px;

@@ -9,20 +9,24 @@
   <body>
 
       <div id="divRegistro" class="shadow">
-                <p >Unete al blog</p>
+                <p >Únete al blog</p>
 
-      <form class="formRegistro">
-<input type="text" name="txtRegistroUsuario" placeholder="Nombre de Usuario" required>
-<input type="email" name="txtRegistroCorreo" placeholder="Correo electrónico" required>
-<input type="password" name="txtRegistroPassword" placeholder="Contraseña" required>
+      <form class="formRegistro" id="formRegistro">
+<input type="text" name="txtRegistroUsuario" placeholder="Nombre de Usuario" required
+maxlength="50" pattern="[a-zA-Z0-9-_]*">
+<input type="email" name="txtRegistroCorreo" placeholder="Correo electrónico" required maxlength="80">
+<input type="password" name="txtRegistroPassword" placeholder="Contraseña" required maxlength="50">
 <input type="radio" name="genero" value="Masculino" checked>
 <label>Masculino</label>
-<input type="radio" name="genero" value="Femenino"> 
+<input type="radio" name="genero" value="Femenino">
 <label>Femenino</label>
 
-<input type="submit" value="Registrarme" >
+<input type="submit" name="btnRegistrarme" value="Registrarme" >
 
       </form>
       </div>
+      <p id="parrafoLogin">¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesión</a></p>
+      <script src="scripts/generales.js"></script>
+      <script src="scripts/registro.js"></script>
   </body>
 </html>

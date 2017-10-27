@@ -93,3 +93,14 @@ input{
 #divRegistro label{
     padding-right: 20px;
 }
+
+
+#parrafoLogin a {
+    text-decoration: none;
+
+}
+
+#parrafoLogin a:hover{
+    text-decoration: underline;
+
+}

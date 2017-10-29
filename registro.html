@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,12 +12,12 @@
       <div id="divRegistro" class="shadow">
                 <p >Únete al blog</p>
 
-      <form class="formRegistro" id="formRegistro" onsubmit="subirXML()">
-<input type="text" name="txtRegistroUsuario" placeholder="Nombre de Usuario" required
+      <form class="formRegistro" id="formRegistro" onsubmit="agregarUsuario()">
+<input type="text" id="txtRegistroUsuario" name="txtRegistroUsuario" placeholder="Nombre de Usuario" required
 maxlength="50" pattern="[a-zA-Z0-9-_.]*">
-<input type="email" name="txtRegistroCorreo" placeholder="Correo electrónico" required maxlength="80">
-<input type="password" name="txtRegistroPassword" placeholder="Contraseña" required maxlength="50">
-<input type="radio" name="genero" value="Masculino" checked>
+<input type="email" id="txtRegistroCorreo" name="txtRegistroCorreo" placeholder="Correo electrónico" required maxlength="80">
+<input type="password" id="txtRegistroPassword" name="txtRegistroPassword" placeholder="Contraseña" required maxlength="50">
+<input type="radio" id="radioMasculino" name="genero" value="Masculino" checked>
 <label>Masculino</label>
 <input type="radio" name="genero" value="Femenino">
 <label>Femenino</label>

@@ -4,16 +4,16 @@
     <title>Iniciar Sesión</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="styles/estiloGeneral.css">
-    
+
   </head>
   <body >
       <header></header>
       <div class="login shadow">
           <div class="divImage"></div>
       <form class="formLogin" id="formulario">
-          <input type="text" name="txtUsuario" placeholder="Usuario o correo" required>
-          <input type="password" name="txtPassword" placeholder="Contraseña" required>
-          <input type="submit" name="btnIniciar" value="Iniciar Sesión">
+          <input type="text" name="txtUsuario" id="txtUsuario" placeholder="Correo" required maxlength="80">
+          <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña" required maxlength="50">
+          <input type="submit" name="btnIniciar" id="btnIniciar" value="Iniciar Sesión">
       </form>
       </div>
 

@@ -18,7 +18,7 @@ function validar(){
 function cargarXML() {
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState === 4 && this.status === 200) {
       procesar(this);
     }
   };
@@ -27,7 +27,6 @@ function cargarXML() {
 }
 
 function procesar(xml) {
-  var x, i, txt;
   xmlDoc = xml.responseXML;
   console.log("cargarXML:");
   console.log(xmlDoc);

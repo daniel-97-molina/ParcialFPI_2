@@ -1,7 +1,7 @@
 var formulario = $("#formRegistro");
 
 formulario.btnRegistrarme.onclick = function(){validar();};
-
+var xmlDoc;
 function validar(){
 
   validarInput(formulario.txtRegistroUsuario, "Ingrese un nombre de usuario");
@@ -27,8 +27,16 @@ function cargarXML() {
 }
 
 function procesar(xml) {
-  var x, i, xmlDoc, txt;
+  var x, i, txt;
   xmlDoc = xml.responseXML;
-  xmlDoc.getElementsByTagName("nombre")[0].childNodes[0].nodeValue = "otroNombre";
-  console.log(xmlDoc.toString());
+  console.log("cargarXML:");
+  console.log(xmlDoc);
+}
+
+function subirXML() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("POST", "procesarPost.php", true);
+  xmlhttp.setRequestHeader("Content-Type", "text/xml");
+  console.log(xmlDoc);
+  xmlhttp.send(xmlDoc);
 }

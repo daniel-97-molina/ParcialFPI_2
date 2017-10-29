@@ -3,7 +3,6 @@ var formulario = $("#formRegistro");
 formulario.btnRegistrarme.onclick = function(){validar();};
 var xmlDoc;
 function validar(){
-
   validarInput(formulario.txtRegistroUsuario, "Ingrese un nombre de usuario");
   validarInput(formulario.txtRegistroCorreo, "Ingrese su correo");
   validarInput(formulario.txtRegistroPassword, "Ingrese una contraseña");
@@ -15,28 +14,31 @@ function validar(){
   }
 }
 
-function cargarXML() {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      procesar(this);
-    }
-  };
-  xmlhttp.open("GET", "data/usuarios.xml", true);
-  xmlhttp.send();
-}
 
-function procesar(xml) {
-  var x, i, txt;
-  xmlDoc = xml.responseXML;
-  console.log("cargarXML:");
-  console.log(xmlDoc);
-}
 
-function subirXML() {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("POST", "procesarPost.php", true);
-  xmlhttp.setRequestHeader("Content-Type", "text/xml");
-  console.log(xmlDoc);
-  xmlhttp.send(xmlDoc);
+function agregarUsuario() {
+  sNombre = xmlDoc.createTextNode($("#txtRegistroUsuario").value);
+  sCorreo = xmlDoc.createTextNode($("#txtRegistroCorreo").value);
+  sPassword = xmlDoc.createTextNode($("#txtRegistroPassword").value);
+  sSexo = xmlDoc.createTextNode($("#radioMasculino").checked ? "M" : "F");
+
+  nNombre = xmlDoc.createElement("nombre");
+  nCorreo = xmlDoc.createElement("correo");
+  nPassword = xmlDoc.createElement("password");
+  nSexo = xmlDoc.createElement("sexo");
+
+  nNombre.appendChild(sNombre);
+  nCorreo.appendChild(sCorreo);
+  nPassword.appendChild(sPassword);
+  nSexo.appendChild(sSexo);
+
+  nUsuario = xmlDoc.createElement("Usuario");
+  nUsuario.appendChild(nNombre);
+  nUsuario.appendChild(nCorreo);
+  nUsuario.appendChild(nPassword);
+  nUsuario.appendChild(nSexo);
+  console.log(nUsuario);
+  usuarios = xmlDoc.getElementsByTagName("usuarios");
+  usuarios[0].appendChild(nUsuario);
+  subirXML(xmlDoc,"data/probando.xml");
 }

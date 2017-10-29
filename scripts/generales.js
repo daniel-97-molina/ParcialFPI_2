@@ -45,3 +45,24 @@ function generarDivArticuloSmall(){
   `;
   return aGenerado;
 }
+
+//DEVUELVE UN ARCHIVO XML - Parámetro: ruta del archivo
+function cargarXML(sRuta) {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      return this.responseXML;
+    }
+  };
+  xmlhttp.open("GET", sRuta, true);
+  xmlhttp.send();
+}
+
+
+function subirXML(documentoXML,direccion) {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("POST", "procesarPost.php?direccion="+direccion, true);
+  xmlhttp.setRequestHeader("Content-Type", "text/xml");
+  console.log(documentoXML);
+  xmlhttp.send(documentoXML);
+}

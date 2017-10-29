@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<usuarios>
+<?xml version="1.0" encoding="UTF-8"?><usuarios>
   <usuario>
     <nombre>Daniel</nombre>
   </usuario>
 
-</usuarios>
+<Usuario><nombre></nombre><correo></correo><password></password><sexo>M</sexo></Usuario><Usuario><nombre>Nuevoooo</nombre><correo>correo@kdkdk</correo><password>586749</password><sexo>M</sexo></Usuario></usuarios>

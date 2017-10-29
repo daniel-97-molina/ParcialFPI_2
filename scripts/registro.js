@@ -21,6 +21,7 @@ function agregarUsuario() {
   sPassword = xmlDoc.createTextNode($("#txtRegistroPassword").value);
   sSexo = xmlDoc.createTextNode($("#radioMasculino").checked ? "M" : "F");
 
+
   nNombre = xmlDoc.createElement("nombre");
   nCorreo = xmlDoc.createElement("correo");
   nPassword = xmlDoc.createElement("password");
@@ -40,4 +41,8 @@ function agregarUsuario() {
   usuarios = xmlDoc.getElementsByTagName("usuarios");
   usuarios[0].appendChild(nUsuario);
   subirXML(xmlDoc,"data/probando.xml");
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 919d8d0d5d8b1b684021f4a411a464918492947c

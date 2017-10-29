@@ -64,4 +64,4 @@ function subirXML(documentoXML,direccion) {
   xmlhttp.setRequestHeader("Content-Type", "text/xml");
   console.log(documentoXML);
   xmlhttp.send(documentoXML);
-}
+  }

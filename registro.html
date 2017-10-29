@@ -1,33 +1,33 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Regístrate</title>
-    <meta charset="utf-8">
+    <head>
+        <title>Regístrate</title>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="styles/estiloGeneral.css">
 
-  </head>
-  <body>
+    </head>
+    <body>
 
-      <div id="divRegistro" class="shadow">
-                <p >Únete al blog</p>
+        <div id="divRegistro" class="shadow">
+            <p >Únete al blog</p>
 
-      <form class="formRegistro" id="formRegistro" onsubmit="agregarUsuario()">
-<input type="text" id="txtRegistroUsuario" name="txtRegistroUsuario" placeholder="Nombre de Usuario" required
-maxlength="50" pattern="[a-zA-Z0-9-_.]*">
-<input type="email" id="txtRegistroCorreo" name="txtRegistroCorreo" placeholder="Correo electrónico" required maxlength="80">
-<input type="password" id="txtRegistroPassword" name="txtRegistroPassword" placeholder="Contraseña" required maxlength="50">
-<input type="radio" id="radioMasculino" name="genero" value="Masculino" checked>
-<label>Masculino</label>
-<input type="radio" name="genero" value="Femenino">
-<label>Femenino</label>
+            <form class="formRegistro" id="formRegistro">
+                <input type="text" id="txtRegistroUsuario" name="txtRegistroUsuario" placeholder="Nombre de Usuario" required
+                       maxlength="50" pattern="[a-zA-Z0-9-_.]*">
+                <input type="email" id="txtRegistroCorreo" name="txtRegistroCorreo" placeholder="Correo electrónico" required maxlength="80">
+                <input type="password" id="txtRegistroPassword" name="txtRegistroPassword" placeholder="Contraseña" required maxlength="50">
+                <input type="radio" id="radioMasculino" name="genero" value="Masculino" checked>
+                <label>Masculino</label>
+                <input type="radio" name="genero" value="Femenino">
+                <label>Femenino</label>
 
-<input type="submit" name="btnRegistrarme" value="Registrarme" >
+                <input type="submit" name="btnRegistrarme" value="Registrarme" >
 
-      </form>
-      </div>
-      <p id="parrafoLogin">¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesión</a></p>
-      <script src="scripts/generales.js"></script>
-      <script src="scripts/registro.js"></script>
-  </body>
+            </form>
+        </div>
+        <p id="parrafoLogin">¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesión</a></p>
+        <script src="scripts/generales.js"></script>
+        <script src="scripts/registro.js"></script>
+    </body>
 </html>

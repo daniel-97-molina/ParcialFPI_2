@@ -1,8 +1,10 @@
 var formulario = $("#formRegistro");
+var xmlDoc;
 
 formulario.btnRegistrarme.onclick = function(){validar();};
-var xmlDoc;
+
 function validar(){
+
   validarInput(formulario.txtRegistroUsuario, "Ingrese un nombre de usuario");
   validarInput(formulario.txtRegistroCorreo, "Ingrese su correo");
   validarInput(formulario.txtRegistroPassword, "Ingrese una contraseña");
@@ -14,25 +16,56 @@ function validar(){
   }
 }
 
+formulario.onsubmit = function(){
+    procesarInfo();
+};
+
+function procesarInfo() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      procesar(this);
+    }
+  };
+  xmlhttp.open("GET", "data/usuarios.xml", true);
+  xmlhttp.send();
+//  xmlhttp.upload.onload = function(){
+//        agregarUsuario();
+//  };
+}
+
+function procesar(xml) {
+  xmlDoc = xml.responseXML;
+  console.log("cargarXML:");
+  console.log(xmlDoc);
+  agregarUsuario();
+}
+
+function subirXML() {
+  var xmlh = new XMLHttpRequest();
+  xmlh.open("POST", "procesarPost.php", true);
+  xmlh.setRequestHeader("Content-Type", "text/xml");
+  console.log(xmlDoc);
+  xmlh.send(xmlDoc);
+}
 
 function agregarUsuario() {
-  sNombre = xmlDoc.createTextNode($("#txtRegistroUsuario").value);
-  sCorreo = xmlDoc.createTextNode($("#txtRegistroCorreo").value);
-  sPassword = xmlDoc.createTextNode($("#txtRegistroPassword").value);
-  sSexo = xmlDoc.createTextNode($("#radioMasculino").checked ? "M" : "F");
+  var sNombre = xmlDoc.createTextNode($("#txtRegistroUsuario").value);
+  var sCorreo = xmlDoc.createTextNode($("#txtRegistroCorreo").value);
+  var sPassword = xmlDoc.createTextNode($("#txtRegistroPassword").value);
+  var sSexo = xmlDoc.createTextNode($("#radioMasculino").checked ? "M" : "F");
 
-
-  nNombre = xmlDoc.createElement("nombre");
-  nCorreo = xmlDoc.createElement("correo");
-  nPassword = xmlDoc.createElement("password");
-  nSexo = xmlDoc.createElement("sexo");
+  var nNombre = xmlDoc.createElement("nombre");
+  var nCorreo = xmlDoc.createElement("correo");
+  var nPassword = xmlDoc.createElement("password");
+  var nSexo = xmlDoc.createElement("sexo");
 
   nNombre.appendChild(sNombre);
   nCorreo.appendChild(sCorreo);
   nPassword.appendChild(sPassword);
   nSexo.appendChild(sSexo);
 
-  nUsuario = xmlDoc.createElement("Usuario");
+  nUsuario = xmlDoc.createElement("usuario");
   nUsuario.appendChild(nNombre);
   nUsuario.appendChild(nCorreo);
   nUsuario.appendChild(nPassword);
@@ -40,9 +73,5 @@ function agregarUsuario() {
   console.log(nUsuario);
   usuarios = xmlDoc.getElementsByTagName("usuarios");
   usuarios[0].appendChild(nUsuario);
-  subirXML(xmlDoc,"data/probando.xml");
-<<<<<<< HEAD
+  subirXML();
 }
-=======
-}
->>>>>>> 919d8d0d5d8b1b684021f4a411a464918492947c

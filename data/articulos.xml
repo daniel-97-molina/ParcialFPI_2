@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<articulos>
-  
-  
-  
-  
-  
-<articulo><titulo>tituloooo x3</titulo><contenido>contenido x3</contenido><img>img</img><categoria>Farándula</categoria></articulo>
-<articulo idArticulo="1" idUsuario="1">
+<?xml version="1.0" encoding="UTF-8"?><articulos ultimo="0">
+ <articulo puntos="3"><titulo>tituloooo x3</titulo><contenido>contenido x3</contenido><img>img</img><categoria>Farándula</categoria></articulo>
+<articulo idArticulo="1" idUsuario="1" puntos="10">
   <titulo>tituloooo x3</titulo>
   <contenido>contenido x3</contenido>
   <img>img</img>
@@ -16,5 +10,4 @@
     </comentario>
   </comentarios>
   </articulo>
-
-<articulo><titulo>dssd</titulo><contenido>dsdsds</contenido><img>img</img><categoria>Politica</categoria></articulo><articulo><titulo>dd</titulo><contenido>dffd</contenido><img>img</img><categoria>Politica</categoria></articulo></articulos>
+<articulo puntos="6"><titulo>dssd</titulo><contenido>dsdsds</contenido><img>img</img><categoria>Politica</categoria></articulo><articulo><titulo>dd</titulo><contenido>dffd</contenido><img>img</img><categoria>Politica</categoria></articulo></articulos>

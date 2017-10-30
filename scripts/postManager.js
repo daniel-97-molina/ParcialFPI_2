@@ -1,4 +1,5 @@
 var xmlDoc;
+var rutaImagen;
 $("#btnRealizado").onclick = function () {
     var form = $("#form");
     validarInput(form.txtTitulo, "Ingresa el titulo del post");
@@ -13,6 +14,8 @@ $("#file").onchange = function (e) {
     var archivo = e.target.files;
     for (var i = 0; i < x.length; i++) {
         if (archivo[0].type === x[i]) {
+            //console.log(archivo[0].name);
+            rutaImagen = archivo[0].name;
             permitida = true;
         }
     }
@@ -47,7 +50,7 @@ function cargarXML() {
 
 function imagen() {
     let form = $("#form");
-    
+
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("post", "imageHandler.php");
     xmlhttp.send(new FormData(form));
@@ -68,7 +71,7 @@ $("#btnRealizado").onclick = function (e) {
 function agregarArticulo() {
     var sTitulo = xmlDoc.createTextNode($("#txtTitulo").value);
     var sContenido = xmlDoc.createTextNode($("#txtContenido").value);
-    var sImagen = xmlDoc.createTextNode("img");
+    var sImagen = xmlDoc.createTextNode(rutaImagen);
     var select = $("#lista");
     var nombreCategoria = select.options[select.selectedIndex].value;
     var sCategoria = xmlDoc.createTextNode(nombreCategoria);
@@ -77,20 +80,25 @@ function agregarArticulo() {
     var nContenido = xmlDoc.createElement("contenido");
     var nImg = xmlDoc.createElement("img");
     var nCategoria = xmlDoc.createElement("categoria");
-
+    var tagComentarios = xmlDoc.createElement("comentarios");
 
     nTitulo.appendChild(sTitulo);
     nContenido.appendChild(sContenido);
     nImg.appendChild(sImagen);
     nCategoria.appendChild(sCategoria);
+    articulos = xmlDoc.getElementsByTagName("articulos");
+    var ultimo=articulos[0].getAttribute("ultimo");
+    articulos[0].setAttribute("ultimo",ultimo+1);
 
     var articulo = xmlDoc.createElement("articulo");
+    articulo.setAttribute("idArticulo", ultimo+1);
+    articulo.setAttribute("idUsuario", idUsuarioLoggeado);
     articulo.appendChild(nTitulo);
     articulo.appendChild(nContenido);
     articulo.appendChild(nImg);
     articulo.appendChild(nCategoria);
+    articulo.appendChild(tagComentarios);
 
-    articulos = xmlDoc.getElementsByTagName("articulos");
     articulos[0].appendChild(articulo);
     subirXMLArticulos();
     imagen();

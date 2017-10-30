@@ -3,7 +3,7 @@ window.onload = function () {
 };
 
 function cargarXML2(idUsuario) {
-
+D
     var xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function () {

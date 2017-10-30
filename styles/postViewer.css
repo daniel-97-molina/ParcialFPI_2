@@ -205,7 +205,11 @@ overflow: hidden;
 }
 label{
     display: none;
+     font-size: 20px;
+    font-weight: bold;
+    color: #5aa0aa;
   
+    
     
 }
 .transition{
@@ -215,10 +219,6 @@ label{
     -moz-animation-duration: 3s;
     animation-name: fade;
     animation-duration: 3s;
-     font-size: 20px;
-    font-weight: bold;
-    color: #5aa0aa;
-  
     display: block;
 }
 @-webkit-keyframes fade{

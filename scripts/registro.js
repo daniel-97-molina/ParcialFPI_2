@@ -49,8 +49,8 @@ function procesarInfo() {
 
 function procesar(xml) {
     xmlDoc = xml.responseXML;
-    console.log("cargarXML:");
-    console.log(xmlDoc);
+//    console.log("cargarXML:");
+//    console.log(xmlDoc);
     agregarUsuario();
 
 }
@@ -59,7 +59,7 @@ function subirXML() {
     var xmlh = new XMLHttpRequest();
     xmlh.open("POST", "procesarPost.php", true);
     xmlh.setRequestHeader("Content-Type", "text/xml");
-    console.log(xmlDoc);
+//    console.log(xmlDoc);
     xmlh.send(xmlDoc);
 
 
@@ -67,13 +67,12 @@ function subirXML() {
 
 function agregarUsuario() {
 
-    var usuarios = xmlDoc.getElementsByTagName("usuarios");
-
-    console.log("Entra aqui 2");
     //Irvin
     var resultado = usuariosExistentes(xmlDoc.getElementsByTagName("usuario"));
     if (resultado == true) {
-        console.log("Entra aqui 3");
+
+        var usuarios = xmlDoc.getElementsByTagName("usuarios");
+
         usuarios[0].setAttribute("ultimo", parseInt(usuarios[0].getAttribute("ultimo")) + 1);
 
         usuarioActual = new Usuario(usuarios[0].getAttribute("ultimo"), $("#txtRegistroUsuario").value, $("#txtRegistroCorreo").value, $("#txtRegistroPassword").value, ($("#radioMasculino").checked ? "M" : "F"));
@@ -97,18 +96,17 @@ function agregarUsuario() {
         nSexo.appendChild(cGenero);
 
         nUsuario = xmlDoc.createElement("usuario");
-        nUsuario.setAttribute("id", "8888");
-        nUsuario.setAttribute("imagen", "nadaaaa");
+        nUsuario.setAttribute("id",usuarioActual.id);
+        nUsuario.setAttribute("imagen", "default.jpg");
         nUsuario.appendChild(nNombre);
         nUsuario.appendChild(nCorreo);
         nUsuario.appendChild(nPassword);
         nUsuario.appendChild(nSexo);
-        console.log(nUsuario);
+//        console.log(nUsuario);
 
         usuarios[0].appendChild(nUsuario);
         subirXML();
     } else {
-        console.log("Entra aqui 4");
         event.preventDefault();
     }
 
@@ -120,37 +118,32 @@ function usuariosExistentes(usuarios) {
     var existeCorreo = false;
     var siguientePaso = false;
 
-    console.log("Entra aqui 1");
-
     for (var i = 0; i < usuarios.length; i++) {
 
         if (usuarios[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue == $("#txtRegistroUsuario").value) {
             existeUsuario = true;
-            if (usuarios[i].getElementsByTagName("correo")[0].childNodes[0].nodeValue == $("#txtRegistroCorreo").value) {
-                existeCorreo = true;
-
-            }
+        }
+        if (usuarios[i].getElementsByTagName("correo")[0].childNodes[0].nodeValue == $("#txtRegistroCorreo").value) {
+            existeCorreo = true;
         }
     }
 
     if (!$("#txtRegistroUsuario").value == "" && !$("#txtRegistroCorreo").value == "") {
-        if (existeUsuario === false) {
-            if (existeCorreo === false) {
+        if (existeUsuario === false && existeCorreo === false) {
+            location.href = "inicio.html";
+            siguientePaso = true;
 
-//                location.href = "inicio.html";
-                siguientePaso = true;
+        } else if (existeCorreo === true && existeUsuario === true) {
+            $("#parrafoError").innerHTML = "El nombre y el correo ya existen";
+            $("#parrafoError").style.display = "block";
 
-            } else if (existeCorreo === true) {
-                $("#parrafoError").innerHTML = "Este correo ya fue registrado";
-//                $("#parrafoError").style.display = "block";
-                console.log("Este correo ya fue registrado");
+        } else if (existeUsuario === false && existeCorreo === true) {
+            $("#parrafoError").innerHTML = "Este correo ya fue registrado";
+            $("#parrafoError").style.display = "block";
 
-            }
-        } else if (existeUsuario === true) {
+        } else if (existeUsuario === true && existeCorreo === false) {
             $("#parrafoError").innerHTML = "Nombre de usuario no disponible";
-//            $("#parrafoError").style.display = "block";
-            console.log("Nombre de usuario no disponible");
-
+            $("#parrafoError").style.display = "block";
         }
     }
 

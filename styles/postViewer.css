@@ -53,7 +53,7 @@ main{
 }
 #sideBar{
      
-    margin: 20px;
+    margin-top: 20px; 
     width: 25%;
     height: 90%;
     float: left;
@@ -79,7 +79,7 @@ main{
 }
 #puntaje{
     height: 60px;
-    margin: 20px 0;
+    margin: 10px 0;
     padding: 20px;
     
     

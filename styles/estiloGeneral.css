@@ -31,7 +31,7 @@ input[type="submit"]:hover{
     margin-top: 20px;
 }
 .formLogin{
-    padding:5%;
+    padding:0% 5% 5% 5%;
     width: 90%;
     height: auto;
 }
@@ -61,6 +61,27 @@ input{
     display: block;
     width: 100%;   
 }
+
+#parrafoErrores, #parrafoError{
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    margin-left: 27px;
+    width: 80%;
+    height: 35px;
+    padding: 3%;
+    font-size: 15px;
+    background-color: rgba(211, 49, 44, 0.2);
+    display: none;
+}
+
+
+
+
+
+
 
 
 /*PARA PAGINA registro.html*/
@@ -105,4 +126,13 @@ input{
 
 #parrafoLogin a:hover{
     text-decoration: underline;
+}
+
+#tituloFormulario{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#parrafoError{
+    
 }

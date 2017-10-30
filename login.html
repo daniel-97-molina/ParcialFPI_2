@@ -10,7 +10,8 @@
       <header></header>
       <div class="login shadow">
           <div class="divImage"></div>
-      <form class="formLogin" id="formulario">
+          <p id="parrafoErrores"></p>
+          <form class="formLogin" id="formulario" onsubmit="return false">
           <input type="text" name="txtUsuario" id="txtUsuario" placeholder="Correo" required maxlength="80">
           <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña" required maxlength="50">
           <input type="submit" name="btnIniciar" id="btnIniciar" value="Iniciar Sesión">

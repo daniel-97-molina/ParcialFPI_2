@@ -1,22 +1,24 @@
 var formulario = $("#formulario");
 
 
-formulario.btnIniciar.onclick = function () {
+formulario.btnIniciar.onclick = function (event) {
     validar();
     cargarXML3();
+
 };
 
 formulario.oninput = function (event) {
-//    event.preventDefault();
-     validarInput(formulario.txtUsuario, "Ingrese su usuario o correo");
-    validarInput(formulario.txtPassword, "Ingrese su contraseña");
-//    event.preventDefault();
+    validar();
 };
+
+function validar() {
+    validarInput(formulario.txtUsuario, "Ingrese su usuario o correo");
+    validarInput(formulario.txtPassword, "Ingrese su contraseña");
+}
 
 
 
 //Para validar que el usuario exista
-
 
 function cargarXML3() {
     var xmlhttp = new XMLHttpRequest();
@@ -50,18 +52,27 @@ function cargarDatos3(xml) {
         }
     }
 
-    if (existeUsuario === true) {
-        console.log("El usuario esta registrado");
-    } else if (existeUsuario === false) {
-        console.log("El usuario no esta registrado");
-    }
+    if (!$("#txtUsuario").value == "" && !$("#txtPassword").value == "") {
+        if (existeUsuario === true) {
+            if (passwordCorrecta === true) {
 
-    if (passwordCorrecta === true) {
-        console.log("La contrasenia es correcta");
-    } else if (passwordCorrecta === false) {
-        console.log("La contrasenia no es correcta");
-    }
+                location.href = "inicio.html";
 
+            } else if (passwordCorrecta === false) {
+                $("#parrafoErrores").innerHTML = "La contraseña es incorrecta";
+                $("#parrafoErrores").style.display = "block";
+                $(".divImage").style.width = "105px";
+                $(".divImage").style.height = "105px";
+            }
+        } else if (existeUsuario === false) {
+            $("#parrafoErrores").innerHTML = "El usuario no esta registrado";
+            $("#parrafoErrores").style.display = "block";
+            $(".divImage").style.width = "105px";
+            $(".divImage").style.height = "105px";
+
+        }
+
+    }
 
 
 }

@@ -41,8 +41,6 @@ function agregarUsuario() {
   usuarios = xmlDoc.getElementsByTagName("usuarios");
   usuarios[0].appendChild(nUsuario);
   subirXML(xmlDoc,"data/probando.xml");
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 919d8d0d5d8b1b684021f4a411a464918492947c
+

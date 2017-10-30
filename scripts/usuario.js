@@ -1,5 +1,9 @@
+window.onload = function(){
+    cargarXML2(parseInt(location.href.split("id=")[1])-1);
+};
 
 function cargarXML2(idUsuario) {
+
   var xmlhttp = new XMLHttpRequest();
     
   xmlhttp.onreadystatechange = function() {

@@ -45,7 +45,11 @@ $("#divUsuario").onclick = function () {
 $("#btnCerrarSesion").onclick = function () {
     localStorage.removeItem("usuarioLogueado");
     location.reload();
-};  
+};
+
+$("#btnPerfil").onclick = function () {
+    location.href = "perfil2.html?id="+localStorage.usuarioLogueado;  
+};
 
 $("#btnIniciarSesion").onclick = function(){
   location.href = "login.html";  

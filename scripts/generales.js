@@ -84,3 +84,16 @@ function Persona(iId, sNombre){
     this.id = iId;
     this.nombre = sNombre;
 }
+
+//codigo para las imagenes 
+$(".contenedorImagen").onclick = function () {
+    $("#file").click(console.log(""));
+};
+
+function imagen(ruta) {
+    let form = $("#form");
+
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("post", "imageHandler.php?ruta="+ruta);
+    xmlhttp.send(new FormData(form));
+}

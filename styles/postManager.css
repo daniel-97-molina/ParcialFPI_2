@@ -100,8 +100,9 @@ p{
     border-top: 1px dashed #ccc;
 }
 .contenedorImagen:hover{
-    transform: scale(0.9);
+    transform: scale(0.98);
      filter:grayscale(60%);
+     cursor: pointer;
 }
 #btnRealizado{
     width: 100%;

@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?><usuarios ultimo="2">
-    <usuario id="1" imagen="Megaman.gif">
-        <nombre>a</nombre>
-        <correo>a@a</correo>
-        <password>a</password>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<usuarios ultimo="13">
+    <usuario id="1" imagen="default.jpg">
+        <nombre>Daniel2</nombre>
+        <correo>molina@hk.com</correo>
+        <password>haha</password>
         <sexo>M</sexo>
     </usuario>
-    <usuario id="2" imagen="Megaman.gif">
-        <nombre>DanielMolinaRAMIREZ</nombre>
-        <correo>daniel@gmail.com</correo>
-        <password>1234</password>
+    <usuario id="2" imagen="default.jpg">
+        <nombre>Maria2</nombre>
+        <correo>maria2@hk.com</correo>
+        <password>haha2</password>
+        <sexo>F</sexo>
+    </usuario>
+    <usuario id="3" imagen="default.jpg">
+        <nombre>Kevin2</nombre>
+        <correo>kevin2@hk.com</correo>
+        <password>haha3</password>
         <sexo>M</sexo>
     </usuario>
 </usuarios>

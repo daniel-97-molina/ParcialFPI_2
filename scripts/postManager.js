@@ -1,4 +1,5 @@
 var xmlDoc;
+var rutaImagen;
 $("#btnRealizado").onclick = function () {
     var form = $("#form");
     validarInput(form.txtTitulo, "Ingresa el titulo del post");
@@ -13,6 +14,8 @@ $("#file").onchange = function (e) {
     var archivo = e.target.files;
     for (var i = 0; i < x.length; i++) {
         if (archivo[0].type === x[i]) {
+            //console.log(archivo[0].name);
+            rutaImagen = archivo[0].name;
             permitida = true;
         }
     }
@@ -68,7 +71,7 @@ $("#btnRealizado").onclick = function (e) {
 function agregarArticulo() {
     var sTitulo = xmlDoc.createTextNode($("#txtTitulo").value);
     var sContenido = xmlDoc.createTextNode($("#txtContenido").value);
-    var sImagen = xmlDoc.createTextNode("img");
+    var sImagen = xmlDoc.createTextNode(rutaImagen);
     var select = $("#lista");
     var nombreCategoria = select.options[select.selectedIndex].value;
     var sCategoria = xmlDoc.createTextNode(nombreCategoria);

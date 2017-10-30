@@ -12,6 +12,8 @@ window.onload = function () {
         if (this.readyState === 4 && this.status === 200) {
             xmlDocUsuarios = xmlhttp.responseXML;
             console.log(xmlDocUsuarios);
+            //AQUI FALTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            $("#divUsuario img").setAttribute("src","images/imagesArticulos/");
             cargarArticulos();
         }
     };

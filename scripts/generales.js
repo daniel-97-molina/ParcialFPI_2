@@ -11,13 +11,13 @@ function validarInput(input, mensaje) {
 }
 
 
-function generarDivArticuloBig(titulo, cuerpo) {
+function generarDivArticuloBig(nArticulo) {
   var aGenerado = document.createElement("a");
-  aGenerado.setAttribute("href", "#");
+  aGenerado.setAttribute("href", "postViewer.html?id="+nArticulo.getAttribute("id"));
   aGenerado.className = "aContenedorArticulo";
   aGenerado.innerHTML = `<div class="contenido">
       <div class="detalles">
-        <p>Autor - fecha - puntos</p>
+        <p>Autor -  fecha - puntos</p>
       </div>
       <div class="categoria">
         <p>Categoría</p>

@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><usuarios ultimo="2">
-    
-<usuario id="1" imagen="default.jpg"><nombre>Daniel</nombre><correo>daniel@gmail.com</correo><password>asdf</password><sexo>M</sexo></usuario><usuario id="2" imagen="default.jpg"><nombre>a</nombre><correo>a@a</correo><password>a</password><sexo>M</sexo></usuario></usuarios>
+    <usuario id="1" imagen="Megaman.gif">
+        <nombre>a</nombre>
+        <correo>a@a</correo>
+        <password>a</password>
+        <sexo>M</sexo>
+    </usuario>
+    <usuario id="2" imagen="Megaman.gif">
+        <nombre>DanielMolinaRAMIREZ</nombre>
+        <correo>daniel@gmail.com</correo>
+        <password>1234</password>
+        <sexo>M</sexo>
+    </usuario>
+</usuarios>

@@ -1,5 +1,6 @@
 var xmlDoc;
 var articulo;
+
 function Articulo(idArticulo, idUsuario) {
     this.idArticulo = 2;
     this.idUsuario = 1;
@@ -14,42 +15,61 @@ function Articulo(idArticulo, idUsuario) {
     if(typeof comentar=== "undefined"){
         Articulo.prototype.agregarComentario= function (texto) {
             //xml
+         
             var comentarios=articulos[this.idArticulo-1].getElementsByTagName("comentarios")[0];
             var tagNuevoComentario=xmlDoc.createElement("comentario");
             tagNuevoComentario.setAttribute("idUsuario",this.idUsuario);
             var contenidoNuevoComentario=xmlDoc.createTextNode(texto);
             tagNuevoComentario.appendChild(contenidoNuevoComentario);
             comentarios.appendChild(tagNuevoComentario);
-            //html
-            var textoComentario = document.createTextNode(texto);
-        var nodo = document.createElement("p");
-        nodo.appendChild(texto);
-        add(sNombre, iDinero);
-        $("#divContenedorPantallaInicial").appendChild(nodo);
-        $("#txtDinero").className = "bordeNormal";
-        $("#txtDinero").className = "bordeNormal";
-            console.log(a);
+            console.log(comentarios);
+          
+        var comentario=document.createElement("div");
+        comentario.className="comentario transition";
+                                comentario.innerHTML=`
+                                    <div class="imagen">
+
+                                        <img src="images/icon_login.jpg" alt="foto">
+
+                                    </div>
+                                    <div class="contenidoComentario">
+                                        <div class="autor">`+idUsuario+`</div>
+                                        <div class="mensaje">`+texto+`</div>
+                                    </div>
+                                `;
+            $("#contenidoComentarios").appendChild(comentario);
         };
     }
     this.puntuarCreado=true;
     this.comentar=true;
 }
+   function cargarXml(){
+       
+   } 
     
-   function  procesar(puntos) {
+   function  procesar(puntos,comentar) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
+
             xmlDoc = xmlhttp.responseXML;
-            console.log(xmlDoc);
-            articulo=new Articulo();
+                                           articulo=new Articulo();
+
+           if(comentar){
+               
+                   articulo.agregarComentario(comentar);
+
+           }else{
             articulo.puntuar(puntos);
-            subirXMLArticulos();
+        }
+                    subirXMLArticulos();
+
         }
     };
     xmlhttp.open("GET", "data/articulos.xml", true);
     xmlhttp.send();
     $("#ul").style.display="none";
-    $("#puntajeBox label").className="transition";
+    $("#puntajeBox label").className+=" transition";
 }
 
 
@@ -63,7 +83,6 @@ function subirXMLArticulos() {
 }
 $(".btnComentar").onclick=function () {
     var msj=$(".areaComentar").value;
-    
-    articulo.agregarComentario(msj);
+    procesar(0,msj);
 };
 

@@ -22,6 +22,7 @@ body{
   margin: auto;
 }
 #layout-izquierda{
+    vertical-align: top;
   float: left;
   width: 65%;
   box-sizing: border-box;
@@ -41,6 +42,9 @@ body{
 
 
 /*CUADROS ARTICULOS GRANDES----------------------------------------------------------------------*/
+.aContenedorArticulo{
+    float: left;
+}
 .aContenedorArticulo, .aContenedorArticuloSmall {
   display: inline-block;
   position: relative;
@@ -51,6 +55,7 @@ body{
    text-decoration: none;
    color: black;
 }
+
 .aContenedorArticulo:hover .contenido{
   background-color: rgba(255, 248, 219, 1);
 }
@@ -66,10 +71,12 @@ body{
 }
 
 .aContenedorArticulo .contenido{
+    height: 300px;
   border-radius: 5px;
   background-color: #f1f1f1 ;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: relative;
+  
 }
 .aContenedorArticulo img{
   width: 100%;
@@ -131,6 +138,7 @@ body{
   color: rgb(27, 56, 176);
 }
 .aContenedorArticuloSmall img{
+    object-fit: cover;
   height: 60px;
   width: 60px;
   float: left;

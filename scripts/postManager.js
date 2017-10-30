@@ -1,3 +1,7 @@
+if(!localStorage.usuarioLogueado){
+    location.href="login.html";
+}
+
 var xmlDoc;
 var rutaImagen;
 $("#btnRealizado").onclick = function () {
@@ -77,12 +81,12 @@ function agregarArticulo() {
     nImg.appendChild(sImagen);
     nCategoria.appendChild(sCategoria);
     articulos = xmlDoc.getElementsByTagName("articulos");
-    var ultimo=articulos[0].getAttribute("ultimo");
+    var ultimo=parseInt(articulos[0].getAttribute("ultimo"));
     articulos[0].setAttribute("ultimo",ultimo+1);
 
     var articulo = xmlDoc.createElement("articulo");
     articulo.setAttribute("idArticulo", ultimo+1);
-    articulo.setAttribute("idUsuario", idUsuarioLoggeado);
+    articulo.setAttribute("idUsuario", localStorage.usuarioLogueado);
     articulo.appendChild(nTitulo);
     articulo.appendChild(nContenido);
     articulo.appendChild(nImg);

@@ -55,11 +55,11 @@ aside{
 }
 
 .divUsuario{
-    background-image: url("../images/imagen1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../images/imagen555.jpg");
+/*    background-repeat: no-repeat;
+    */background-size: contain;
     width: 75%;
-    height: 180px;
+    height: 210px;
     padding-top: 10px;
     margin: auto;
     /*padding-left: 15px;*/
@@ -95,7 +95,8 @@ aside{
     padding: 10px 10px;
     font-size: 18px;
     text-align: left;
-    color: #fff;
+    color: #333;
+    font-weight: bold;
 }
 
 #datosUsuario > p{
@@ -104,15 +105,20 @@ aside{
 }
 
 #divPuntosPosts{
-    width: 75%;
+    background-color: rgba(0,0,0,0.4); 
+    /*background-repeat: no-repeat;*/
+    /*background-size: auto;*/
+    width: 100%;
     height: 60px;
     text-align: center;
-    margin: auto;
-    background: #f0f3f9;
+    /*margin: auto;*/
+    /*background: #f0f3f9;*/
     /*display: block;*/
     /*margin-top: 10px;*/
     /*position: absolute;*/
-    border-radius: 0px 0px 10px 10px
+    /*border-radius: 0px 0px 10px 10px*/
+    vertical-align: bottom;
+   margin-top: 140px;
 }
 
 .ubicarDivsUsuario{
@@ -126,7 +132,7 @@ aside{
     display: inline-block;
     padding: 8px;
     font-size: 18px;
-    color: #1D5A72;
+    color: #fff;
     float: left; 
 }
 
@@ -216,102 +222,6 @@ hr{
 }
 
 
-
-
-
-
-/*No se usa esto*/ 
-
-
-
-#post1{
-    border: 1.5px solid teal;
-    margin-top: 30px;
-    width: 30%; 
-    text-align: center;
-    /*background: #f0f3f9;*/
-}
-
-#post1 > div{
-    display: block;
-    width: 95%;
-    /*border: 1px solid #000;*/
-    margin: auto;
-}
-
-.image{ 
-    position: relative; 
-    width: 95%;
-    background-image: url("../images/user.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 10px;
-    /*border: 1px solid #000;*/
-    height: 250px;
-}
-h2{ 
-    position: absolute; 
-    top: 60%; 
-    left: 0; 
-    width: 100%; 
-}
-h2 span{ 
-    color: white; 
-    font: bold 20px Helvetica, Sans-Serif;  
-    /*    background: rgb(0, 0, 0); */
-    background: rgba(0, 0, 0, 0.3); 
-    padding: 1px; 
-}
-
-.divDatosPost{
-    background: #f0f3f9;
-    height: 30px;
-    display: block;
-    text-align: center; 
-}
-.divDatosPost > div{
-    display: inline-block;
-}
-
-.datosPost{
-    display: inline-block;
-    margin-top: 5px;
-    margin-right: 5px;
-}
-
-.datosPost2{
-    font-size: 14px; 
-    margin-right: 15px;
-}
-
-#iconoCategoria{
-    background-image: url("../images/iconoCategoria.png");
-    width: 12px;
-    height: 12px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#iconoFecha{
-    background-image: url("../images/iconoFecha.png");
-    width: 12px;
-    height: 12px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#iconoPuntos{
-    background-image: url("../images/iconoPuntaje.jpg");
-    width: 12px;
-    height: 12px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#iconoAutor{
-    background-image: url("../images/iconoUsuario.png");
-    width: 12px;
-    height: 12px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 
 

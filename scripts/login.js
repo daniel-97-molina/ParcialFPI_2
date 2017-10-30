@@ -6,17 +6,21 @@ formulario.btnIniciar.onclick = function () {
     cargarXML3();
 };
 
-formulario.oninput = function (event) {
+
+formulario.oninput = function () {
 //    event.preventDefault();
-     validarInput(formulario.txtUsuario, "Ingrese su usuario o correo");
-    validarInput(formulario.txtPassword, "Ingrese su contraseña");
+     validar();
 //    event.preventDefault();
 };
+
+function validar() {
+    validarInput(formulario.txtUsuario, "Ingrese su usuario o correo");
+    validarInput(formulario.txtPassword, "Ingrese su contraseña");
+}
 
 
 
 //Para validar que el usuario exista
-
 
 function cargarXML3() {
     var xmlhttp = new XMLHttpRequest();
@@ -46,23 +50,31 @@ function cargarDatos3(xml) {
             existeUsuario = true;
             if (usuarios[i].getElementsByTagName("password")[0].childNodes[0].nodeValue == $("#txtPassword").value) {
                 passwordCorrecta = true;
+                
             }
         }
     }
 
-    if (existeUsuario === true) {
-        console.log("El usuario esta registrado");
-    } else if (existeUsuario === false) {
-        console.log("El usuario no esta registrado");
+    if (!$("#txtUsuario").value == "" && !$("#txtPassword").value == "") {
+        if (existeUsuario === true) {
+            if (passwordCorrecta === true) {
+
+                location.href = "inicio.html";
+
+            } else if (passwordCorrecta === false) {
+                $("#parrafoErrores").innerHTML = "La contraseña es incorrecta";
+                $("#parrafoErrores").style.display = "block";
+                $(".divImage").style.width = "105px";
+                $(".divImage").style.height = "105px";
+            }
+        } else if (existeUsuario === false) {
+            $("#parrafoErrores").innerHTML = "El usuario no esta registrado";
+            $("#parrafoErrores").style.display = "block";
+            $(".divImage").style.width = "105px";
+            $(".divImage").style.height = "105px";
+
+        }
     }
-
-    if (passwordCorrecta === true) {
-        console.log("La contrasenia es correcta");
-    } else if (passwordCorrecta === false) {
-        console.log("La contrasenia no es correcta");
-    }
-
-
 
 }
 

@@ -1,3 +1,7 @@
+if (localStorage.usuarioLogueado) {
+    location.href = "inicio.html";
+}
+
 var formulario = $("#formulario");
 
 formulario.btnIniciar.onclick = function () {

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<articulos>
+<?xml version="1.0" encoding="UTF-8"?><articulos>
   
   
   
@@ -17,4 +16,4 @@
   </comentarios>
   </articulo>
 
-<articulo><titulo>dssd</titulo><contenido>dsdsds</contenido><img>img</img><categoria>Politica</categoria></articulo><articulo><titulo>dd</titulo><contenido>dffd</contenido><img>img</img><categoria>Politica</categoria></articulo></articulos>
+<articulo><titulo>dssd</titulo><contenido>dsdsds</contenido><img>img</img><categoria>Politica</categoria></articulo><articulo><titulo>dd</titulo><contenido>dffd</contenido><img>img</img><categoria>Politica</categoria></articulo><articulo><titulo></titulo><contenido></contenido><img>payoneer.jpg</img><categoria>Deportes</categoria></articulo></articulos>

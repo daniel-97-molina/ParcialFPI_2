@@ -65,3 +65,22 @@ function generarDivArticuloSmall(){
 //  console.log(documentoXML);
 //  xmlhttp.send(documentoXML);
 //  }
+
+function Usuario(iId, sNombre, sCorreo, sPassword, cGenero, sImagen){
+    this.correo = sCorreo;
+    this.password = sPassword;
+    this.imagen = sImagen;
+    this.genero = cGenero;
+    Persona.call(this, iId ,sNombre);
+    
+//    if(typeOf(Usuario.prototype.__iniciado) === "undefined"){
+//        Usuario.prototype.
+//        Usuario.prototype.__iniciado = true;
+//    }
+} 
+
+ 
+function Persona(iId, sNombre){
+    this.id = iId;
+    this.nombre = sNombre;
+}

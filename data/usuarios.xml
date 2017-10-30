@@ -1,22 +1,2 @@
-<?xml version="1.0" encoding="UTF-8"?><usuarios>
-  <usuario>
-    <nombre>KevinDaniel</nombre>
-    <correo>molina@l.com</correo>
-    <password>HAHAHA</password>
-    <sexo>Masculino</sexo>
-  </usuario>
-
-<usuario>
-    <nombre>Maria</nombre>
-    <correo>vasquez@ghhkl.com</correo>
-    <password>Hola</password>
-    <sexo>Femenino</sexo>
-</usuario>
-<usuario>
-    <nombre>Nuevoooo</nombre>
-    <correo>correo@kdkdk.com</correo>
-    <password>586749</password>
-    <sexo>Masculino</sexo>
-</usuario>
-</usuarios>
-
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><usuarios ultimo="5">
+    <usuario id="8888" imagen="nadaaaa"><nombre>FFFFFFFFFFFFFFFF</nombre><correo>FFFFFFFFFFFFFFFFFFFFFF@g</correo><password>asdf</password><sexo>M</sexo></usuario><usuario id="8888" imagen="nadaaaa"><nombre>OOOOO</nombre><correo>OOOOO@O</correo><password>asdf</password><sexo>F</sexo></usuario><usuario id="8888" imagen="nadaaaa"><nombre>VVVVVVVVVVVVVVVVVVVVVVVVVVV</nombre><correo>u@g</correo><password>jajaja</password><sexo>F</sexo></usuario><usuario id="8888" imagen="nadaaaa"><nombre>NUMERO4</nombre><correo>NUM4@4</correo><password>4444</password><sexo>F</sexo></usuario><usuario id="8888" imagen="nadaaaa"><nombre>NUMERO4</nombre><correo>NUM4@4</correo><password>.........</password><sexo>F</sexo></usuario></usuarios>

@@ -1,15 +1,22 @@
 var formulario = $("#formulario");
 
 
-formulario.btnIniciar.onclick = function () {
+formulario.btnIniciar.onclick = function (event) {
+    
     validar();
+    
     cargarXML3();
+    
 };
+
+function validar(){
+    validarInput(formulario.txtUsuario, "Ingrese su usuario o correo");
+    validarInput(formulario.txtPassword, "Ingrese su contraseña");
+}
 
 formulario.oninput = function (event) {
 //    event.preventDefault();
-     validarInput(formulario.txtUsuario, "Ingrese su usuario o correo");
-    validarInput(formulario.txtPassword, "Ingrese su contraseña");
+     validar();
 //    event.preventDefault();
 };
 
@@ -46,6 +53,7 @@ function cargarDatos3(xml) {
             existeUsuario = true;
             if (usuarios[i].getElementsByTagName("password")[0].childNodes[0].nodeValue == $("#txtPassword").value) {
                 passwordCorrecta = true;
+                
             }
         }
     }

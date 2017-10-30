@@ -72,8 +72,8 @@ input{
     margin: auto;
     margin-top: 7%;
     width: 350px;
-    height: 350px;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 .formRegistro{
     width: 90%;

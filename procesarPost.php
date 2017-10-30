@@ -8,4 +8,5 @@ $fh = fopen('data/usuarios.xml', 'w');
 fwrite($fh, $xml);
 //closing the file handler
 fclose($fh);
-?>
+
+

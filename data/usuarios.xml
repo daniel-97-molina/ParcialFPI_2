@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><usuarios ultimo="5">
     <usuario id="1" imagen="nada.jpg">
         <nombre>Daniel2</nombre>
@@ -17,4 +18,4 @@
         <password>haha3</password>
         <sexo>M</sexo>
     </usuario>
-<usuario id="8888" imagen="nadaaaa"><nombre>Dan</nombre><correo>molina@hk.com</correo><password>sadf</password><sexo>M</sexo></usuario></usuarios>
+</usuarios>

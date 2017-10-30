@@ -66,6 +66,7 @@ function subirXML() {
 }
 
 function agregarUsuario() {
+
     var usuarios = xmlDoc.getElementsByTagName("usuarios");
 
     console.log("Entra aqui 2");

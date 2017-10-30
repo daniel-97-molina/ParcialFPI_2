@@ -1,28 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><articulos>
+<?xml version="1.0" encoding="UTF-8"?>
+<articulos>
   
   
-  <articulo idArticulo="1" idUsuario="5">
-    <titulo>
-    </titulo>
-    
-    <contenido>
-      </contenido>
   
-      <categoria>
-	
-	</categoria>
-   
-	<imagen>
-      
-      </imagen>
-      <comentarios>
-	
-	<comentario idUsuario="3">
-	  
-	  </comentario>
-	
-	</comentarios>
-   
-    </articulo>
   
-<articulo><titulo/><contenido/><img>img</img><categoria>Deportes</categoria></articulo><articulo><titulo>hsiasjiajiasjasiajsaissa</titulo><contenido>aksmasosoiksoksdpskpskapskapskassjhbxshxbsjanxakmsakmxax anaj</contenido><img>img</img><categoria>Politica</categoria></articulo><articulo><titulo>fd</titulo><contenido>dfd</contenido><img>img</img><categoria>Farándula</categoria></articulo><articulo><titulo>sdds</titulo><contenido>sdds</contenido><img>img</img><categoria>Politica</categoria></articulo><articulo><titulo>Prueba con imagen</titulo><contenido>Contenido, pues esto es muy importante, nunca lo olviden.</contenido><img>img</img><categoria>Farándula</categoria></articulo></articulos>
+  
+<articulo><titulo>tituloooo x3</titulo><contenido>contenido x3</contenido><img>img</img><categoria>Farándula</categoria></articulo>
+<articulo idArticulo="1" idUsuario="1">
+  <titulo>tituloooo x3</titulo>
+  <contenido>contenido x3</contenido>
+  <img>img</img>
+  <categoria>Farándula</categoria>
+  <comentarios>
+    <comentario idUsuario="1">
+    </comentario>
+  </comentarios>
+  </articulo>
+
+<articulo><titulo>dssd</titulo><contenido>dsdsds</contenido><img>img</img><categoria>Politica</categoria></articulo><articulo><titulo>dd</titulo><contenido>dffd</contenido><img>img</img><categoria>Politica</categoria></articulo></articulos>

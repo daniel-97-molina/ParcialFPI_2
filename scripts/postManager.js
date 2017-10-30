@@ -1,3 +1,7 @@
+if(!localStorage.usuarioLogueado){
+    location.href="login.html";
+}
+
 var xmlDoc;
 var rutaImagen;
 $("#btnRealizado").onclick = function () {
@@ -50,7 +54,7 @@ function cargarXML() {
 
 function imagen() {
     let form = $("#form");
-    
+
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("post", "imageHandler.php");
     xmlhttp.send(new FormData(form));
@@ -80,20 +84,25 @@ function agregarArticulo() {
     var nContenido = xmlDoc.createElement("contenido");
     var nImg = xmlDoc.createElement("img");
     var nCategoria = xmlDoc.createElement("categoria");
-
+    var tagComentarios = xmlDoc.createElement("comentarios");
 
     nTitulo.appendChild(sTitulo);
     nContenido.appendChild(sContenido);
     nImg.appendChild(sImagen);
     nCategoria.appendChild(sCategoria);
+    articulos = xmlDoc.getElementsByTagName("articulos");
+    var ultimo=parseInt(articulos[0].getAttribute("ultimo"));
+    articulos[0].setAttribute("ultimo",ultimo+1);
 
     var articulo = xmlDoc.createElement("articulo");
+    articulo.setAttribute("idArticulo", ultimo+1);
+    articulo.setAttribute("idUsuario", localStorage.usuarioLogueado);
     articulo.appendChild(nTitulo);
     articulo.appendChild(nContenido);
     articulo.appendChild(nImg);
     articulo.appendChild(nCategoria);
+    articulo.appendChild(tagComentarios);
 
-    articulos = xmlDoc.getElementsByTagName("articulos");
     articulos[0].appendChild(articulo);
     subirXMLArticulos();
     imagen();

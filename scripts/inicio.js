@@ -30,10 +30,23 @@ function cargarArticulos() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             xmlDocArticulos = xmlhttp.responseXML;
-            console.log(xmlDocArticulos);
             aArticulos = xmlDocArticulos.getElementsByTagName("articulo");
+            aUsuarios = xmlDocUsuarios.getElementsByTagName("usuario");
+            
             for(var i = aArticulos.length-1; i>=0; i--){
-                    $("#layout-izquierda").appendChild(generarDivArticuloBig(aArticulos[i]));
+                var sAutor="nadie";
+                
+                for(var j=0; j < aUsuarios.length; j++){
+                    
+                    console.log(aUsuarios[j]);
+                    if(aUsuarios[j].getAttribute("id")===aArticulos[i].getAttribute("idUsuario")){
+                        
+                        sAutor = "Autor: "+aUsuarios[j].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+                        break;
+                    }
+                }
+                    $("#layout-izquierda").appendChild(generarDivArticuloBig(aArticulos[i],sAutor));
+                    $("#contenedorDerecha").appendChild(generarDivArticuloSmall(aArticulos[i],sAutor));
             }
         }
     };
@@ -48,7 +61,7 @@ function cargarArticulos() {
 //    $("#contenedorDerecha").appendChild(generarDivArticuloSmall());
 //    $("#contenedorDerecha").appendChild(generarDivArticuloSmall());
 //    $("#contenedorDerecha").appendChild(generarDivArticuloSmall());
-//    $("#contenedorDerecha").appendChild(generarDivArticuloSmall());
+
 }
 
 

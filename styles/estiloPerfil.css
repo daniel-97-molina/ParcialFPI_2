@@ -6,7 +6,7 @@
 
 /*PARA PAGINA perfil.html*/
 body{
-        background: #e0e3e4;
+    background: #e0e3e4;
 }
 
 #contenedorUsuario{
@@ -43,7 +43,7 @@ aside{
     font-size: 25px;
     color: #1D5A72;
     font-weight: bold;
-    margin-left: 5%;
+
     display: block;
     margin: auto;
     margin-top: 2%;
@@ -58,7 +58,7 @@ aside{
     background-image: url("../images/imagen1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 75%;
+    width: 90%;
     height: 180px;
     padding-top: 10px;
     margin: auto;
@@ -74,7 +74,7 @@ aside{
     height: 150px;
     width: 150px;
     margin-top: 5px;
-    margin-left: 15px;
+    margin-left: 5%;
     /*display: inline-block;*/
     background-repeat: no-repeat;
     background-size: cover;
@@ -104,7 +104,7 @@ aside{
 }
 
 #divPuntosPosts{
-    width: 75%;
+    width: 90%;
     height: 60px;
     text-align: center;
     margin: auto;
@@ -148,14 +148,6 @@ aside{
     margin-left: 5%;
 }
 
-hr{
-    height: 3px;
-    background: teal;
-    border-style: inset;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
 
 #postsRelavantesUsuario{
     display: block;
@@ -164,7 +156,7 @@ hr{
     font-weight: bold;
     margin-left: 5%;
     margin-bottom: 10px;
-    
+
 }
 
 #contenedorUsuario > header{
@@ -187,18 +179,21 @@ hr{
 
 
 #divEntradasUsuario{
-    width: 95%;
-    margin: auto;
+    width: 90%;
+    margin:15px auto;
     text-align: center;
+    border-top: 5px dotted darksalmon;
     /*height: 30px;*/
 }
 
 #divEntradasUsuario > div{
-    background-image: url("../images/user.png");
-    width: 40%;
+    background-image: url("../images/icon_login.jpg");
+    width: 45%;
     height: 300px;
-    background-repeat: no-repeat;
+
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     margin: 10px;
     box-shadow: 1px 1px 20px 2px #ccc;
     display: inline-block;

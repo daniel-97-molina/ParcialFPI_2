@@ -11,34 +11,34 @@ function validarInput(input, mensaje) {
 }
 
 
-function generarDivArticuloBig(nArticulo) {
+function generarDivArticuloBig(nArticulo, sAutor) {
   var aGenerado = document.createElement("a");
-  aGenerado.setAttribute("href", "postViewer.html?id="+nArticulo.getAttribute("id"));
+  aGenerado.setAttribute("href", "postViewer.html?id="+nArticulo.getAttribute("idArticulo"));
   aGenerado.className = "aContenedorArticulo";
   aGenerado.innerHTML = `<div class="contenido">
       <div class="detalles">
-        <p>Autor -  fecha - puntos</p>
+        <p>${sAutor} -  fecha - puntos???</p>
       </div>
       <div class="categoria">
-        <p>Categoría</p>
+        <p>${nArticulo.getElementsByTagName("categoria")[0].childNodes[0].nodeValue}</p>
       </div>
-      <img src="images/a.jpg" alt="imagen-del-post">
-      <h3>Titulo de la publicacion publicada articulo</h3>
-      <p>cuerpo del articulo, mas texto makdkf aqui las primeras lineas de la publicacion unas cuantas palabras</p>
+      <img src="images/imagesArticulos/${nArticulo.getElementsByTagName("img")[0].childNodes[0].nodeValue}" alt="imagen-del-post">
+      <h3>${nArticulo.getElementsByTagName("titulo")[0].childNodes[0].nodeValue.substr(0,30)}</h3>
+      <p>${nArticulo.getElementsByTagName("contenido")[0].childNodes[0].nodeValue.substr(0,75)+"..."}</p>
     </div>
   `;
   return aGenerado;
 }
 
-function generarDivArticuloSmall(){
+function generarDivArticuloSmall(nArticulo, sAutor){
   var aGenerado = document.createElement("a");
-  aGenerado.setAttribute("href", "#");
+  aGenerado.setAttribute("href", "postViewer.html?id="+nArticulo.getAttribute("idArticulo"));
   aGenerado.className = "aContenedorArticuloSmall";
   aGenerado.innerHTML = `<div class="contenido">
-      <img src="images/a.jpg" alt="imagen-del-post">
-      <h3>Titulo de la publicacion publicada</h3>
+      <img src="images/imagesArticulos/${nArticulo.getElementsByTagName("img")[0].childNodes[0].nodeValue}" alt="imagen-del-post"">
+      <h3>${nArticulo.getElementsByTagName("titulo")[0].childNodes[0].nodeValue.substr(0,30)}</h3>
       <div class="detalles">
-        <p>Categoría - Autor - fecha - puntos</p>
+        <p>${nArticulo.getElementsByTagName("categoria")[0].childNodes[0].nodeValue} - ${sAutor} - fecha - puntos</p>
       </div>
     </div>
   `;

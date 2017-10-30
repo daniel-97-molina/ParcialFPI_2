@@ -21,6 +21,7 @@ main{
     border-radius: 10px;
     float: left;
     margin: 5px;
+    margin-top: 10px;
     padding: 5px;
     background: #fff;
 
@@ -32,6 +33,7 @@ aside{
     border-radius: 10px;
     float: left;
     margin: 5px;
+    margin-top: 10px;
     padding: 5px;
     background: #fff
 }
@@ -53,7 +55,7 @@ aside{
 }
 
 .divUsuario{
-    background-image: url("images/imagen1.jpg");
+    background-image: url("../images/imagen1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 75%;
@@ -68,7 +70,7 @@ aside{
 }
 
 #imagenUsuario{
-    background-image: url("images/login_icon.png");
+    background-image: url("../images/login_icon.png");
     height: 150px;
     width: 150px;
     margin-top: 5px;
@@ -88,11 +90,17 @@ aside{
     height: 150px;
     margin-left: 25px;
     margin-right: 20px;
+    margin-top: 10px;
     /*border: 2px solid activecaption;*/
-    padding: 5px 5px;
+    padding: 10px 10px;
     font-size: 18px;
     text-align: left;
     color: #fff;
+}
+
+#datosUsuario > p{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #divPuntosPosts{
@@ -126,10 +134,11 @@ aside{
     margin-bottom: 20px;
     /*border-radius: 0px 0px 0px 10px;*/
     border-right: 0.2px solid teal;
+    font-weight: bold;
 }
 
 #postsUsuario{
-    /*border-radius: 0px 0px 10px 0px;*/
+    font-weight: bold;
 }
 
 #spanTitulo2{
@@ -155,6 +164,7 @@ hr{
     font-weight: bold;
     margin-left: 5%;
     margin-bottom: 10px;
+    
 }
 
 #contenedorUsuario > header{
@@ -173,7 +183,7 @@ hr{
 
 
 
-
+/*Esto es solo para mostrar algo de contenido*/
 
 
 #divEntradasUsuario{
@@ -184,7 +194,7 @@ hr{
 }
 
 #divEntradasUsuario > div{
-    background-image: url("images/user.png");
+    background-image: url("../images/user.png");
     width: 40%;
     height: 300px;
     background-repeat: no-repeat;
@@ -197,7 +207,7 @@ hr{
 }   
 
 .agregarImagen{
-    background-image: url("images/user.png");
+    background-image: url("../images/user.png");
     width: 90%;
     height: 200px;
     background-repeat: no-repeat;
@@ -210,7 +220,7 @@ hr{
 
 
 
-
+/*No se usa esto*/ 
 
 
 
@@ -232,7 +242,7 @@ hr{
 .image{ 
     position: relative; 
     width: 95%;
-    background-image: url("images/user.png");
+    background-image: url("../images/user.png");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 10px;

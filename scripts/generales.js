@@ -46,22 +46,41 @@ function generarDivArticuloSmall(){
 }
 
 //DEVUELVE UN ARCHIVO XML - Parámetro: ruta del archivo
-function cargarXML(sRuta) {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      return this.responseXML;
-    }
-  };
-  xmlhttp.open("GET", sRuta, true);
-  xmlhttp.send();
+//function cargarXML(sRuta) {
+//  var xmlhttp = new XMLHttpRequest();
+//  xmlhttp.onreadystatechange = function() {
+//    if (this.readyState == 4 && this.status == 200) {
+//      return this.responseXML;
+//    }
+//  };
+//  xmlhttp.open("GET", sRuta, true);
+//  xmlhttp.send();
+//}
+//
+//
+//function subirXML(documentoXML,direccion) {
+//  var xmlhttp = new XMLHttpRequest();
+//  xmlhttp.open("POST", "procesarPost.php?direccion="+direccion, true);
+//  xmlhttp.setRequestHeader("Content-Type", "text/xml");
+//  console.log(documentoXML);
+//  xmlhttp.send(documentoXML);
+//  }
+
+function Usuario(iId, sNombre, sCorreo, sPassword, cGenero, sImagen){
+    this.correo = sCorreo;
+    this.password = sPassword;
+    this.imagen = sImagen;
+    this.genero = cGenero;
+    Persona.call(this, iId ,sNombre);
+    
+//    if(typeOf(Usuario.prototype.__iniciado) === "undefined"){
+//        Usuario.prototype.
+//        Usuario.prototype.__iniciado = true;
+//    }
+} 
+
+ 
+function Persona(iId, sNombre){
+    this.id = iId;
+    this.nombre = sNombre;
 }
-
-
-function subirXML(documentoXML,direccion) {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.open("POST", "procesarPost.php?direccion="+direccion, true);
-  xmlhttp.setRequestHeader("Content-Type", "text/xml");
-  console.log(documentoXML);
-  xmlhttp.send(documentoXML);
-  }

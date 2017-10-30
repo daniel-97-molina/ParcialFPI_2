@@ -4,6 +4,10 @@ body{
   background-color: #e0e3e4;
   font-family: Ubuntu;
 }
+.oculto{
+    display: none;
+}
+
 #btnCrearPublicacion{
   position: absolute;
   right: 10px;
@@ -134,4 +138,20 @@ body{
 }
 .aContenedorArticuloSmall .detalles{
   color: rgb(75, 75, 75);
+}
+
+.divUsuario{
+    position: relative;
+    top: 5px;
+    background-color: rgba(255,255,255,0.2);
+}
+.divUsuario h4{
+    display: inline-block;
+    color: white;
+    padding: 10px;
+}
+.divUsuario img{
+    float: right;
+    width: 50px;
+    height: 50px;
 }

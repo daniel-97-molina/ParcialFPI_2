@@ -14,13 +14,14 @@
               <input type="text" name="txtTitulo" id="txtTitulo" placeholder="Escribe el titulo del post" required maxlength="70">
 
           <label>Cuerpo</label>
-          <textarea name="contenido" placeholder="Escribe el contenido de tu post, puedes usar etiquetas html para dar formato (negrita,cursiva,h1,h2,etc)." required></textarea>
+          <textarea name="contenido" id="txtContenido" placeholder="Escribe el contenido de tu post, puedes usar etiquetas html para dar formato (negrita,cursiva,h1,h2,etc)." required></textarea>          
+
           </div>
 
           <aside>
 
               <label>Categoría</label>
-              <select>
+              <select id="lista">
                   <option>Deportes</option>
                   <option>Programación</option>
                   <option>Politica</option>
@@ -28,9 +29,8 @@
                   <option>Tecnología</option>
                   <option>Antropología</option>
               </select>
-
               <div class="contenedorAside">
-                  <label>Imagen en miniatura</label>
+                  <label>Imagen en miniatura<br><input name="files" type="file" accept="image/*" id="file" style="display: none"></label>
                   <div class="contenedorImagen"></div>
                   <p>Esta imagen servirá de vista previa de tu posteo en los listados de posts.</p>
               </div>
@@ -39,6 +39,7 @@
 
       </div>
       </form>
+      
       <script src="scripts/generales.js"></script>
       <script src="scripts/postManager.js"></script>
   </body>

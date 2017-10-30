@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <articulos ultimo="0">
- <articulo puntos="3"><titulo>tituloooo x3</titulo><contenido>contenido x3</contenido><img>img</img><categoria>Farándula</categoria></articulo>
-<articulo idArticulo="1" idUsuario="1" puntos="10">
-  <titulo>tituloooo x3</titulo>
-  <contenido>contenido x3</contenido>
-  <img>img</img>
-  <categoria>Farándula</categoria>
-  <comentarios>
-    <comentario idUsuario="1">
-    </comentario>
-  <comentario idUsuario="1">jksdjkdjskjsdskdjsjdsksdjksdssajsasjasasassasa</comentario>
-  </comentarios>
-  </articulo>
+ 
 </articulos>

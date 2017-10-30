@@ -62,7 +62,7 @@ input{
     width: 100%;   
 }
 
-#parrafoErrores, #parrafoError{
+#parrafoErrores{
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 10px;

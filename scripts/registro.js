@@ -1,4 +1,4 @@
-if(localStorage.usuarioLogueado){
+if (localStorage.usuarioLogueado) {
     location.href = "inicio.html";
 }
 
@@ -8,6 +8,7 @@ var usuarioActual;
 
 formulario.btnRegistrarme.onclick = function () {
     validar();
+    procesarInfo();
 };
 
 function validar() {
@@ -23,23 +24,23 @@ function validar() {
     }
 }
 
-formulario.onsubmit = function (event) {
-    event.preventDefault();
-    procesarInfo();
-    location.href = "inicio.html";
-};
+//formulario.onsubmit = function (event) {//le borre event
+////    event.preventDefault();
+//    procesarInfo();
+////    location.href = "inicio.html";
+//};
 
 
 function procesarInfo() {
 
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState === 4 && this.status === 200) {
-      procesar(this);
-    }
-  };
-  xmlhttp.open("GET", "data/usuarios.xml", true);
-  xmlhttp.send();
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            procesar(this);
+        }
+    };
+    xmlhttp.open("GET", "data/usuarios.xml", true);
+    xmlhttp.send();
 
 //  xmlhttp.upload.onload = function(){
 //        agregarUsuario();
@@ -51,7 +52,7 @@ function procesar(xml) {
     console.log("cargarXML:");
     console.log(xmlDoc);
     agregarUsuario();
-    
+
 }
 
 function subirXML() {
@@ -60,44 +61,98 @@ function subirXML() {
     xmlh.setRequestHeader("Content-Type", "text/xml");
     console.log(xmlDoc);
     xmlh.send(xmlDoc);
-    
-    
+
+
 }
 
 function agregarUsuario() {
-    usuarios = xmlDoc.getElementsByTagName("usuarios");
-    usuarios[0].setAttribute("ultimo",parseInt(usuarios[0].getAttribute("ultimo"))+1);
-    
-    usuarioActual = new Usuario(usuarios[0].getAttribute("ultimo"), $("#txtRegistroUsuario").value, $("#txtRegistroCorreo").value, $("#txtRegistroPassword").value,($("#radioMasculino").checked ? "M" : "F"));
-    
-    
-    window.localStorage.usuarioLogueado = usuarioActual.id;
-    
-    var sNombre = xmlDoc.createTextNode(usuarioActual.nombre);
-    var sCorreo = xmlDoc.createTextNode(usuarioActual.correo);
-    var sPassword = xmlDoc.createTextNode(usuarioActual.password);
-    var cGenero = xmlDoc.createTextNode(usuarioActual.genero);
+    var usuarios = xmlDoc.getElementsByTagName("usuarios");
 
-    var nNombre = xmlDoc.createElement("nombre");
-    var nCorreo = xmlDoc.createElement("correo");
-    var nPassword = xmlDoc.createElement("password");
-    var nSexo = xmlDoc.createElement("sexo");
+    console.log("Entra aqui 2");
+    //Irvin
+    var resultado = usuariosExistentes(xmlDoc.getElementsByTagName("usuario"));
+    if (resultado == true) {
+        console.log("Entra aqui 3");
+        usuarios[0].setAttribute("ultimo", parseInt(usuarios[0].getAttribute("ultimo")) + 1);
 
-    nNombre.appendChild(sNombre);
-    nCorreo.appendChild(sCorreo);
-    nPassword.appendChild(sPassword);
-    nSexo.appendChild(cGenero);
+        usuarioActual = new Usuario(usuarios[0].getAttribute("ultimo"), $("#txtRegistroUsuario").value, $("#txtRegistroCorreo").value, $("#txtRegistroPassword").value, ($("#radioMasculino").checked ? "M" : "F"));
 
-    nUsuario = xmlDoc.createElement("usuario");
-    nUsuario.setAttribute("id", "8888");
-    nUsuario.setAttribute("imagen", "nadaaaa");
-    nUsuario.appendChild(nNombre);
-    nUsuario.appendChild(nCorreo);
-    nUsuario.appendChild(nPassword);
-    nUsuario.appendChild(nSexo);
-    console.log(nUsuario);
 
-    usuarios[0].appendChild(nUsuario);
-    subirXML();
+        window.localStorage.usuarioLogueado = usuarioActual.id;
+
+        var sNombre = xmlDoc.createTextNode(usuarioActual.nombre);
+        var sCorreo = xmlDoc.createTextNode(usuarioActual.correo);
+        var sPassword = xmlDoc.createTextNode(usuarioActual.password);
+        var cGenero = xmlDoc.createTextNode(usuarioActual.genero);
+
+        var nNombre = xmlDoc.createElement("nombre");
+        var nCorreo = xmlDoc.createElement("correo");
+        var nPassword = xmlDoc.createElement("password");
+        var nSexo = xmlDoc.createElement("sexo");
+
+        nNombre.appendChild(sNombre);
+        nCorreo.appendChild(sCorreo);
+        nPassword.appendChild(sPassword);
+        nSexo.appendChild(cGenero);
+
+        nUsuario = xmlDoc.createElement("usuario");
+        nUsuario.setAttribute("id", "8888");
+        nUsuario.setAttribute("imagen", "nadaaaa");
+        nUsuario.appendChild(nNombre);
+        nUsuario.appendChild(nCorreo);
+        nUsuario.appendChild(nPassword);
+        nUsuario.appendChild(nSexo);
+        console.log(nUsuario);
+
+        usuarios[0].appendChild(nUsuario);
+        subirXML();
+    } else {
+        console.log("Entra aqui 4");
+        event.preventDefault();
+    }
+
 }
 
+//Irvin
+function usuariosExistentes(usuarios) {
+    var existeUsuario = false;
+    var existeCorreo = false;
+    var siguientePaso = false;
+
+    console.log("Entra aqui 1");
+
+    for (var i = 0; i < usuarios.length; i++) {
+
+        if (usuarios[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue == $("#txtRegistroUsuario").value) {
+            existeUsuario = true;
+            if (usuarios[i].getElementsByTagName("correo")[0].childNodes[0].nodeValue == $("#txtRegistroCorreo").value) {
+                existeCorreo = true;
+
+            }
+        }
+    }
+
+    if (!$("#txtRegistroUsuario").value == "" && !$("#txtRegistroCorreo").value == "") {
+        if (existeUsuario === false) {
+            if (existeCorreo === false) {
+
+//                location.href = "inicio.html";
+                siguientePaso = true;
+
+            } else if (existeCorreo === true) {
+                $("#parrafoError").innerHTML = "Este correo ya fue registrado";
+//                $("#parrafoError").style.display = "block";
+                console.log("Este correo ya fue registrado");
+
+            }
+        } else if (existeUsuario === true) {
+            $("#parrafoError").innerHTML = "Nombre de usuario no disponible";
+//            $("#parrafoError").style.display = "block";
+            console.log("Nombre de usuario no disponible");
+
+        }
+    }
+
+    return siguientePaso;
+
+}

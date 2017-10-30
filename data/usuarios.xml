@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><usuarios ultimo="5">
-    <usuario id="8888" imagen="nadaaaa"><nombre>FFFFFFFFFFFFFFFF</nombre><correo>FFFFFFFFFFFFFFFFFFFFFF@g</correo><password>asdf</password><sexo>M</sexo></usuario><usuario id="8888" imagen="nadaaaa"><nombre>OOOOO</nombre><correo>OOOOO@O</correo><password>asdf</password><sexo>F</sexo></usuario><usuario id="8888" imagen="nadaaaa"><nombre>VVVVVVVVVVVVVVVVVVVVVVVVVVV</nombre><correo>u@g</correo><password>jajaja</password><sexo>F</sexo></usuario><usuario id="8888" imagen="nadaaaa"><nombre>NUMERO4</nombre><correo>NUM4@4</correo><password>4444</password><sexo>F</sexo></usuario><usuario id="8888" imagen="nadaaaa"><nombre>NUMERO4</nombre><correo>NUM4@4</correo><password>.........</password><sexo>F</sexo></usuario></usuarios>
+    <usuario id="1" imagen="nada.jpg">
+        <nombre>Daniel2</nombre>
+        <correo>molina@hk.com</correo>
+        <password>haha</password>
+        <sexo>M</sexo>
+    </usuario>
+    <usuario id="2" imagen="nada.jpg">
+        <nombre>Maria2</nombre>
+        <correo>maria2@hk.com</correo>
+        <password>haha2</password>
+        <sexo>M</sexo>
+    </usuario>
+    <usuario id="3" imagen="nada.jpg">
+        <nombre>Kevin2</nombre>
+        <correo>kevin2@hk.com</correo>
+        <password>haha3</password>
+        <sexo>M</sexo>
+    </usuario>
+<usuario id="8888" imagen="nadaaaa"><nombre>Dan</nombre><correo>molina@hk.com</correo><password>sadf</password><sexo>M</sexo></usuario></usuarios>

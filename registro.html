@@ -13,7 +13,7 @@
           <p id="tituloFormulario">Únete al blog</p>
           <p id="parrafoError">Únete al blog</p>
             
-            <form class="formRegistro" id="formRegistro">
+          <form class="formRegistro" id="formRegistro" method="POST" onsubmit="return false">
                 <input type="text" id="txtRegistroUsuario" name="txtRegistroUsuario" placeholder="Nombre de Usuario" required
                        maxlength="50" pattern="[a-zA-Z0-9-_.]*">
                 <input type="email" id="txtRegistroCorreo" name="txtRegistroCorreo" placeholder="Correo electrónico" required maxlength="80">

@@ -1,16 +1,13 @@
 var formulario = $("#formulario");
 
-
 formulario.btnIniciar.onclick = function () {
     validar();
     cargarXML3();
+
 };
 
-
 formulario.oninput = function () {
-//    event.preventDefault();
-     validar();
-//    event.preventDefault();
+    validar();
 };
 
 function validar() {
@@ -50,7 +47,7 @@ function cargarDatos3(xml) {
             existeUsuario = true;
             if (usuarios[i].getElementsByTagName("password")[0].childNodes[0].nodeValue == $("#txtPassword").value) {
                 passwordCorrecta = true;
-                
+                localStorage.usuarioLogueado = usuarios[i].getAttribute("id");
             }
         }
     }
@@ -60,6 +57,8 @@ function cargarDatos3(xml) {
             if (passwordCorrecta === true) {
 
                 location.href = "inicio.html";
+                
+                
 
             } else if (passwordCorrecta === false) {
                 $("#parrafoErrores").innerHTML = "La contraseña es incorrecta";
@@ -74,7 +73,8 @@ function cargarDatos3(xml) {
             $(".divImage").style.height = "105px";
 
         }
+
     }
 
-}
 
+}

@@ -96,8 +96,8 @@ function agregarUsuario() {
         nSexo.appendChild(cGenero);
 
         nUsuario = xmlDoc.createElement("usuario");
-        nUsuario.setAttribute("id", "8888");
-        nUsuario.setAttribute("imagen", "nadaaaa");
+        nUsuario.setAttribute("id",usuarioActual.id);
+        nUsuario.setAttribute("imagen", "default.jpg");
         nUsuario.appendChild(nNombre);
         nUsuario.appendChild(nCorreo);
         nUsuario.appendChild(nPassword);

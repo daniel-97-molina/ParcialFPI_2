@@ -62,6 +62,12 @@ $("#btnRealizado").onclick = function (e) {
     cargarXML();
 
 };
+
+//codigo para las imagenes 
+$(".contenedorImagen").onclick = function () {
+    $("#file").click(console.log(""));
+};
+
 function agregarArticulo() {
     var sTitulo = xmlDoc.createTextNode($("#txtTitulo").value);
     var sContenido = xmlDoc.createTextNode($("#txtContenido").value);
@@ -87,6 +93,7 @@ function agregarArticulo() {
     var articulo = xmlDoc.createElement("articulo");
     articulo.setAttribute("idArticulo", ultimo+1);
     articulo.setAttribute("idUsuario", localStorage.usuarioLogueado);
+    articulo.setAttribute("puntos",0);
     articulo.appendChild(nTitulo);
     articulo.appendChild(nContenido);
     articulo.appendChild(nImg);

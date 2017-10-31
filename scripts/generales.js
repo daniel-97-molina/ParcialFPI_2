@@ -86,9 +86,9 @@ function Persona(iId, sNombre){
 }
 
 //codigo para las imagenes 
-$(".contenedorImagen").onclick = function () {
-    $("#file").click(console.log(""));
-};
+//$(".contenedorImagen").onclick = function () {
+//    $("#file").click(console.log(""));
+//};
 
 function imagen(ruta) {
     let form = $("#form");
@@ -97,3 +97,6 @@ function imagen(ruta) {
     xmlhttp.open("post", "imageHandler.php?ruta="+ruta);
     xmlhttp.send(new FormData(form));
 }
+
+
+    

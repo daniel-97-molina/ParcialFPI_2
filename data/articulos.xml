@@ -6,7 +6,7 @@
         <categoria>Deportes</categoria>
         <comentarios/>
     </articulo>
-    <articulo idArticulo="2" idUsuario="1" puntos="4">
+    <articulo idArticulo="2" idUsuario="1" puntos="14">
         <titulo>What is JSON?</titulo>
         <contenido>JSON stands for JavaScript Object Notation
             JSON is lightweight data interchange format
@@ -65,8 +65,15 @@
         <categoria>Deportes</categoria>
         <comentarios/>
     </articulo>
-<articulo idArticulo="10" idUsuario="4" puntos="0"><titulo>asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa</titulo><contenido>asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa
-asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa
-asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa
-asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa
-asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa</contenido><img>AlbumArtSmall.jpg</img><categoria>Farándula</categoria><comentarios/></articulo></articulos>
+    <articulo idArticulo="10" idUsuario="4" puntos="0">
+        <titulo>asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa</titulo>
+        <contenido>asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa
+            asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa
+            asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa
+            asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa
+            asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa</contenido>
+        <img>AlbumArtSmall.jpg</img>
+        <categoria>Farándula</categoria>
+        <comentarios/>
+    </articulo>
+</articulos>

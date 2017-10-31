@@ -147,6 +147,12 @@ body{
   margin: 0 10px;
 }
 .aContenedorArticuloSmall .detalles{
+    word-wrap: break-word;
   color: rgb(75, 75, 75);
+}
+.noEncontrado{
+    text-align: center;
+    font-size: 20px;
+    margin: 30px 0;
 }
 

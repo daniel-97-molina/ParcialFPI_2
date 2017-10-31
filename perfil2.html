@@ -3,24 +3,24 @@
     <head>
         <title>Blog</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/generales.css">
         <link rel="stylesheet" href="styles/estiloPerfil.css">
     </head>
     <body>
         <div id="contenedorUsuario">
             <header></header>
-
-            <main>
+            <div id="wrapper">
+            <main id="layout-izquierda">
                 <span id="spanTitulo1">Perfil de usuario</span>
                 <br>
 
                 <div class="divUsuario">
                     
-                        <div id="imagenUsuario" class="ubicarDivsUsuario contenedorImagen">
-                            <div>
+                        <div id="imagenUsuario" class="ubicarDivsUsuario">
+                       
 
                                 <label class="mensaje">Seleccionar imagen</label>
-                            </div>
+                            
 
 
                         </div>
@@ -64,20 +64,20 @@
                 </div>
             </main>
 
-            <aside>
-                <span id="postsRelavantesUsuario">Posts mas relevantes del usuario</span>
+                <aside id="layout-derecha">
+              
                 <div>
                     <div class="agregarImagen"></div>
-                    <h3>Titulo</h3>
-                    <p>Este es el contenido del post, ojala le guste, esta muy ieresante, se le invita a leerlo completo.</p>
+                   
                 </div>
             </aside>
-
+            </div>
             <footer></footer>
 
 
         </div>
-        <script src="scripts/usuario.js"></script>
         <script src="scripts/generales.js"></script>
+        <script src="scripts/usuario.js"></script>
+        
     </body>
 </html>

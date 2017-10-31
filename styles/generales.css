@@ -1,0 +1,149 @@
+@import "reset.css";
+
+body{
+  background-color: #e0e3e4;
+  font-family: Ubuntu;
+}
+.oculto{
+    display: none;
+}
+
+#btnCrearPublicacion{
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 35px;
+  width: 140px;
+}
+/*LAYOUT------------------------------------------------------------------------------------------*/
+#wrapper{
+  min-width: 800px;
+  max-width: 1100px;
+  margin: auto;
+}
+#layout-izquierda{
+    vertical-align: top;
+  float: left;
+  width: 65%;
+  box-sizing: border-box;
+  /*border-right: 15px solid rgba(0, 0, 0, 0);*/
+}
+#layout-derecha{
+  float: left;
+  width: 35%;
+}
+#contenedorDerecha{
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding-bottom: 5px;
+}
+
+
+/*CUADROS ARTICULOS GRANDES----------------------------------------------------------------------*/
+.aContenedorArticulo{
+    float: left;
+}
+.aContenedorArticulo, .aContenedorArticuloSmall {
+  display: inline-block;
+  position: relative;
+   width: 33%;
+   box-sizing: border-box;
+   border-right: 10px solid rgba(0,0,0,0);
+   border-top: 10px solid rgba(0,0,0,0);
+   text-decoration: none;
+   color: black;
+}
+
+.aContenedorArticulo:hover .contenido{
+  background-color: rgba(255, 248, 219, 1);
+}
+.aContenedorArticulo:hover img{
+  filter: brightness(140%);
+}
+
+.aContenedorArticulo:hover div{
+  z-index: 1;
+}
+.aContenedorArticulo:hover h3{
+  text-decoration: underline;
+}
+
+.aContenedorArticulo .contenido{
+    height: 300px;
+  border-radius: 5px;
+  background-color: #f1f1f1 ;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  
+}
+.aContenedorArticulo img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+.aContenedorArticulo .categoria{
+  background-color: teal;
+  display: inline-block;
+  min-width: 120px;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  position: absolute;
+}
+.aContenedorArticulo .detalles{
+  position: absolute;
+  font-size: 12px;
+  top: 145px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+}
+.aContenedorArticulo h3{
+  font-size: 18px;
+  padding: 5px 10px;
+}
+.aContenedorArticulo .contenido > p {
+  padding: 10px;
+  color: rgb(51, 51, 51);
+  font-size: 14px;
+}
+
+.barra {
+  position: relative;
+  padding: 10px;
+  color: white;
+  background-color: rgb(190, 56, 56);
+}
+.barraDerecha{
+  background-color: rgb(58, 116, 184);
+}
+
+/*CUADROS ARTICULOS PEQUEÑO-------------------------------------------------------------------------------*/
+
+.aContenedorArticuloSmall{
+  width: 100%;
+  font-size: 15px;
+  margin: 0;
+}
+.aContenedorArticuloSmall:hover{
+  background-color: rgb(231, 232, 224);
+}
+.aContenedorArticuloSmall h3{
+  padding-bottom: 8px;
+}
+.aContenedorArticuloSmall:hover h3{
+  color: rgb(27, 56, 176);
+}
+.aContenedorArticuloSmall img{
+    object-fit: cover;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 0 10px;
+}
+.aContenedorArticuloSmall .detalles{
+  color: rgb(75, 75, 75);
+} 

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<usuarios ultimo="13">
-    <usuario id="1" imagen="default.jpg">
+<?xml version="1.0" encoding="UTF-8"?><usuarios ultimo="6">
+    <usuario id="1" imagen="a.jpg">
         <nombre>Daniel2</nombre>
         <correo>molina@hk.com</correo>
         <password>haha</password>
@@ -18,4 +17,16 @@
         <password>haha3</password>
         <sexo>M</sexo>
     </usuario>
-</usuarios>
+    <usuario id="4" imagen="default.jpg">
+        <nombre>hola</nombre>
+        <correo>hola@hola</correo>
+        <password>hola</password>
+        <sexo>M</sexo>
+    </usuario>
+    <usuario id="5" imagen="default.jpg">
+        <nombre>a</nombre>
+        <correo>a@a</correo>
+        <password>a</password>
+        <sexo>M</sexo>
+    </usuario>
+<usuario id="6" imagen="hi.jpg"><nombre>hola2</nombre><correo>hola@gmail</correo><password>hola</password><sexo>M</sexo></usuario></usuarios>

@@ -30,7 +30,7 @@ function generarDivArticuloBig(nArticulo, sAutor) {
   return aGenerado;
 }
 
-function generarDivArticuloSmall(nArticulo, sAutor){
+function generarDivArticuloSmall(nArticulo, sAutor){//?id=1&otro=3
   var aGenerado = document.createElement("a");
   aGenerado.setAttribute("href", "postViewer.html?id="+nArticulo.getAttribute("idArticulo"));
   aGenerado.className = "aContenedorArticuloSmall";
@@ -86,11 +86,9 @@ function Persona(iId, sNombre){
 }
 
 //codigo para las imagenes 
-$(".contenedorImagen").onclick = function () {
-    $("#file").click(console.log(""));
-};
 
-function imagen(ruta) {
+
+function imagen(ruta) {//codigo para enviar la imagen al servidor
     let form = $("#form");
 
     var xmlhttp = new XMLHttpRequest();

@@ -9,7 +9,9 @@ $("#btnRealizado").onclick = function () {
     validarInput(form.txtTitulo, "Ingresa el titulo del post");
     validarInput(form.contenido, "Ingresa el contenido de tu post");
 };
-
+$(".contenedorImagen").onclick = function () {
+    $("#file").click(console.log(""));
+};
 $("#file").onchange = function (e) {
     var permitida = false;
     var x = ["image/jpg", "image/png", "image/jpeg"];
@@ -95,7 +97,7 @@ function agregarArticulo() {
 
     articulos[0].appendChild(articulo);
     subirXMLArticulos();
-    imagen("imagesPerfil");
+    imagen("imagesArticulos");
 }
 
 

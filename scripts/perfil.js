@@ -22,6 +22,13 @@ function cargarDatos2(xml, idUsuario, imagen) {
 
     var usuarios = [];
     usuarios = xmlDoc.getElementsByTagName("usuario");
+
+    //Irvin
+    var usuarioActual = xmlDoc.getElementsByTagName("usuario")[localStorage.usuarioLogueado - 1];
+    $("#divUsuario img").setAttribute("src", "images/imagesPerfil/" + usuarioActual.getAttribute("imagen"));
+    $("#divUsuario h4").innerHTML = usuarioActual.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+
+
     if (imagen) {
         usuarios[idUsuario].setAttribute("imagen", rutaImagen);
     } else {

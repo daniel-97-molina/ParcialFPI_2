@@ -99,4 +99,27 @@ function imagen(ruta) {
 }
 
 
-    
+ //Metodod de header
+ $("#divUsuario").onclick = function () {
+    if ($("#menuUsuario").className === "oculto") {
+        $("#menuUsuario").className = "";
+    } else {
+        $("#menuUsuario").className = "oculto";
+    }
+};
+
+$("#btnCerrarSesion").onclick = function () {
+    localStorage.removeItem("usuarioLogueado");
+    location.reload();
+};
+
+$("#btnPerfil").onclick = function () {
+    location.href = "perfil.html?id=" + localStorage.usuarioLogueado;
+};
+
+$("#btnIniciarSesion").onclick = function () {
+    location.href = "login.html";
+};
+$("#btnRegistrarme").onclick = function () {
+    location.href = "registro.html";
+};

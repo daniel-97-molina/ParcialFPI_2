@@ -46,7 +46,8 @@ function cargarArticulos() {
                     }
                 }
                     $("#layout-izquierda").appendChild(generarDivArticuloBig(aArticulos[i],sAutor));
-                    $("#contenedorDerecha").appendChild(generarDivArticuloSmall(aArticulos[i],sAutor));
+                    //$("#contenedorDerecha").appendChild(generarDivArticuloSmall(aArticulos[i],sAutor));
+                    
             }
         }
     };

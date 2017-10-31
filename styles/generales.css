@@ -26,7 +26,6 @@ body{
   float: left;
   width: 65%;
   box-sizing: border-box;
-  /*border-right: 15px solid rgba(0, 0, 0, 0);*/
 }
 #layout-derecha{
   float: left;
@@ -119,6 +118,10 @@ body{
 }
 .barraDerecha{
   background-color: rgb(58, 116, 184);
+}
+.barraIzquierda{
+      margin-right: 18px;
+
 }
 
 /*CUADROS ARTICULOS PEQUEÑO-------------------------------------------------------------------------------*/

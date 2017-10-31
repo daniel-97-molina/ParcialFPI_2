@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Blog</title>
+        <title>Perfil</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="styles/generales.css">
+        <link rel="icon" type="image/jpg" href="images/logo2.jpg"/>
+        <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/estiloPerfil.css">
+        <link rel="stylesheet" href="styles/generales.css">
+        <link rel="stylesheet" href="styles/header.css">
     </head>
     <body>
+        <header>
+            <div id="logo"></div>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="#">Categorías</a>
+                    <ul>
+                        <li><a href="categoria.html?cat=Arte">Arte</a></li>
+                        <li><a href="categoria.html?cat=Tecnología">Tecnología</a></li>
+                        <li><a href="categoria.html?cat=Ciencia">Ciencia</a></li>
+                        <li><a href="categoria.html?cat=Entretenimiento">Entretenimiento</a></li>
+                        <li><a href="categoria.html?cat=Espectáculos">Espectáculos</a></li>
+                        <li><a href="categoria.html?cat=Deportes">Deportes</a></li>
+                        <li><a href="categoria.html?cat=Economía">Economía</a></li>
+                        <li><a href="categoria.html?cat=Noticias">Noticias</a></li>
+                        <li><a href="categoria.html?cat=Política">Política</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">Acerca de</a></li>
+            </ul>
+            <div id="divBotonesLogin" class="oculto">
+                <input id="btnIniciarSesion" class="botonTransparente" type="button" value="Iniciar Sesión" >
+                <input id="btnRegistrarme" class="botonTransparente" type="button" value="Registrarme" >
+            </div>
+            <div id="divUsuario" class="">
+                <img src="images/icon_login.jpg" alt="usuario">
+                <h4></h4>
+                <div id="divMenuUsuario">
+                    <ul id="menuUsuario" class="oculto">
+                        <li><a id="btnPerfil">Mi perfil</a></li>
+                        <li><a id="btnCerrarSesion">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
         <div id="contenedorUsuario">
-            <header></header>
             <div id="wrapper">
             <main id="layout-izquierda">
                 <span id="spanTitulo1">Perfil de usuario</span>
@@ -77,7 +114,7 @@
 
         </div>
         <script src="scripts/generales.js"></script>
-        <script src="scripts/usuario.js"></script>
-        
+        <!--script src="scripts/inicio.js"></script-->
+        <script src="scripts/perfil.js"></script>
     </body>
 </html>

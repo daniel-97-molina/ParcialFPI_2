@@ -33,6 +33,11 @@ $("#imagenUsuario").onclick = function () {
 function cargarDatos2(xml, idUsuario) {
     xmlDocUsuarios = xml.responseXML;
     usuarios = xmlDocUsuarios.getElementsByTagName("usuario");
+    
+      var usuarioActual = usuarios[localStorage.usuarioLogueado - 1];
+    $("#divUsuario img").setAttribute("src", "images/imagesPerfil/" + usuarioActual.getAttribute("imagen"));
+    $("#divUsuario h4").innerHTML = usuarioActual.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+    
     var nombre = usuarios[idUsuario].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
     var correo = usuarios[idUsuario].getElementsByTagName("correo")[0].childNodes[0].nodeValue;
     var genero = usuarios[idUsuario].getElementsByTagName("sexo")[0].childNodes[0].nodeValue;

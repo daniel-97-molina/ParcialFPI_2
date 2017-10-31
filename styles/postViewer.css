@@ -5,18 +5,18 @@
 body{
     background-color: #e0e3e4;
 }
-li{
+#ul li{
 
     display: inline;
     text-align: center;
     background-color: #ccc;
 }
-ul{
+#ul{
 
     height: 100%;
     margin: 0;
 }
-li a{
+#ul li a{
     padding: 5px 10px;
     color: #666;
     background-color: #eeeeee;
@@ -62,7 +62,7 @@ li a{
     height: 300px;
 }
 
-li a:hover{
+#ul li a:hover{
     background-color: #0066ff;
     color: #fff;
     cursor: pointer;
@@ -124,7 +124,7 @@ main{
 
 
 }
-li a,.cajaPuntos{
+#ul li a,.cajaPuntos{
     color: #0066ff;
 }
 #puntajeBox{

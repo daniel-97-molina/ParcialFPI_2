@@ -84,43 +84,7 @@ function cargarArticulos() {
     xmlhttp.open("GET", "data/articulos.xml", true);
     xmlhttp.send();
 
-
-//    $("#layout-izquierda").appendChild(generarDivArticuloBig());
-//    $("#layout-izquierda").appendChild(generarDivArticuloBig());
-//    $("#layout-izquierda").appendChild(generarDivArticuloBig());
-//    $("#layout-izquierda").appendChild(generarDivArticuloBig());
-//    $("#contenedorDerecha").appendChild(generarDivArticuloSmall());
-//    $("#contenedorDerecha").appendChild(generarDivArticuloSmall());
-//    $("#contenedorDerecha").appendChild(generarDivArticuloSmall());
-
 }
-
-
-
-$("#divUsuario").onclick = function () {
-    if ($("#menuUsuario").className === "oculto") {
-        $("#menuUsuario").className = "";
-    } else {
-        $("#menuUsuario").className = "oculto";
-    }
-};
-
-$("#btnCerrarSesion").onclick = function () {
-    localStorage.removeItem("usuarioLogueado");
-    location.reload();
-};
-
-$("#btnPerfil").onclick = function () {
-    location.href = "perfil2.html?id=" + localStorage.usuarioLogueado;
-};
-
-$("#btnIniciarSesion").onclick = function () {
-    location.href = "login.html";
-};
-$("#btnRegistrarme").onclick = function () {
-    location.href = "registro.html";
-};
-
 $("#btnCrearPublicacion").onclick = function () {
     if (localStorage.usuarioLogueado) {
         location.href = "postManager.html";

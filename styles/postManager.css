@@ -50,7 +50,7 @@ textArea{
     min-height: 80%;
     font-size: 18px;
 }
-aside{
+#aside{
     
     text-align: center;
     height: 100%;
@@ -81,7 +81,7 @@ label{
     border: 1px solid #ccc;
    margin-bottom: 35px;
 }
-p{
+.texto{
     text-align: justify;
     padding: 15px 5px;
     height: 26%;

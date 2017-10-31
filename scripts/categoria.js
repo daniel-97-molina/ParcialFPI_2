@@ -117,3 +117,13 @@ function cargarArticulos() {
     xmlhttp.send();
 
 }
+
+
+
+$("#btnCrearPublicacion").onclick = function () {
+    if (localStorage.usuarioLogueado) {
+        location.href = "postManager.html";
+    } else {
+        location.href = "login.html";
+    }
+};

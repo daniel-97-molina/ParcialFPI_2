@@ -2,13 +2,50 @@
 
 <html>
     <head>
-        <title>Post</title>
+        <title>Publicación</title>
         <meta charset="utf-8">
+        <link rel="icon" type="image/jpg" href="images/logo2.jpg"/>
         <link rel="stylesheet" href="styles/postViewer.css">
         <link rel="stylesheet" href="styles/reset.css">
-
+        <link rel="stylesheet" href="styles/generales.css">
+        <link rel="stylesheet" href="styles/header.css">
     </head>
     <body>
+        <header>
+            <div id="logo"></div>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="#">Categorías</a>
+                    <ul>
+                        <li><a href="categoria.html?cat=Arte">Arte</a></li>
+                        <li><a href="categoria.html?cat=Tecnología">Tecnología</a></li>
+                        <li><a href="categoria.html?cat=Ciencia">Ciencia</a></li>
+                        <li><a href="categoria.html?cat=Entretenimiento">Entretenimiento</a></li>
+                        <li><a href="categoria.html?cat=Espectáculos">Espectáculos</a></li>
+                        <li><a href="categoria.html?cat=Deportes">Deportes</a></li>
+                        <li><a href="categoria.html?cat=Economía">Economía</a></li>
+                        <li><a href="categoria.html?cat=Noticias">Noticias</a></li>
+                        <li><a href="categoria.html?cat=Política">Política</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">Acerca de</a></li>
+            </ul>
+            <div id="divBotonesLogin" class="oculto">
+                <input id="btnIniciarSesion" class="botonTransparente" type="button" value="Iniciar Sesión" >
+                <input id="btnRegistrarme" class="botonTransparente" type="button" value="Registrarme" >
+            </div>
+            <div id="divUsuario" class="">
+                <img src="images/icon_login.jpg" alt="usuario">
+                <h4></h4>
+                <div id="divMenuUsuario">
+                    <ul id="menuUsuario" class="oculto">
+                        <li><a id="btnPerfil">Mi perfil</a></li>
+                        <li><a id="btnCerrarSesion">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
         <div id="all">
             <main>
                 <section id="sectionContenido">
@@ -58,7 +95,7 @@
                         </div>
                         
                         <div id="contenidoComentarios">
-                                
+
                         </div>
 
                         <div class="boxContainer">
@@ -79,16 +116,19 @@
 
             
         </div>
+        
         <div id="modal">
             <p>Identificate como usuario para realizar la acción.</p>
             <div id="contenedor-botones-modal">
             <button id="cerrarModal" class="btnModal">Cerrar</button>
             <button id="loginModal" class="btnModal">Iniciar Sesión</button>
             </div>
+
         </div>
-<script src="scripts/generales.js"></script>
+        
+        <script src="scripts/generales.js"></script>
+        <!--script src="scripts/inicio.js"></script-->
         <script src="scripts/postViewer.js"></script>
-      
 
     </body>
 </html>

@@ -104,9 +104,7 @@ function imagen(ruta) {//codigo para enviar la imagen al servidor
 
 
 
-
 //MÉTODOS DEL HEADER
-
 $("#divUsuario").onclick = function () {
     if ($("#menuUsuario").className === "oculto") {
         $("#menuUsuario").className = "";
@@ -121,7 +119,7 @@ $("#btnCerrarSesion").onclick = function () {
 };
 
 $("#btnPerfil").onclick = function () {
-    location.href = "perfil2.html?id=" + localStorage.usuarioLogueado;
+    location.href = "perfil.html?id=" + localStorage.usuarioLogueado;
 };
 
 $("#btnIniciarSesion").onclick = function () {
@@ -131,16 +129,3 @@ $("#btnRegistrarme").onclick = function () {
     location.href = "registro.html";
 };
 
-$("#btnCrearPublicacion").onclick = function () {
-    if (localStorage.usuarioLogueado) {
-        location.href = "postManager.html";
-    } else {
-        location.href = "login.html";
-    }
-};
-
-
-
-
-
-    

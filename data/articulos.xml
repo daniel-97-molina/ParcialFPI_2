@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><articulos ultimo="8">
-    <articulo idArticulo="1" idUsuario="1">
+<?xml version="1.0" encoding="UTF-8"?><articulos ultimo="10">
+    <articulo idArticulo="1" idUsuario="1" puntos="2">
         <titulo>asdf</titulo>
         <contenido>s un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).</contenido>
         <img>kde-back.png</img>
         <categoria>Deportes</categoria>
         <comentarios/>
     </articulo>
-    <articulo idArticulo="2" idUsuario="1" puntos="5">
+    <articulo idArticulo="2" idUsuario="1" puntos="4">
         <titulo>What is JSON?</titulo>
         <contenido>JSON stands for JavaScript Object Notation
             JSON is lightweight data interchange format
@@ -16,32 +16,57 @@
         <categoria>Tecnologia</categoria>
         <comentarios/>
     </articulo>
-    <articulo idArticulo="3" idUsuario="1">
+    <articulo idArticulo="3" idUsuario="1" puntos="6">
         <titulo>Nueva pub</titulo>
         <contenido>El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados. Las secciones 1.10.32 y 1.10.33 de "de Finibus Bonorum et Malorum" por Cicero son también reproducidas en su forma original exacta, acompañadas por versiones en Inglés de la traducción realizada en 1914 por H. Rackham.</contenido>
         <img>Selection_002.png</img>
         <categoria>Espectaculos</categoria>
         <comentarios/>
     </articulo>
-    <articulo idArticulo="4" idUsuario="1">
+    <articulo idArticulo="4" idUsuario="1" puntos="8">
         <titulo>El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es </titulo>
         <contenido>El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados. Las secciones 1.10.32 y 1.10.33 de "de Finibus Bonorum et Malorum" por Cicero son también reproducidas en su forma original exacta, acompañadas por versiones en Inglés de la traducción realizada en 1914 por H. Rackham.</contenido>
         <img>Selection_016.png</img>
         <categoria>Tecnologia</categoria>
         <comentarios/>
     </articulo>
-    <articulo idArticulo="5" idUsuario="1">
+    <articulo idArticulo="5" idUsuario="1" puntos="10">
         <titulo>asdfkdkdkdkdk dkdkd dkdksk a dfkaskfasdkf assfalk alsdf</titulo>
         <contenido>Cras lorem augue, imperdiet sit amet fermentum sed, auctor ac enim. Etiam tincidunt tellus quam, non commodo sapien gravida nec. Cras ut sagittis ante. Nullam sollicitudin lorem orci. Quisque ante mauris, accumsan sed justo et, hendrerit laoreet erat. Mauris at nulla quis tortor elementum ornare quis imperdiet ligula. Sed viverra nisl sit amet risus egestas, id aliquam mauris tempus. Maecenas tincidunt pharetra lorem sed dignissimCras lorem augue, imperdiet sit amet fermentum sed, auctor ac enim. Etiam tincidunt tellus quam, non commodo sapien gravida nec. Cras ut sagittis ante. Nullam sollicitudin lorem orci. Quisque ante mauris, accumsan sed justo et, hendrerit laoreet erat. Mauris at nulla quis tortor elementum ornare quis imperdiet ligula. Sed viverra nisl sit amet risus egestas, id aliquam mauris tempus. Maecenas tincidunt pharetra lorem sed dignissim</contenido>
         <img>TIEMPOINICIO.png</img>
         <categoria>Deportes</categoria>
         <comentarios/>
     </articulo>
-    <articulo idArticulo="6" idUsuario="1">
+    <articulo idArticulo="6" idUsuario="1" puntos="12">
         <titulo>asdf</titulo>
         <contenido>asdf</contenido>
         <img>50.png</img>
         <categoria>Deportes</categoria>
         <comentarios/>
     </articulo>
-<articulo idArticulo="7" idUsuario="2"><titulo>Este es otro post</titulo><contenido>eso fue hecho por Daniel...blabla</contenido><img>AlbumArtSmall.jpg</img><categoria>Antropología</categoria><comentarios/></articulo><articulo idArticulo="8" idUsuario="2"><titulo>post hecho por danielM</titulo><contenido>este post fue hecho por el usuario DanielRamirez</contenido><img>AlbumArtSmall.jpg</img><categoria>Antropología</categoria><comentarios/></articulo></articulos>
+    <articulo idArticulo="7" idUsuario="2" puntos="14">
+        <titulo>Este es otro post</titulo>
+        <contenido>eso fue hecho por Daniel...blabla</contenido>
+        <img>AlbumArtSmall.jpg</img>
+        <categoria>Antropología</categoria>
+        <comentarios/>
+    </articulo>
+    <articulo idArticulo="8" idUsuario="2" puntos="16">
+        <titulo>post hecho por danielM</titulo>
+        <contenido>este post fue hecho por el usuario DanielRamirez</contenido>
+        <img>AlbumArtSmall.jpg</img>
+        <categoria>Antropología</categoria>
+        <comentarios/>
+    </articulo>
+    <articulo idArticulo="9" idUsuario="2" puntos="0">
+        <titulo>Titulonamhjdjsj</titulo>
+        <contenido>hahahahahahahahahahahhahhahahahahhahha</contenido>
+        <img>1.png</img>
+        <categoria>Deportes</categoria>
+        <comentarios/>
+    </articulo>
+<articulo idArticulo="10" idUsuario="4" puntos="0"><titulo>asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa</titulo><contenido>asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa
+asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa
+asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa
+asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa
+asdf jjajdalkf akasflas flakfaskfa alfasklfaksf afla dfa</contenido><img>AlbumArtSmall.jpg</img><categoria>Farándula</categoria><comentarios/></articulo></articulos>

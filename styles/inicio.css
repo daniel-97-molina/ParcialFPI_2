@@ -76,7 +76,7 @@ body{
   background-color: #f1f1f1 ;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   position: relative;
-  
+  word-wrap: break-word;
 }
 .aContenedorArticulo img{
   width: 100%;
@@ -94,6 +94,8 @@ body{
   position: absolute;
 }
 .aContenedorArticulo .detalles{
+    width: 100%;
+    word-wrap: break-word;
   position: absolute;
   font-size: 12px;
   top: 145px;

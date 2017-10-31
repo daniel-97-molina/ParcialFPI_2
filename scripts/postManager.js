@@ -9,16 +9,13 @@ $("#btnRealizado").onclick = function () {
     validarInput(form.txtTitulo, "Ingresa el titulo del post");
     validarInput(form.contenido, "Ingresa el contenido de tu post");
 };
-$(".contenedorImagen").onclick = function () {
-    $("#file").click(console.log(""));
-};
+
 $("#file").onchange = function (e) {
     var permitida = false;
     var x = ["image/jpg", "image/png", "image/jpeg"];
     var archivo = e.target.files;
     for (var i = 0; i < x.length; i++) {
         if (archivo[0].type === x[i]) {
-            //console.log(archivo[0].name);
             rutaImagen = archivo[0].name;
             permitida = true;
         }
@@ -39,7 +36,6 @@ $("#file").onchange = function (e) {
     }
 };
 
-
 function cargarXML() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -52,13 +48,7 @@ function cargarXML() {
     xmlhttp.send();
 }
 
-function imagen() {
-    let form = $("#form");
 
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("post", "imageHandler.php");
-    xmlhttp.send(new FormData(form));
-}
 function subirXMLArticulos() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "procesarPostArticulo.php", true);
@@ -72,6 +62,12 @@ $("#btnRealizado").onclick = function (e) {
     cargarXML();
 
 };
+
+//codigo para las imagenes 
+$(".contenedorImagen").onclick = function () {
+    $("#file").click(console.log(""));
+};
+
 function agregarArticulo() {
     var sTitulo = xmlDoc.createTextNode($("#txtTitulo").value);
     var sContenido = xmlDoc.createTextNode($("#txtContenido").value);
@@ -97,6 +93,7 @@ function agregarArticulo() {
     var articulo = xmlDoc.createElement("articulo");
     articulo.setAttribute("idArticulo", ultimo+1);
     articulo.setAttribute("idUsuario", localStorage.usuarioLogueado);
+    articulo.setAttribute("puntos",0);
     articulo.appendChild(nTitulo);
     articulo.appendChild(nContenido);
     articulo.appendChild(nImg);
@@ -105,7 +102,7 @@ function agregarArticulo() {
 
     articulos[0].appendChild(articulo);
     subirXMLArticulos();
-    imagen();
+    imagen("imagesPerfil");
 }
 
 

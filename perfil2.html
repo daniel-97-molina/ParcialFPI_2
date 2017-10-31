@@ -15,7 +15,20 @@
                 <br>
 
                 <div class="divUsuario">
-                    <div id="imagenUsuario" class="ubicarDivsUsuario"></div>
+                    
+                        <div id="imagenUsuario" class="ubicarDivsUsuario contenedorImagen">
+                            <div>
+
+                                <label class="mensaje">Seleccionar imagen</label>
+                            </div>
+
+
+                        </div>
+                        <form id="form">
+                            <input name="files" type="file" accept="image/*" id="file" style="display: none">
+                           
+                        </form>  
+                   
 
                     <div id="datosUsuario" class="ubicarDivsUsuario">
                         <p id="nombreUsuario"></p>
@@ -25,24 +38,23 @@
 
 
                     <div id="divPuntosPosts">
-                        <div id="puntosUsuario" class="ubicarPuntosPosts">
-                            <label>Puntos: <br><b>79</b></label>
+                        <div class="contenedor">
 
+                            <div id="puntosUsuario" class="ubicarPuntosPosts">
+                                <label>Puntos: <br><b>79</b></label>
+
+                            </div>
+
+                            <div id="postsUsuario" class="ubicarPuntosPosts">
+                                <label>Posts: <br><b>79</b></label>
+                            </div>
                         </div>
 
-                        <div id="postsUsuario" class="ubicarPuntosPosts">
-                            <label>Posts: <br><b>79</b></label>
-                        </div>
                     </div>
+
                 </div>
-
                 <br><br>
-                <span id="spanTitulo2">Posts del usuario:</span>
-            
-
-
-
-
+                <span id="spanTitulo2">Actividad reciente del usuario</span>
                 <div id="divEntradasUsuario">
                     <div></div>
                     <div></div>

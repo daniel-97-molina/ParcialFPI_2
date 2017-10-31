@@ -11,13 +11,13 @@ function validarInput(input, mensaje) {
 }
 
 
-function generarDivArticuloBig(nArticulo, sAutor) {
+function generarDivArticuloBig(nArticulo, sAutor, iPuntos) {
   var aGenerado = document.createElement("a");
   aGenerado.setAttribute("href", "postViewer.html?id="+nArticulo.getAttribute("idArticulo"));
   aGenerado.className = "aContenedorArticulo";
   aGenerado.innerHTML = `<div class="contenido">
       <div class="detalles">
-        <p>${sAutor} -  fecha - puntos???</p>
+        <p>${sAutor} - puntos: ${iPuntos}</p>
       </div>
       <div class="categoria">
         <p>${nArticulo.getElementsByTagName("categoria")[0].childNodes[0].nodeValue}</p>
@@ -30,7 +30,8 @@ function generarDivArticuloBig(nArticulo, sAutor) {
   return aGenerado;
 }
 
-function generarDivArticuloSmall(nArticulo, sAutor){//?id=1&otro=3
+
+function generarDivArticuloSmall(nArticulo, sAutor, iPuntos){
   var aGenerado = document.createElement("a");
   aGenerado.setAttribute("href", "postViewer.html?id="+nArticulo.getAttribute("idArticulo"));
   aGenerado.className = "aContenedorArticuloSmall";
@@ -38,7 +39,7 @@ function generarDivArticuloSmall(nArticulo, sAutor){//?id=1&otro=3
       <img src="images/imagesArticulos/${nArticulo.getElementsByTagName("img")[0].childNodes[0].nodeValue}" alt="imagen-del-post"">
       <h3>${nArticulo.getElementsByTagName("titulo")[0].childNodes[0].nodeValue.substr(0,30)}</h3>
       <div class="detalles">
-        <p>${nArticulo.getElementsByTagName("categoria")[0].childNodes[0].nodeValue} - ${sAutor} - fecha - puntos</p>
+        <p>${nArticulo.getElementsByTagName("categoria")[0].childNodes[0].nodeValue} - ${sAutor} - puntos: ${iPuntos}</p>
       </div>
     </div>
   `;
@@ -87,6 +88,11 @@ function Persona(iId, sNombre){
 
 //codigo para las imagenes 
 
+//$(".contenedorImagen").onclick = function () {
+//    $("#file").click(console.log(""));
+//};
+
+
 
 function imagen(ruta) {//codigo para enviar la imagen al servidor
     let form = $("#form");
@@ -95,3 +101,46 @@ function imagen(ruta) {//codigo para enviar la imagen al servidor
     xmlhttp.open("post", "imageHandler.php?ruta="+ruta);
     xmlhttp.send(new FormData(form));
 }
+
+
+
+
+//MÉTODOS DEL HEADER
+
+$("#divUsuario").onclick = function () {
+    if ($("#menuUsuario").className === "oculto") {
+        $("#menuUsuario").className = "";
+    } else {
+        $("#menuUsuario").className = "oculto";
+    }
+};
+
+$("#btnCerrarSesion").onclick = function () {
+    localStorage.removeItem("usuarioLogueado");
+    location.reload();
+};
+
+$("#btnPerfil").onclick = function () {
+    location.href = "perfil2.html?id=" + localStorage.usuarioLogueado;
+};
+
+$("#btnIniciarSesion").onclick = function () {
+    location.href = "login.html";
+};
+$("#btnRegistrarme").onclick = function () {
+    location.href = "registro.html";
+};
+
+$("#btnCrearPublicacion").onclick = function () {
+    if (localStorage.usuarioLogueado) {
+        location.href = "postManager.html";
+    } else {
+        location.href = "login.html";
+    }
+};
+
+
+
+
+
+    

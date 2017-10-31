@@ -18,7 +18,9 @@ function cargarXML2(idUsuario) {
 
     xmlhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
+
             cargarDatos2(this, idUsuario);
+
         }
     };
     xmlhttp.open("GET", "data/usuarios.xml", true);
@@ -31,7 +33,6 @@ $("#imagenUsuario").onclick = function () {
 function cargarDatos2(xml, idUsuario) {
     xmlDocUsuarios = xml.responseXML;
     usuarios = xmlDocUsuarios.getElementsByTagName("usuario");
-
     var nombre = usuarios[idUsuario].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
     var correo = usuarios[idUsuario].getElementsByTagName("correo")[0].childNodes[0].nodeValue;
     var genero = usuarios[idUsuario].getElementsByTagName("sexo")[0].childNodes[0].nodeValue;
@@ -67,7 +68,6 @@ function cargarArticulosUsuario(usuario) {
 
     xmlHttp.open("GET", "data/articulos.xml", true);
     xmlHttp.send();
-
 
 }
 $("#file").onchange = function (e) {

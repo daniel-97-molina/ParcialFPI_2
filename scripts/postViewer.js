@@ -2,13 +2,15 @@
 var objetoArticulo;
 var aUsuario;
 var xmlDocArticulos;
+var logueado;
 window.onload = function (e) {
     var articulo = location.href.split("id=")[1] - 1;
     cargarDatosArticulo(articulo);
     if(localStorage.usuarioLogueado){
         objetoArticulo=new Articulo(articulo,localStorage.usuarioLogueado);
+        logueado=true;
     }else{
-        
+        logueado=false;
     }
 };
 
@@ -21,6 +23,7 @@ function Articulo(idArticulo, idUsuario) {
             var puntosActuales=aArticulos[this.idArticulo].getAttribute("puntos");
             aArticulos[this.idArticulo].setAttribute("puntos", puntosActuales+puntos);
             $("#puntajes").innerHTML = puntosActuales+puntos;
+
         };
     }
     if (typeof comentar === "undefined") {
@@ -44,6 +47,7 @@ function Articulo(idArticulo, idUsuario) {
     this.comentar = true;
 }
 function cargarDatosArticulo(articulo) {
+
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -59,6 +63,7 @@ function cargarDatosArticulo(articulo) {
             $("#tituloPost").innerHTML = tituloArticulo;
             $("#contenidoArticulo").innerHTML = contenidoArticulo;
             $("#contenedorImagen > img").setAttribute("src",imgArticulo);
+
 
             cargarDatosUsuario(aComentarios);
 //                }
@@ -87,7 +92,7 @@ function cargarDatosUsuario(comentarios) {
 
             }
         }
-        ;
+        
     };
       xmlhttp.open("GET", "data/usuarios.xml", true);
         xmlhttp.send();
@@ -97,10 +102,10 @@ function  procesar(puntos, comentar) {
 
     if (comentar) {
 
-        articulo.agregarComentario(comentar);
+        objetoArticulo.agregarComentario(comentar);
 
     } else {
-        articulo.puntuar(puntos);
+        objetoArticulo.puntuar(puntos);
     }
     subirXMLArticulos();
 
@@ -134,7 +139,15 @@ function crearDivArticulo(rutaImagen, autor, texto) {
     $("#contenidoComentarios").appendChild(comentario);
 }
 $(".btnComentar").onclick = function () {
+    if(logueado){
     var msj = $(".areaComentar").value;
     procesar(0, msj);
+    }else{
+        
+    }
 };
 
+
+
+
+//Para lo de los posts relevantes

@@ -42,6 +42,7 @@ function cargarArticulos() {
             
             var bEncontrados = false;
             for (var i = aArticulos.length - 1; i >= 0; i--) {
+                if(aArticulos.length-i > 15){break;}
                 var sAutor = "No encontrado";
                 var iPuntos = aArticulos[i].getAttribute("puntos");
 
@@ -65,6 +66,7 @@ function cargarArticulos() {
 
 
             for (var i =0; i < aArticulosOrdenado.length; i++) {
+                if(i > 7){break;}
                 var sAutor = "No encontrado";
                 var iPuntos = aArticulosOrdenado[i].getAttribute("puntos");
                 for (var j = 0; j < aArticulosOrdenado.length; j++) {

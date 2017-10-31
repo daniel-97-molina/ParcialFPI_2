@@ -69,6 +69,7 @@ function cargarArticulos() {
             //Agregar divs de categoría
             var bEncontrados = false;
             for (var i = aArticulos.length - 1; i >= 0; i--) {
+                if(aArticulos.length-i > 15){break;}
                 var sAutor = "No encontrado";
                 var iPuntos = aArticulos[i].getAttribute("puntos");
                 for (var j = 0; j < aUsuarios.length; j++) {
@@ -92,6 +93,7 @@ function cargarArticulos() {
             }
 
             //Agregar divs de mas destacados
+            var iContador = 0;
             for (var i = 0; i < aArticulosOrdenado.length; i++) {
                 var sAutor = "No encontrado";
                 var iPuntos = aArticulosOrdenado[i].getAttribute("puntos");
@@ -103,7 +105,9 @@ function cargarArticulos() {
                 }
                 //$("#layout-izquierda").appendChild(generarDivArticuloBig(aArticulos[i],sAutor));
                 if (aArticulosOrdenado[i].getElementsByTagName("categoria")[0].childNodes[0].nodeValue === categoriaActual) {
+                    iContador ++;
                     $("#contenedorDerecha").appendChild(generarDivArticuloSmall(aArticulosOrdenado[i], sAutor,iPuntos));
+                    if(iContador >= 7){break;}
                 }
             }
         }

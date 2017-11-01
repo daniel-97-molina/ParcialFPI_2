@@ -1,4 +1,3 @@
-
 *{
     box-sizing: border-box;
 }
@@ -88,9 +87,8 @@ body{
 
 #imagenUsuario{
     background-image: url("../images/login_icon.png");
-    height: 150px;
-    width: 150px;
-    margin-top: 5px;
+    height: 130px;
+    width: 130px;
     margin-left: 5%;
     text-align: center;
     /*display: inline-block;*/
@@ -219,4 +217,16 @@ body{
     text-align: center;
     display: block;
  
+}
+
+@media screen and (max-width: 730px){
+    #imagenUsuario{
+        width: 100px;
+        height: 100px;
+        margin-left: 5px;
+        margin-top: 15px;
+    }
+    #datosUsuarios{
+        margin-left: 10px;
+    }
 }

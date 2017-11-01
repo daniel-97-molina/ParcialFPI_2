@@ -49,6 +49,7 @@ function cargarArticulos() {
                         break;
                     }
                 }
+                console.log(aArticulos);
                 $("#layout-izquierda").appendChild(generarDivArticuloBig(aArticulos[i], sAutor, iPuntos));
                 bEncontrados = true;
 //                $("#contenedorDerecha").appendChild(generarDivArticuloSmall(aArticulos[i], sAutor));

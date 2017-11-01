@@ -59,23 +59,24 @@ function cargarDatosArticulo(articulo) {
             var contenidoArticulo = aArticulos[articulo].getElementsByTagName("contenido")[0].childNodes[0].nodeValue;
             var imgArticulo = "images/imagesArticulos/" + aArticulos[articulo].getElementsByTagName("img")[0].childNodes[0].nodeValue;
             var puntos = aArticulos[articulo].getAttribute("puntos");
-
+            var comentarios = aArticulos[articulo].getElementsByTagName("comentarios")[0].getElementsByTagName("comentario");
 
             var usuario = aArticulos[articulo].getAttribute("idUsuario");
+            $("#tituloComentario p").innerHTML=comentarios.length+" comentarios - "+tituloArticulo;
             $("#tituloPost").innerHTML = tituloArticulo;
             $("#contenidoArticulo").innerHTML = contenidoArticulo;
             $("#contenedorImagen > img").setAttribute("src", imgArticulo);
             $("#puntajes").innerHTML = puntos;
 
 
-            cargarDatosUsuario(aArticulos, articulo, usuario);
+            cargarDatosUsuario(aArticulos, articulo, usuario,comentarios);
         }
     };
     xmlhttp.open("GET", "data/articulos.xml", true);
     xmlhttp.send();
 }
-function cargarDatosUsuario(aArticulos, articulo, usuario) {
-    var comentarios = aArticulos[articulo].getElementsByTagName("comentarios")[0].getElementsByTagName("comentario");
+function cargarDatosUsuario(aArticulos, articulo, usuario,comentarios) {
+    
     var categoria = aArticulos[articulo].getElementsByTagName("categoria")[0].childNodes[0].nodeValue;
     var puntosUsuario = 0;
     var articulosUsuario = 0;
@@ -96,9 +97,11 @@ function cargarDatosUsuario(aArticulos, articulo, usuario) {
                     articulosUsuario++;
                     puntosUsuario += parseInt(aArticulos[i].getAttribute("puntos"));
                 }
+                  if(aArticulos[i].getAttribute("idArticulo")==articulo+1){continue;}
                 if (aArticulos[i].getElementsByTagName("categoria")[0].childNodes[0].nodeValue === categoria) {
+                  
                         var sAutor=aUsuarios[aArticulos[i].getAttribute("idUsuario")-1].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
-                        var iPuntos=aArticulos[articulo].getAttribute("puntos");
+                        var iPuntos=aArticulos[i].getAttribute("puntos");
                         $("#contenedorSmall").appendChild(generarDivArticuloSmall(aArticulos[i], sAutor, iPuntos));
                 }
             }

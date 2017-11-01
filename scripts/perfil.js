@@ -13,12 +13,12 @@ window.onload = function () {
 };
 
 function cargarXML2(idUsuario) {
-
+    
     var xmlhttp = new XMLHttpRequest();
-
+    
     xmlhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-
+            
             cargarDatos2(this, idUsuario);
 //            cargarArticulos();
         }
@@ -33,26 +33,26 @@ $("#imagenUsuario").onclick = function () {
 function cargarDatos2(xml, idUsuario) {
     xmlDocUsuarios = xml.responseXML;
     usuarios = xmlDocUsuarios.getElementsByTagName("usuario");
-
+    
     var usuarioActual = usuarios[localStorage.usuarioLogueado - 1];
     $("#divUsuario img").setAttribute("src", "images/imagesPerfil/" + usuarioActual.getAttribute("imagen"));
     $("#divUsuario h4").innerHTML = usuarioActual.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
-
+    
     var nombre = usuarios[idUsuario].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
     var correo = usuarios[idUsuario].getElementsByTagName("correo")[0].childNodes[0].nodeValue;
     var genero = usuarios[idUsuario].getElementsByTagName("sexo")[0].childNodes[0].nodeValue;
     var imagen = "images/imagesPerfil/" + usuarios[idUsuario].getAttribute("imagen");
-
+    
     $("#nombreUsuario").innerHTML = nombre;
     $("#correoUsuario").innerHTML = correo;
     $("#imagenUsuario").style.backgroundImage = "url(" + imagen + ")";
-
+    
     if (genero === "M") {
         $("#generoUsuario").innerHTML = "Masculino";
     } else if (genero === "F") {
         $("#generoUsuario").innerHTML = "Femenino";
     }
-
+    
 }
 
 //function cargarArticulosUsuario(usuario) {
@@ -86,25 +86,25 @@ $("#file").onchange = function (e) {
     for (var i = 0; i < x.length; i++) {
         if (archivo[0].type === x[i]) {
             rutaImagen = archivo[0].name;
-
+            
             permitida = true;
         }
     }
     if (permitida) {
         var reader = new FileReader();
-
+        
         reader.onload = (function (f) {
             return function (e) {
                 // Insertamos la imagen
                 $("#imagenUsuario").style.backgroundImage = "url(" + e.target.result + ")";
             };
         })();
-
+        
         reader.readAsDataURL(archivo[0]);
     } else {
         alert("Ingrese una imagen con formato png,jpg o jpeg");
     }
-
+    
     enviarImagen_Xml();
 };
 
@@ -132,17 +132,26 @@ function cargarArticulosUsuario(usuario) {
             var xmlDocArticulos = xmlhttp.responseXML;
             var aArticulos = xmlDocArticulos.getElementsByTagName("articulo");
             var aUsuarios = xmlDocUsuarios.getElementsByTagName("usuario");
-
+            var iNumeroArticulos = 0;
+            var iPuntosPerfil = 0;
             //Para lo de los posts relevantes
             var aArticulosOrdenado = Array.from(aArticulos);
             aArticulosOrdenado.sort(function (a, b) {
                 return b.getAttribute("puntos") - a.getAttribute("puntos");
             });
-
+            
             //Agregar divs de categoría
             var bEncontrados = false;
-
+            for (var i = 0; i < aArticulos.length; i++) {
+                console.log(aArticulos[i].getAttribute("idUsuario") === localStorage.usuarioLogueado);
+                if (aArticulos[i].getAttribute("idUsuario") === localStorage.usuarioLogueado) {
+                    iNumeroArticulos++;
+                    iPuntosPerfil += parseInt(aArticulos[i].getAttribute("puntos"));
+                     console.log(iPuntosPerfil);
+                }
+            }
             for (var i = aArticulos.length - 1; i >= 0; i--) {
+                
                 if (aArticulos.length - i > 15) {
                     break;
                 }
@@ -156,11 +165,15 @@ function cargarArticulosUsuario(usuario) {
                 }
                 if (aUsuarios[usuario].getAttribute("id") === aArticulos[i].getAttribute("idUsuario")) {
                     bEncontrados = true;
-                    $("#layout-izquierda").appendChild(generarDivArticuloBig(aArticulos[i], sAutor, iPuntos));
+                    $("#layout-izquierda").appendChild(generarDivArticuloBig(aArticulos[i], sAutor, iPuntosPerfil));
                 }
 //                $("#contenedorDerecha").appendChild(generarDivArticuloSmall(aArticulos[i], sAutor));
+                
+                
             }
-            
+       
+            $(".ubicarPuntosPosts #puntos").innerHTML = iPuntosPerfil;
+            $(".ubicarPuntosPosts #posts").innerHTML = iNumeroArticulos;
             if (!bEncontrados) {
                 var nt = document.createTextNode("No se encontraron publicaciones");
                 var np = document.createElement("p");
@@ -168,13 +181,13 @@ function cargarArticulosUsuario(usuario) {
                 np.className = "noEncontrado";
                 $("#divEntradasUsuario").appendChild(np);
             }
-
+            
             //Agregar divs de mas destacados
             var iContador = 0;
             for (var i = 0; i < aArticulosOrdenado.length; i++) {
                 var sAutor = "No encontrado";
                 var iPuntos = aArticulosOrdenado[i].getAttribute("puntos");
-
+                
                 for (var j = 0; j < aArticulosOrdenado.length; j++) {
                     if (aUsuarios[j].getAttribute("id") === aArticulosOrdenado[i].getAttribute("idUsuario")) {
                         sAutor = "Autor: " + aUsuarios[j].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
@@ -184,7 +197,7 @@ function cargarArticulosUsuario(usuario) {
                 //$("#layout-izquierda").appendChild(generarDivArticuloBig(aArticulos[i],sAutor));
                 if (usuarios[usuario].getAttribute("id") === aArticulosOrdenado[i].getAttribute("idUsuario")) {
                     iContador++;
-                    $("#layout-derecha").appendChild(generarDivArticuloSmall(aArticulosOrdenado[i], sAutor, iPuntos));
+                    $("#layout-derecha").appendChild(generarDivArticuloSmall(aArticulosOrdenado[i], sAutor, iPuntosPerfil));
                     if (iContador >= 7) {
                         break;
                     }
@@ -192,7 +205,7 @@ function cargarArticulosUsuario(usuario) {
             }
         }
     };
-
+    
     xmlhttp.open("GET", "data/articulos.xml", true);
     xmlhttp.send();
 }

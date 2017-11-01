@@ -29,6 +29,7 @@ body{
 #layout-derecha{
   float: left;
   width: 35%;
+ 
 }
 #contenedorDerecha{
   background-color: white;

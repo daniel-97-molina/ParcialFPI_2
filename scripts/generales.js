@@ -6,7 +6,10 @@ if (!localStorage.usuarioLogueado) {
     $("#divUsuario").className = "oculto";
     $("#divBotonesLogin").className = "";
 }
-
+if (!localStorage.usuarioLogueado) {
+    $("#divUsuario").className = "oculto";
+    $("#divBotonesLogin").className = "";
+}
 function validarInput(input, mensaje) {
     if (input.validity.valueMissing) {
         input.setCustomValidity(mensaje);

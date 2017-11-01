@@ -1,43 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?><usuarios ultimo="8">
-        <usuario id="1" imagen="a.jpg">
-            <nombre>Daniel2</nombre>
-            <correo>molina@hk.com</correo>
-            <password>haha</password>
-            <sexo>M</sexo>
-        </usuario>
-        <usuario id="2" imagen="aq.jpg">
-            <nombre>Maria2</nombre>
-            <correo>maria2@hk.com</correo>
-            <password>haha2</password>
-            <sexo>F</sexo>
-        </usuario>
-        <usuario id="3" imagen="4.png">
-            <nombre>Kevin2</nombre>
-            <correo>kevin2@hk.com</correo>
-            <password>haha3</password>
-            <sexo>M</sexo>
-        </usuario>
-        <usuario id="4" imagen="default.jpg">
-            <nombre>hola</nombre>
-            <correo>hola@hola</correo>
-            <password>hola</password>
-            <sexo>M</sexo>
-        </usuario>
-        <usuario id="5" imagen="1.png">
-            <nombre>a</nombre>
-            <correo>a@a</correo>
-            <password>a</password>
-            <sexo>M</sexo>
-        </usuario>
-        <usuario id="6" imagen="hi.jpg">
-            <nombre>hola2</nombre>
-            <correo>hola@gmail</correo>
-            <password>hola</password>
-            <sexo>M</sexo>
-        </usuario>
-        <usuario id="7" imagen="default.jpg">
-            <nombre>DanielMolinaRAMIREZ</nombre>
-            <correo>daniel@gmail.com</correo>
-            <password>1234</password>
-            <sexo>M</sexo>
-        </usuario><usuario id="8" imagen="default.jpg"><nombre>b</nombre><correo>b@b</correo><password>b</password><sexo>M</sexo></usuario></usuarios>
+<?xml version="1.0" encoding="UTF-8"?><usuarios ultimo="6">
+    <usuario id="1" imagen="a.jpg">
+        <nombre>Daniel2</nombre>
+        <correo>molina@hk.com</correo>
+        <password>haha</password>
+        <sexo>M</sexo>
+    </usuario>
+    <usuario id="2" imagen="default.jpg">
+        <nombre>Maria2</nombre>
+        <correo>maria2@hk.com</correo>
+        <password>haha2</password>
+        <sexo>F</sexo>
+    </usuario>
+    <usuario id="3" imagen="default.jpg">
+        <nombre>Kevin2</nombre>
+        <correo>kevin2@hk.com</correo>
+        <password>haha3</password>
+        <sexo>M</sexo>
+    </usuario>
+    <usuario id="4" imagen="default.jpg">
+        <nombre>hola</nombre>
+        <correo>hola@hola</correo>
+        <password>hola</password>
+        <sexo>M</sexo>
+    </usuario>
+    <usuario id="5" imagen="default.jpg">
+        <nombre>a</nombre>
+        <correo>a@a</correo>
+        <password>a</password>
+        <sexo>M</sexo>
+    </usuario>
+    <usuario id="6" imagen="gato.jpg">
+        <nombre>hola2</nombre>
+        <correo>hola@gmail</correo>
+        <password>hola</password>
+        <sexo>M</sexo>
+    </usuario>
+</usuarios>

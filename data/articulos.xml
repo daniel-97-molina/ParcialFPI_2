@@ -14,7 +14,14 @@
             JSON is "self-describing" and easy to understand</contenido>
         <img>Selection_032.png</img>
         <categoria>Tecnologia</categoria>
-        <comentarios/>
+        <comentarios>
+            <comentario idUsuario="6">hola</comentario>
+            <comentario idUsuario="5">que ondas man
+            </comentario>
+            <comentario idUsuario="5">hahahaha</comentario>
+            <comentario idUsuario="6">alsuave y voos?
+            </comentario>
+        </comentarios>
     </articulo>
     <articulo idArticulo="3" idUsuario="1" puntos="6">
         <titulo>Nueva pub</titulo>
@@ -30,7 +37,7 @@
         <categoria>Tecnologia</categoria>
         <comentarios/>
     </articulo>
-    <articulo idArticulo="5" idUsuario="1" puntos="10">
+    <articulo idArticulo="5" idUsuario="1" puntos="20">
         <titulo>asdfkdkdkdkdk dkdkd dkdksk a dfkaskfasdkf assfalk alsdf</titulo>
         <contenido>Cras lorem augue, imperdiet sit amet fermentum sed, auctor ac enim. Etiam tincidunt tellus quam, non commodo sapien gravida nec. Cras ut sagittis ante. Nullam sollicitudin lorem orci. Quisque ante mauris, accumsan sed justo et, hendrerit laoreet erat. Mauris at nulla quis tortor elementum ornare quis imperdiet ligula. Sed viverra nisl sit amet risus egestas, id aliquam mauris tempus. Maecenas tincidunt pharetra lorem sed dignissimCras lorem augue, imperdiet sit amet fermentum sed, auctor ac enim. Etiam tincidunt tellus quam, non commodo sapien gravida nec. Cras ut sagittis ante. Nullam sollicitudin lorem orci. Quisque ante mauris, accumsan sed justo et, hendrerit laoreet erat. Mauris at nulla quis tortor elementum ornare quis imperdiet ligula. Sed viverra nisl sit amet risus egestas, id aliquam mauris tempus. Maecenas tincidunt pharetra lorem sed dignissim</contenido>
         <img>TIEMPOINICIO.png</img>
@@ -63,6 +70,9 @@
         <contenido>hahahahahahahahahahahhahhahahahahhahha</contenido>
         <img>1.png</img>
         <categoria>Deportes</categoria>
-        <comentarios/>
+        <comentarios>
+            <comentario idUsuario="5">bababababa</comentario>
+            <comentario idUsuario="6">holaaaaaaaaaaaaaaa</comentario>
+        </comentarios>
     </articulo>
 </articulos>

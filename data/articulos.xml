@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><articulos ultimo="9">
     <articulo idArticulo="1" idUsuario="1" puntos="5">
-<titulo>asdf</titulo>
-<contenido>s un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).</contenido>
+        <titulo>asdf</titulo>
+        <contenido>s un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).</contenido>
         <img>kde-back.png</img>
         <categoria>Deportes</categoria>
         <comentarios/>
@@ -14,9 +14,14 @@
             JSON is "self-describing" and easy to understand</contenido>
         <img>Selection_032.png</img>
         <categoria>Tecnologia</categoria>
-        <comentarios><comentario idUsuario="6">hola</comentario><comentario idUsuario="5">que ondas man
-</comentario><comentario idUsuario="5">hahahaha</comentario><comentario idUsuario="6">alsuave y voos?
-</comentario></comentarios>
+        <comentarios>
+            <comentario idUsuario="6">hola</comentario>
+            <comentario idUsuario="5">que ondas man
+            </comentario>
+            <comentario idUsuario="5">hahahaha</comentario>
+            <comentario idUsuario="6">alsuave y voos?
+            </comentario>
+        </comentarios>
     </articulo>
     <articulo idArticulo="3" idUsuario="1" puntos="6">
         <titulo>Nueva pub</titulo>
@@ -39,25 +44,25 @@
         <categoria>Deportes</categoria>
         <comentarios/>
     </articulo>
-<articulo idArticulo="6" idUsuario="6">
+    <articulo idArticulo="6" idUsuario="6" puntos="7">
         <titulo>asdf</titulo>
         <contenido>asdf</contenido>
         <img>50.png</img>
         <categoria>Deportes</categoria>
         <comentarios/>
     </articulo>
-<articulo idArticulo="7" idUsuario="2" puntos="14">
+    <articulo idArticulo="7" idUsuario="2" puntos="14">
         <titulo>Este es otro post</titulo>
         <contenido>eso fue hecho por Daniel...blabla</contenido>
         <img>AlbumArtSmall.jpg</img>
-        <categoria>Antropología</categoria>
+        <categoria>Ciencia</categoria>
         <comentarios/>
     </articulo>
     <articulo idArticulo="8" idUsuario="2" puntos="16">
-        <titulo>post hecho por danielM</titulo>
+        <titulo>post hecho por Maria</titulo>
         <contenido>este post fue hecho por el usuario DanielRamirez</contenido>
         <img>AlbumArtSmall.jpg</img>
-        <categoria>Antropología</categoria>
+        <categoria>Ciencia</categoria>
         <comentarios/>
     </articulo>
     <articulo idArticulo="9" idUsuario="2" puntos="0">
@@ -65,6 +70,10 @@
         <contenido>hahahahahahahahahahahhahhahahahahhahha</contenido>
         <img>1.png</img>
         <categoria>Deportes</categoria>
-        <comentarios><comentario idUsuario="5">bababababa</comentario><comentario idUsuario="6">holaaaaaaaaaaaaaaa</comentario></comentarios>
+        <comentarios>
+            <comentario idUsuario="5">bababababa</comentario>
+            <comentario idUsuario="6">holaaaaaaaaaaaaaaa</comentario>
+        </comentarios>
     </articulo>
-    </articulos>
+</articulos>
+

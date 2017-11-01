@@ -23,14 +23,17 @@
    background-repeat: no-repeat;
    float: left;
  }
+
+ header > ul{
+     display: inline-block;
+ }
  header > ul > li{
    padding: 10px 0;
-   float: left;
+   display: inline-block;
    position: relative;
  }
  header > ul > li > ul{
    z-index: 20;
-   display: none;
    position: absolute;
    top: 58px;
    font-size: 15px;
@@ -39,12 +42,13 @@
  header > ul > li > ul > li {
   background-color: teal;
   padding: 0px ;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
  }
  header > ul > li > ul > li:hover {
   background-color: rgb(20, 93, 98);
  }
 header > ul > li:hover > ul{
-  display: block;
+  /*display: block;*/
 
 }
 header li > ul a{
@@ -87,12 +91,13 @@ header li > a {
 #divUsuario{
     z-index: 22;
     margin-right: 30px;
-    position: absolute;
     right: 0;
     top: 5px;
     background-color: rgba(255,255,255,0.2);
 }
-
+#divBotonesLogin{
+    margin: auto 15px;
+}
 #divMenuUsuario{
     position: relative;
     background-color: #42a574;
@@ -112,7 +117,89 @@ header li > a {
     width: 50px;
     height: 50px;
 }
-
 .oculto{
     display: none;
+}
+.iconoMenu{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    object-fit: scale-down;
+}
+#menu h4{
+    position: relative;
+    top: -20px;
+    display: inline-block;
+}
+#menu{
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    color: white;
+    font-size: 24px;
+    background-color: teal;
+    width: 100%;
+    height: 60px;
+    display: none;
+}
+
+@media screen and (max-width: 730px){
+    body{
+        padding-top: 75px;
+    }
+    #menu{
+        display: block;
+    }
+    header #logo{display: none;}
+    header{        
+        animation: mostrar 3s ease ;
+        left: -80%;
+        overflow: scroll;
+        height: calc(100% - 60px);
+        width: 80%;
+        z-index: 200;
+        position: fixed;
+        top: 59px;
+    }
+    header > ul li{
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    header > ul li:hover{
+        background-color: #143B29;
+    }
+    header > ul > li > ul {
+        position: relative;
+        top: 10px;
+        width: 100%;
+    }
+    header > ul > li > ul > li {
+        padding-left: 25px;
+        background-color: #468D6C;
+    }
+    header > ul{
+        clear: both;
+        height: 100%;
+        width: 100%;
+        
+    }
+    header a{
+        width: 100%;
+    }
+    #divBotonesLogin{
+     float: none;   
+     margin-bottom: 20px;
+    }
+    #divUsuario{
+     float: none;  
+     height: 50px;
+    }
+    header > ul > li:hover > ul{
+        /*display: none;*/
+    }
+    @keyframe mostrar{
+        from{left: -80%}
+        to{left: 0px}
+    }
 }

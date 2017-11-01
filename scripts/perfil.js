@@ -1,15 +1,15 @@
 var xmlDocUsuarios;
 var idUsuario;
 var usuarios;
-window.onload= function () {
-    if(!localStorage.usuarioLogueado){
-        location.href="login.html";
-    }else{
-    var x=location.href.split("id=")[1]||localStorage.usuarioLogueado;
-    idUsuario = parseInt(x)- 1;
-    cargarXML2(idUsuario);
-    cargarArticulosUsuario(idUsuario);
-}
+window.onload = function () {
+    if (!localStorage.usuarioLogueado) {
+        location.href = "login.html";
+    } else {
+        var x = location.href.split("id=")[1] || localStorage.usuarioLogueado;
+        idUsuario = parseInt(x) - 1;
+        cargarXML2(idUsuario);
+        cargarArticulosUsuario(idUsuario);
+    }
 };
 
 function cargarXML2(idUsuario) {
@@ -20,7 +20,7 @@ function cargarXML2(idUsuario) {
         if (this.readyState === 4 && this.status === 200) {
 
             cargarDatos2(this, idUsuario);
-
+//            cargarArticulos();
         }
     };
     xmlhttp.open("GET", "data/usuarios.xml", true);
@@ -33,11 +33,11 @@ $("#imagenUsuario").onclick = function () {
 function cargarDatos2(xml, idUsuario) {
     xmlDocUsuarios = xml.responseXML;
     usuarios = xmlDocUsuarios.getElementsByTagName("usuario");
-    
-      var usuarioActual = usuarios[localStorage.usuarioLogueado - 1];
+
+    var usuarioActual = usuarios[localStorage.usuarioLogueado - 1];
     $("#divUsuario img").setAttribute("src", "images/imagesPerfil/" + usuarioActual.getAttribute("imagen"));
     $("#divUsuario h4").innerHTML = usuarioActual.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
-    
+
     var nombre = usuarios[idUsuario].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
     var correo = usuarios[idUsuario].getElementsByTagName("correo")[0].childNodes[0].nodeValue;
     var genero = usuarios[idUsuario].getElementsByTagName("sexo")[0].childNodes[0].nodeValue;
@@ -54,27 +54,31 @@ function cargarDatos2(xml, idUsuario) {
     }
 
 }
-function cargarArticulosUsuario(usuario) {
-    var xmlHttp = new XMLHttpRequest;
-    xmlHttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            var xmlDocArticulo = xmlHttp.responseXML;
-            var aArticulos = xmlDocArticulo.getElementsByTagName("articulo");
-            for (var i = 0; i < aArticulos.length; i++) {
-                if (usuarios[usuario].getAttribute("id") === aArticulos[i].getAttribute("idUsuario")) {
-                     var sAutor = usuarios[usuario].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
-                    $("#layout-izquierda").appendChild(generarDivArticuloBig(aArticulos[i], sAutor));
 
-                }
-            }
-        }
+//function cargarArticulosUsuario(usuario) {
+//    var xmlHttp = new XMLHttpRequest;
+//    xmlHttp.onreadystatechange = function () {
+//        if (this.readyState === 4 && this.status === 200) {
+//            var xmlDocArticulo = xmlHttp.responseXML;
+//            
+//            var aArticulos = xmlDocArticulo.getElementsByTagName("articulo");
+//            
+//            for (var i = 0; i < aArticulos.length; i++) {
+//                if (usuarios[usuario].getAttribute("id") === aArticulos[i].getAttribute("idUsuario")) {
+//                    var sAutor = usuarios[usuario].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+//                    $("#layout-izquierda").appendChild(generarDivArticuloBig(aArticulos[i], sAutor));
+//
+//                }
+//            }
+//        }
+//
+//    };
+//
+//    xmlHttp.open("GET", "data/articulos.xml", true);
+//    xmlHttp.send();
+//
+//}
 
-    };
-
-    xmlHttp.open("GET", "data/articulos.xml", true);
-    xmlHttp.send();
-
-}
 $("#file").onchange = function (e) {
     var permitida = false;
     var x = ["image/jpg", "image/png", "image/jpeg"];
@@ -103,6 +107,8 @@ $("#file").onchange = function (e) {
 
     enviarImagen_Xml();
 };
+
+
 function enviarImagen_Xml() {
     usuarios[idUsuario].setAttribute("imagen", rutaImagen);
     imagen("imagesPerfil");
@@ -116,3 +122,78 @@ function subirXMLUsuario() {
     console.log(xmlDocUsuarios);
     xmlhttp.send(xmlDocUsuarios);
 }
+
+
+//Para lo de los relevantes
+function cargarArticulosUsuario(usuario) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+            var xmlDocArticulos = xmlhttp.responseXML;
+            var aArticulos = xmlDocArticulos.getElementsByTagName("articulo");
+            var aUsuarios = xmlDocUsuarios.getElementsByTagName("usuario");
+
+            //Para lo de los posts relevantes
+            var aArticulosOrdenado = Array.from(aArticulos);
+            aArticulosOrdenado.sort(function (a, b) {
+                return b.getAttribute("puntos") - a.getAttribute("puntos");
+            });
+
+            //Agregar divs de categoría
+            var bEncontrados = false;
+
+            for (var i = aArticulos.length - 1; i >= 0; i--) {
+                if (aArticulos.length - i > 15) {
+                    break;
+                }
+                var sAutor = "No encontrado";
+                var iPuntos = aArticulos[i].getAttribute("puntos");
+                for (var j = 0; j < aUsuarios.length; j++) {
+                    if (aUsuarios[j].getAttribute("id") === aArticulos[i].getAttribute("idUsuario")) {
+                        sAutor = "Autor: " + aUsuarios[j].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+                        break;
+                    }
+                }
+                if (aUsuarios[usuario].getAttribute("id") === aArticulos[i].getAttribute("idUsuario")) {
+                    bEncontrados = true;
+                    $("#layout-izquierda").appendChild(generarDivArticuloBig(aArticulos[i], sAutor, iPuntos));
+                }
+//                $("#contenedorDerecha").appendChild(generarDivArticuloSmall(aArticulos[i], sAutor));
+            }
+            
+            if (!bEncontrados) {
+                var nt = document.createTextNode("No se encontraron publicaciones");
+                var np = document.createElement("p");
+                np.appendChild(nt);
+                np.className = "noEncontrado";
+                $("#divEntradasUsuario").appendChild(np);
+            }
+
+            //Agregar divs de mas destacados
+            var iContador = 0;
+            for (var i = 0; i < aArticulosOrdenado.length; i++) {
+                var sAutor = "No encontrado";
+                var iPuntos = aArticulosOrdenado[i].getAttribute("puntos");
+
+                for (var j = 0; j < aArticulosOrdenado.length; j++) {
+                    if (aUsuarios[j].getAttribute("id") === aArticulosOrdenado[i].getAttribute("idUsuario")) {
+                        sAutor = "Autor: " + aUsuarios[j].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+                        break;
+                    }
+                }
+                //$("#layout-izquierda").appendChild(generarDivArticuloBig(aArticulos[i],sAutor));
+                if (usuarios[usuario].getAttribute("id") === aArticulosOrdenado[i].getAttribute("idUsuario")) {
+                    iContador++;
+                    $("#layout-derecha").appendChild(generarDivArticuloSmall(aArticulosOrdenado[i], sAutor, iPuntos));
+                    if (iContador >= 7) {
+                        break;
+                    }
+                }
+            }
+        }
+    };
+
+    xmlhttp.open("GET", "data/articulos.xml", true);
+    xmlhttp.send();
+}
+

@@ -54,7 +54,6 @@ function cargarDatosArticulo(articulo) {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             xmlDocArticulos = xmlhttp.responseXML;
-
             var aArticulos = xmlDocArticulos.getElementsByTagName("articulo");
             var tituloArticulo = aArticulos[articulo].getElementsByTagName("titulo")[0].childNodes[0].nodeValue;
             var contenidoArticulo = aArticulos[articulo].getElementsByTagName("contenido")[0].childNodes[0].nodeValue;

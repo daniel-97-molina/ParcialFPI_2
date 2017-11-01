@@ -3,6 +3,11 @@
 *{
     box-sizing: border-box;
 }
+
+#bodyLogin{
+    background: #fff;
+}
+
 .divImage{
     background-image: url("../images/icon_login.jpg");
     height: 150px;
@@ -41,7 +46,7 @@ input[type="submit"]:hover{
     height: 350px;
     padding-top: 10px;
     margin: auto;
-    margin-top: 7%;
+    margin-top: 3%;
 }
 .shadow{
     box-shadow: 1px 1px 20px 2px #ccc;
@@ -86,12 +91,15 @@ input{
 
 /*PARA PAGINA registro.html*/
 
-/*css para registro*/
+#bodyRegistro{
+    background: #fff;
+}
+
 #divRegistro{
 
     text-align: center;
     margin: auto;
-    margin-top: 7%;
+    margin-top: 3%;
     width: 350px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -133,6 +141,41 @@ input{
     font-weight: bold;
     font-size: 20px;
 }
+
+
+
+
+
+/*PARA PAGINA about.html*/
+#divAbout{
+    width: 75%;
+    margin-top: 25px;
+    background-color: #fff;
+    margin: auto;
+    box-shadow: 1px 1px 20px 2px #ccc;
+    padding: 10px 0px;
+}
+
+#bodyAbout{
+    background: #e0e3e4;
+}
+
+#tituloAbout{
+    font-size: 30px;
+    margin-left: 10px;
+    padding: 10px;
+    color: teal;
+    font-weight: bold;
+}
+
+.parrafoAbout{
+    display: block;
+    font-size: 20px;
+    margin-left: 10px;
+    padding: 10px;
+    line-height: 25px;
+}
+
 
 
 

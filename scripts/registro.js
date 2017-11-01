@@ -128,7 +128,7 @@ function usuariosExistentes(usuarios) {
         }
     }
 
-    if (!$("#txtRegistroUsuario").value == "" && !$("#txtRegistroCorreo").value == "") {
+    if (!$("#txtRegistroUsuario").value == "" && !$("#txtRegistroCorreo").value == "" && !$("#txtRegistroPassword").value=="") {
         if (existeUsuario === false && existeCorreo === false) {
             location.href = "inicio.html";
             siguientePaso = true;

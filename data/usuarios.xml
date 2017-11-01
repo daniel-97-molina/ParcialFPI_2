@@ -29,5 +29,11 @@
         <password>a</password>
         <sexo>M</sexo>
     </usuario>
+    <usuario id="6" imagen="gato.jpg">
+        <nombre>hola2</nombre>
+        <correo>hola@gmail</correo>
+        <password>hola</password>
+        <sexo>M</sexo>
+    </usuario>
+</usuarios>
 
-<usuario id="6" imagen="gato.jpg"><nombre>hola2</nombre><correo>hola@gmail</correo><password>hola</password><sexo>M</sexo></usuario></usuarios>

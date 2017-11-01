@@ -1,10 +1,7 @@
 var usuarioActual;
 var xmlDocUsuarios;
 var xmlDocArticulos;
-if (!localStorage.usuarioLogueado) {
-    $("#divUsuario").className = "oculto";
-    $("#divBotonesLogin").className = "";
-}
+
 
 window.onload = function () {
     var xmlhttp = new XMLHttpRequest();

@@ -1,11 +1,20 @@
 if(!localStorage.usuarioLogueado){
     location.href="login.html";
 }
-
+var form = $("#form");
 var xmlDoc;
 var rutaImagen;
-$("#btnRealizado").onclick = function () {
-    var form = $("#form");
+var ultimo;
+
+form.onsubmit = function(e){
+    e.preventDefault(); 
+    cargarXML();
+    
+};
+$("#btnRealizado").onclick = function (e) {
+    
+    //e.preventDefault(); 
+    //cargarXML();
     validarInput(form.txtTitulo, "Ingresa el titulo del post");
     validarInput(form.contenido, "Ingresa el contenido de tu post");
 };
@@ -47,6 +56,7 @@ function cargarXML() {
         }
     };
     xmlhttp.open("GET", "data/articulos.xml", true);
+    xmlhttp.setRequestHeader('Cache-Control', 'no-cache');
     xmlhttp.send();
 }
 
@@ -54,16 +64,15 @@ function cargarXML() {
 function subirXMLArticulos() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "procesarPostArticulo.php", true);
+    xmlhttp.setRequestHeader('Cache-Control', 'no-cache');
     xmlhttp.setRequestHeader("Content-Type", "text/xml");
-    console.log(xmlDoc);
     xmlhttp.send(xmlDoc);
+    setTimeout(function () {
+        location.href="postViewer.html?id="+(ultimo+1);  
+    },50);
+          
+   
 }
-
-$("#btnRealizado").onclick = function (e) {
-    e.preventDefault();
-    cargarXML();
-
-};
 
 //codigo para las imagenes 
 $(".contenedorImagen").onclick = function () {
@@ -89,7 +98,7 @@ function agregarArticulo() {
     nImg.appendChild(sImagen);
     nCategoria.appendChild(sCategoria);
     articulos = xmlDoc.getElementsByTagName("articulos");
-    var ultimo=parseInt(articulos[0].getAttribute("ultimo"));
+    ultimo=parseInt(articulos[0].getAttribute("ultimo"));
     articulos[0].setAttribute("ultimo",ultimo+1);
 
     var articulo = xmlDoc.createElement("articulo");

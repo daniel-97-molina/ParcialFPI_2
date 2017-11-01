@@ -31,43 +31,43 @@
                 </div>
             </div>
             <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a id="submenu" href="#">Categorías</a>
+                <li><a href="inicio.html" ><span class="icon-home"></span>Inicio</a></li>
+                <li><a id="submenu" href="#"><span class="icon-list"></span>Categorías<span class="icon-circle-down"></span></a>
                     <ul id="submenu2" class="oculto">
                         <li><a href="categoria.html?cat=Arte">Arte</a></li>
-                        <li><a href="categoria.html?cat=Tecnologia">Tecnología</a></li>
+                        <li><a href="categoria.html?cat=Tecnologia">Tecnologia</a></li>
                         <li><a href="categoria.html?cat=Ciencia">Ciencia</a></li>
                         <li><a href="categoria.html?cat=Entretenimiento">Entretenimiento</a></li>
-                        <li><a href="categoria.html?cat=Espectaculos">Espectáculos</a></li>
+                        <li><a href="categoria.html?cat=Espectaculos">Espectaculos</a></li>
                         <li><a href="categoria.html?cat=Deportes">Deportes</a></li>
-                        <li><a href="categoria.html?cat=Economia">Economía</a></li>
+                        <li><a href="categoria.html?cat=Economia">Economia</a></li>
                         <li><a href="categoria.html?cat=Noticias">Noticias</a></li>
-                        <li><a href="categoria.html?cat=Politica">Política</a></li>
+                        <li><a href="categoria.html?cat=Politica">Politica</a></li>
                     </ul>
                 </li>
-                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="about.html"><span class="icon-info"></span>Acerca de</a></li>
             </ul>
-            
         </header>
 
         <!--div id="contenedorUsuario"-->
-            <div id="wrapper">
-                <main id="layout-izquierda">
-                    <span id="spanTitulo1">Perfil de usuario</span>
-                    <br>
-                    <div class="divUsuario">
-                        <div id="imagenUsuario" class="ubicarDivsUsuario">
-                            <label class="mensaje">Seleccionar imagen</label>
-                        </div>
-                        <form id="form">
-                            <input name="files" type="file" accept="image/*" id="file" style="display: none">
+        <div id="wrapper">
+            <main id="layout-izquierda">
+                <span id="spanTitulo1">Perfil de usuario</span>
+                <br>
+                <div class="divUsuario">
+                    <div id="imagenUsuario" class="ubicarDivsUsuario">
+                        <label class="mensaje">Seleccionar imagen</label>
+                    </div>
+                    <form id="form">
+                        <input name="files" type="file" accept="image/*" id="file" style="display: none">
 
-                        </form>  
-                        <div id="datosUsuario" class="ubicarDivsUsuario">
-                            <p id="nombreUsuario"></p>
-                            <p id="correoUsuario"></p>
-                            <p id="generoUsuario"></p>
-                        </div>
+                    </form>  
+                    <div id="datosUsuario" class="ubicarDivsUsuario">
+                        <p id="nombreUsuario"></p>
+                        <p id="correoUsuario"></p>
+                        <p id="generoUsuario"></p>
+                    </div>
+
 
 
                         <div id="divPuntosPosts">
@@ -81,24 +81,37 @@
                                       <label>Posts </label><br>
                                     <label id="posts"></label>
                                 </div>
+
                             </div>
                         </div>
-
                     </div>
 
-                    <br><br>
-                    <span id="spanTitulo2">Actividad reciente del usuario</span><br><br>
-                    <div id="divEntradasUsuario"></div>
+                
 
-                </main>
+                <br><br>
+                <span id="spanTitulo2">Actividad reciente del usuario</span><br><br>
+                <div id="divEntradasUsuario"></div>
 
-                <aside id="layout-derecha">
-                    <span id="tituloDerecha">Relevantes</span>
-                </aside>
+            </main>
 
+            <aside id="layout-derecha">
+                <span id="tituloDerecha">Relevantes</span>
+            </aside>
+
+        </div>
+
+        <footer>
+            <div>
+                <a href="about.html" class="paraFooter">Quienes somos</a>
             </div>
-
-            <footer></footer>
+            <div>
+                <p class="paraFooter">Contactanos:</p>
+                <p>infoblogm@gmail.com</p>  
+            </div>
+            <div>
+                <p>El Salvador</p>
+            </div>
+        </footer>
 
         <!--/div-->
         <script src="scripts/generales.js"></script>

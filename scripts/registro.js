@@ -40,6 +40,7 @@ function procesarInfo() {
         }
     };
     xmlhttp.open("GET", "data/usuarios.xml", true);
+    xmlhttp.setRequestHeader('Cache-Control', 'no-cache');
     xmlhttp.send();
 
 //  xmlhttp.upload.onload = function(){
@@ -58,10 +59,12 @@ function procesar(xml) {
 function subirXML() {
     var xmlh = new XMLHttpRequest();
     xmlh.open("POST", "procesarPost.php", true);
+    xmlh.setRequestHeader('Cache-Control', 'no-cache');
     xmlh.setRequestHeader("Content-Type", "text/xml");
 //    console.log(xmlDoc);
+        
     xmlh.send(xmlDoc);
-
+    location.href = "inicio.html";
 
 }
 
@@ -96,7 +99,7 @@ function agregarUsuario() {
         nSexo.appendChild(cGenero);
 
         nUsuario = xmlDoc.createElement("usuario");
-        nUsuario.setAttribute("id",usuarioActual.id);
+        nUsuario.setAttribute("id", usuarioActual.id);
         nUsuario.setAttribute("imagen", "default.jpg");
         nUsuario.appendChild(nNombre);
         nUsuario.appendChild(nCorreo);
@@ -128,9 +131,9 @@ function usuariosExistentes(usuarios) {
         }
     }
 
-    if (!$("#txtRegistroUsuario").value == "" && !$("#txtRegistroCorreo").value == "" && !$("#txtRegistroPassword").value=="") {
+    if (!$("#txtRegistroUsuario").value == "" && !$("#txtRegistroCorreo").value == "" && !$("#txtRegistroPassword").value == "" && !$("#txtRegistroCorreo").validity.typeMismatch) {
         if (existeUsuario === false && existeCorreo === false) {
-            location.href = "inicio.html";
+
             siguientePaso = true;
 
         } else if (existeCorreo === true && existeUsuario === true) {

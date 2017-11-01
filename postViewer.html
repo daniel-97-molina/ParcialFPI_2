@@ -33,23 +33,22 @@
                 </div>
             </div>
             <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a id="submenu" href="#">Categorías</a>
+                <li><a href="inicio.html" ><span class="icon-home"></span>Inicio</a></li>
+                <li><a id="submenu" href="#"><span class="icon-list"></span>Categorías<span class="icon-circle-down"></span></a>
                     <ul id="submenu2" class="oculto">
                         <li><a href="categoria.html?cat=Arte">Arte</a></li>
-                        <li><a href="categoria.html?cat=Tecnologia">Tecnología</a></li>
+                        <li><a href="categoria.html?cat=Tecnologia">Tecnologia</a></li>
                         <li><a href="categoria.html?cat=Ciencia">Ciencia</a></li>
                         <li><a href="categoria.html?cat=Entretenimiento">Entretenimiento</a></li>
-                        <li><a href="categoria.html?cat=Espectaculos">Espectáculos</a></li>
+                        <li><a href="categoria.html?cat=Espectaculos">Espectaculos</a></li>
                         <li><a href="categoria.html?cat=Deportes">Deportes</a></li>
-                        <li><a href="categoria.html?cat=Economia">Economía</a></li>
+                        <li><a href="categoria.html?cat=Economia">Economia</a></li>
                         <li><a href="categoria.html?cat=Noticias">Noticias</a></li>
-                        <li><a href="categoria.html?cat=Politica">Política</a></li>
+                        <li><a href="categoria.html?cat=Politica">Politica</a></li>
                     </ul>
                 </li>
-                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="about.html"><span class="icon-info"></span>Acerca de</a></li>
             </ul>
-            
         </header>
 
         <div id="wrapper">
@@ -57,7 +56,7 @@
                 <section id="sectionContenido">
 
                     <div id="contenido" class="block">
-                        <p id="tituloPost">Fin del populismo</p>
+                        <p id="tituloPost"></p>
                         <div id="contenedorImagen">
                             <img src="images/fondoUsuario.jpg" alt="No se encontro la imagen">
                         </div>
@@ -65,6 +64,7 @@
 
 
                         </p>
+
                         <div id="posibleImagen"></div>
                     </div>
                     <div id="puntaje" class="block">
@@ -94,9 +94,9 @@
                 <section id="comentarios" class="block">
                     <div id="contenedorComentarios">
                         <div id="tituloComentario">
-                            <p>Fin del populismo</p>
+                            <p></p>
                         </div>
-                        
+
                         <div id="contenidoComentarios">
 
                         </div>
@@ -117,41 +117,56 @@
                 <div id="info-usuario" class="block">
                     <div class="imagen-infoUsuario">
                         <img src="images/fondoUsuario.jpg" alt="No se encontro la imagen">
+                    </div>
+                    <div class="datos-usuario">
+                        <div class="userName"><span id="nombre"><a href="#"></a></span></div>
+                        <div><span id="correo"></span></div>
+                        <div class="posts">
+                            <span id="nPost"></span><br>
+                            <span class="textoPequenio">POSTS</span>
                         </div>
-                     <div class="datos-usuario">
-                         <div class="userName"><span id="nombre"><a href="#">steven</a></span></div>
-                         <div><span id="correo">correo@gmail.com</span></div>
-                                        <div class="posts">
-                                            <span id="nPost">5</span><br>
-                                        <span class="textoPequenio">POSTS</span>
-                                        </div>
-                                        <div class="puntos">
-                                            <span id="nPuntos">5</span><br>
-                                            <span class="textoPequenio">PUNTOS</span>
-                                        </div>
-                                    </div>
+                        <div class="puntos">
+                            <span id="nPuntos"></span><br>
+                            <span class="textoPequenio">PUNTOS</span>
+                        </div>
+                    </div>
                 </div>
-                
+
                 <p id="tematica">Posts relacionados al articulo</p>
                 <div id="contenedorSmall" class="block">
-                    
+
                 </div>
             </aside>
 
-            
-        </div>
-        
-        <div id="contenedorModal" class="ocultar"> 
-            <div id="modal">
-            <p>Identificate como usuario o registrate para realizar la acción.</p>
-            <div id="contenedor-botones-modal">
-            <button id="cerrarModal" class="btnModal">Cerrar</button>
-            <button id="loginModal" class="btnModal">Iniciar Sesión</button>
-            </div>
 
         </div>
+
+        <div id="contenedorModal" class="ocultar"> 
+            <div id="modal">
+             
+                <p>Identificate como usuario o registrate para realizar la acción.</p>
+                <div id="contenedor-botones-modal">
+                    <button id="cerrarModal" class="btnModal">Cerrar</button>
+                    <button id="loginModal" class="btnModal">Iniciar Sesión</button>
+                </div>
+            
+
+            </div>
         </div>
-        
+
+        <footer>
+            <div>
+                <a href="about.html" class="paraFooter">Quienes somos</a>
+            </div>
+            <div>
+                <p class="paraFooter">Contactanos:</p>
+                <p>infoblogm@gmail.com</p>  
+            </div>
+            <div>
+                <p>El Salvador</p>
+            </div>
+        </footer>
+
         <script src="scripts/generales.js"></script>
         <!--script src="scripts/inicio.js"></script-->
         <script src="scripts/postViewer.js"></script>

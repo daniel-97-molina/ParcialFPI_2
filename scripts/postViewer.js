@@ -8,6 +8,7 @@ window.onload = function (e) {
     cargarDatosArticulo(articulo);
     if (localStorage.usuarioLogueado) {
         objetoArticulo = new Articulo(articulo, localStorage.usuarioLogueado);
+        cargarXMLGenerales(localStorage.usuarioLogueado);
         logueado = true;
     } else {
         logueado = false;
@@ -73,6 +74,7 @@ function cargarDatosArticulo(articulo) {
         }
     };
     xmlhttp.open("GET", "data/articulos.xml", true);
+    xmlhttp.setRequestHeader('Cache-Control', 'no-cache');
     xmlhttp.send();
 }
 function cargarDatosUsuario(aArticulos, articulo, usuario,comentarios) {
@@ -122,6 +124,7 @@ function cargarDatosUsuario(aArticulos, articulo, usuario,comentarios) {
 
     };
     xmlhttp.open("GET", "data/usuarios.xml", true);
+    xmlhttp.setRequestHeader('Cache-Control', 'no-cache');
     xmlhttp.send();
 }
 
@@ -153,6 +156,7 @@ $("#loginModal").onclick = function () {
 function subirXMLArticulos() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "procesarPostArticulo.php", true);
+    xmlhttp.setRequestHeader('Cache-Control', 'no-cache');
     xmlhttp.setRequestHeader("Content-Type", "text/xml");
     console.log(xmlDocArticulos);
     xmlhttp.send(xmlDocArticulos);

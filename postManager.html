@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Nueva publicación</title>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/jpg" href="images/logo2.jpg"/>
-    <link rel="stylesheet" href="styles/postManager.css">
-    <link rel="stylesheet" href="styles/generales.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-  </head>
-  <body>
-      <div id="menu">
+    <head>
+        <title>Nueva publicación</title>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/jpg" href="images/logo2.jpg"/>
+        <link rel="stylesheet" href="styles/postManager.css">
+        <link rel="stylesheet" href="styles/generales.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="menu">
             <img class="iconoMenu" src="images/menu.png" alt="-"><h4>Menu</h4>
         </div>
         <header>
@@ -30,63 +30,75 @@
                 </div>
             </div>
             <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a id="submenu" href="#">Categorías</a>
+                <li><a href="inicio.html" ><span class="icon-home"></span>Inicio</a></li>
+                <li><a id="submenu" href="#"><span class="icon-list"></span>Categorías<span class="icon-circle-down"></span></a>
                     <ul id="submenu2" class="oculto">
                         <li><a href="categoria.html?cat=Arte">Arte</a></li>
-                        <li><a href="categoria.html?cat=Tecnologia">Tecnología</a></li>
+                        <li><a href="categoria.html?cat=Tecnologia">Tecnologia</a></li>
                         <li><a href="categoria.html?cat=Ciencia">Ciencia</a></li>
                         <li><a href="categoria.html?cat=Entretenimiento">Entretenimiento</a></li>
-                        <li><a href="categoria.html?cat=Espectaculos">Espectáculos</a></li>
+                        <li><a href="categoria.html?cat=Espectaculos">Espectaculos</a></li>
                         <li><a href="categoria.html?cat=Deportes">Deportes</a></li>
-                        <li><a href="categoria.html?cat=Economia">Economía</a></li>
+                        <li><a href="categoria.html?cat=Economia">Economia</a></li>
                         <li><a href="categoria.html?cat=Noticias">Noticias</a></li>
-                        <li><a href="categoria.html?cat=Politica">Política</a></li>
+                        <li><a href="categoria.html?cat=Politica">Politica</a></li>
                     </ul>
                 </li>
-                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="about.html"><span class="icon-info"></span>Acerca de</a></li>
             </ul>
-            
         </header>
 
-      <form id="form">
-      <div class="contenedor">
-          <div class="contenidoPrincipal">
-              <label>Título</label><br>
-              <input type="text" name="txtTitulo" id="txtTitulo" placeholder="Escribe el titulo del post" required maxlength="70">
+        <form id="form">
+            <div class="contenedor" id="wrapper">
+                <div class="contenidoPrincipal" id="layout-izquierda">
+                    <label>Título</label><br>
+                    <input type="text" name="txtTitulo" id="txtTitulo" placeholder="Escribe el titulo del post" required maxlength="70">
 
-          <label>Cuerpo</label>
-          <textarea name="contenido" id="txtContenido" placeholder="Escribe el contenido de tu post, puedes usar etiquetas html para dar formato (negrita,cursiva,h1,h2,etc)." required></textarea>          
+                    <label>Cuerpo</label>
+                    <textarea name="contenido" id="txtContenido" placeholder="Escribe el contenido de tu post, puedes usar etiquetas html para dar formato (negrita,cursiva,h1,h2,etc)." required></textarea>          
 
-          </div>
+                </div>
 
-          <aside id="aside">
+                <aside class="aside" id="layout-derecha">
 
-              <label>Categoría</label>
-              <select id="lista">
-                  <option>Arte</option>
-                  <option>Tecnología</option>
-                  <option>Ciencia</option>
-                  <option>Entretenimiento</option>
-                  <option>Espectáculos</option>
-                  <option>Deportes</option>
-                  <option>Economía</option>
-                  <option>Noticias</option>
-                  <option>Política</option>
-              </select>
-              <div class="contenedorAside">
-                  <label>Click para agregar imagen<br><input name="files" type="file" accept="image/*" id="file" style="display: none"></label>
-                  <div class="contenedorImagen"></div>
-                  <p class="texto">Esta imagen servirá de vista previa de tu publicación en los listados de publicaciones.</p>
-              </div>
-              <input type="submit" id="btnRealizado" value="Hecho">
-          </aside>
+                    <label>Categoría</label>
+                    <select id="lista">
+                        <option>Arte</option>
+                        <option>Tecnologia</option>
+                        <option>Ciencia</option>
+                        <option>Entretenimiento</option>
+                        <option>Espectaculos</option>
+                        <option>Deportes</option>
+                        <option>Economia</option>
+                        <option>Noticias</option>
+                        <option>Politica</option>
+                    </select>
+                    <div class="contenedorAside">
+                        <label>Click para agregar imagen<br><input name="files" type="file" accept="image/*" id="file" style="display: none"></label>
+                        <div class="contenedorImagen"></div>
+                        <p class="texto">Esta imagen servirá de vista previa de tu publicación en los listados de publicaciones.</p>
+                    </div>
+                    <input type="submit" id="btnRealizado" value="Hecho">
+                </aside>
 
-      </div>
-      </form>
-      
-      <script src="scripts/generales.js"></script>
-      <!--script src="scripts/inicio.js"></script-->
-      <script src="scripts/postManager.js"></script>
-  </body>
+            </div>
+        </form>
+
+        <footer>
+            <div>
+                <a href="about.html" class="paraFooter">Quienes somos</a>
+            </div>
+            <div>
+                <p class="paraFooter">Contactanos:</p>
+                <p>infoblogm@gmail.com</p>  
+            </div>
+            <div>
+                <p>El Salvador</p>
+            </div>
+        </footer>
+
+        <script src="scripts/generales.js"></script>
+        <!--script src="scripts/inicio.js"></script-->
+        <script src="scripts/postManager.js"></script>
+    </body>
 </html>

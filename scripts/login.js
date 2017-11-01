@@ -32,6 +32,7 @@ function cargarXML3() {
         }
     };
     xmlhttp.open("GET", "data/usuarios.xml", true);
+    xmlhttp.setRequestHeader('Cache-Control', 'no-cache');
     xmlhttp.send();
 }
 

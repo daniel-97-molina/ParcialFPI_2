@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><articulos ultimo="9">
+<?xml version="1.0" encoding="UTF-8"?><articulos ultimo="10">
     <articulo idArticulo="1" idUsuario="1" puntos="5">
         <titulo>Computadoras actuales</titulo>
         <contenido>La computadora​ (del inglés: computer; y este del latín: computare,​ 'calcular'), también denominada computador y ordenador​ (del francés: ordinateur; y éste del latín: ordinator), es una máquina electrónica que recibe y procesa datos, para convertirlos en información conveniente y útil, que posteriormente se envía a las unidades de salida, para que pueda ser analizada y utilizada por humanos. Un ordenador está formado físicamente por numerosos circuitos integrados y muchos componentes de apoyo, extensión y accesorios, que en conjunto pueden ejecutar tareas diversas con suma rapidez y bajo el control de un programa (software).
@@ -81,12 +81,21 @@
         <categoria>Tecnologia</categoria>
         <comentarios/>
     </articulo>
-    <articulo idArticulo="9" idUsuario="4" puntos="26">
+    <articulo idArticulo="9" idUsuario="4" puntos="36">
         <titulo>Tesla Inc.</titulo>
         <contenido>sla, Inc. (estilizado como T☰SLA, anteriormente llamada Tesla Motors) es una compañía estadounidense ubicada en Silicon Valley, California, que diseña, fabrica y vende coches eléctricos, componentes para la propulsión de vehículos eléctricos y sistemas de almacenamiento a baterías. Tesla Motors es una compañía cotizada en bolsa bajo el acrónimo TSLA en el índice NASDAQ, y que ya supera la capitalización bursátil de Ford Motor Company.4​ Tesla es la empresa automovilística que más ha incrementado su valor de marca en 2017 según el índice BrandZ.5​
             Tesla Motors ganó amplia atención al producir el Tesla Roadster, el primer automóvil de serie deportivo completamente eléctrico.6​ También vende componentes de propulsión eléctrica, incluyendo paquetes de baterías de iones de litio, a otros fabricantes de automóviles, como Daimler y Toyota.7​ El director ejecutivo Elon Musk ha afirmado que Tesla es un fabricante de coches independiente.8​ Ha desarrollado el Tesla Model S, un liftback de lujo totalmente eléctrico. Su objetivo es producir coches eléctricos a un precio que sea accesible para el consumidor medio.
             Tesla Motors toma el nombre del físico e ingeniero eléctrico de origen serbio Nikola Tesla.</contenido>
         <img>tesla.jpg</img>
+        <categoria>Tecnologia</categoria>
+        <comentarios/>
+    </articulo>
+    <articulo idArticulo="10" idUsuario="5" puntos="0">
+        <titulo>ANÁLISIS: GOOGLE PIXEL 2 XL</titulo>
+        <contenido>Ya hemos tenido la posibilidad de analizar el nuevo teléfono de Google que ha llegado a España, el Google Pixel 2 XL. Este modelo, que ofrece todo lo que se espera de un terminal de gama alta, ofrece un hardware de lo más competente y, como no, la última versión del sistema operativo Android. Os contamos las impresiones que nos ha dejado.
+            &lt;br&gt;&lt;br&gt;Este modelo utiliza como sistema operativo Android Oreo (versión 8.0), y dispone de una personalización que sólo los modelos Pixel utilizan de serie. El caso es que el sistema operativo se muestra muy solvente y capaz, dejando claro que cada vez consume menos recursos para funcionar y sacando el máximo partido del hardware que esta incluido en el Google Pixel 2 XL. 
+            &lt;br&gt;&lt;br&gt;Por cierto, que la actualización Android 8.1 se espera para antes de que acabe el año 2017, concretamente en diciembre. Evidentemente, nada de bloatware y sí de la opción de disfrutar de las novedades que desarrollo Google en el mismo momento en que las lanza al mercado.</contenido>
+        <img>Trasera-Google-Pixel-2-XL-768x432.jpg</img>
         <categoria>Tecnologia</categoria>
         <comentarios/>
     </articulo>

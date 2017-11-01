@@ -1,13 +1,19 @@
 var xmlDocUsuarios;
 var idUsuario;
 var usuarios;
+var visitante;
 window.onload = function () {
     if (!localStorage.usuarioLogueado) {
         location.href = "login.html";
     } else {
-        var x = location.href.split("id=")[1] || localStorage.usuarioLogueado;
+        var usuarioVisita=location.href.split("id=")[1];
+        visitante=usuarioVisita!==localStorage.usuarioLogueado;
+        var x = usuarioVisita || localStorage.usuarioLogueado;
         idUsuario = parseInt(x) - 1;
         cargarXML2(idUsuario);
+        if(visitante){
+            $("#imagenUsuario .mensaje").className="ocultar";
+        }
         cargarArticulosUsuario(idUsuario);
     }
 };
@@ -28,7 +34,9 @@ function cargarXML2(idUsuario) {
     xmlhttp.send();
 }
 $("#imagenUsuario").onclick = function () {
+    if(!visitante){
     $("#file").click(console.log(""));
+    }
 };
 
 function cargarDatos2(xml, idUsuario) {

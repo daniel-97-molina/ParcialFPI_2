@@ -18,6 +18,12 @@ body{
     filter: grayscale(100%);
     cursor: pointer;
 }
+.mostrar{
+    display: block;
+}
+.ocultar{
+    display: none;
+}
 #imagenUsuario > .mensaje{
     opacity: 0;
 

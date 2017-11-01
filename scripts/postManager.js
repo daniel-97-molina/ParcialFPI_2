@@ -69,7 +69,7 @@ function subirXMLArticulos() {
     xmlhttp.send(xmlDoc);
     setTimeout(function () {
         location.href="postViewer.html?id="+(ultimo+1);  
-    },50);
+    },100);
           
    
 }

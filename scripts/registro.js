@@ -131,7 +131,7 @@ function usuariosExistentes(usuarios) {
         }
     }
 
-    if (!$("#txtRegistroUsuario").value == "" && !$("#txtRegistroCorreo").value == "" && !$("#txtRegistroPassword").value == "") {
+    if (!$("#txtRegistroUsuario").value == "" && !$("#txtRegistroCorreo").value == "" && !$("#txtRegistroPassword").value == "" && !$("#txtRegistroCorreo").validity.typeMismatch) {
         if (existeUsuario === false && existeCorreo === false) {
 
             siguientePaso = true;

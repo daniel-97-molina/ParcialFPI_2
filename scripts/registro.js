@@ -40,6 +40,7 @@ function procesarInfo() {
         }
     };
     xmlhttp.open("GET", "data/usuarios.xml", true);
+    xmlhttp.setRequestHeader('Cache-Control', 'no-cache');
     xmlhttp.send();
 
 //  xmlhttp.upload.onload = function(){
@@ -58,11 +59,12 @@ function procesar(xml) {
 function subirXML() {
     var xmlh = new XMLHttpRequest();
     xmlh.open("POST", "procesarPost.php", true);
+    xmlh.setRequestHeader('Cache-Control', 'no-cache');
     xmlh.setRequestHeader("Content-Type", "text/xml");
 //    console.log(xmlDoc);
         
     xmlh.send(xmlDoc);
-    setTimeout(function(){location.href = "inicio.html";},2000);
+    location.href = "inicio.html";
 
 }
 

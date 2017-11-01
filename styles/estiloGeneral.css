@@ -176,6 +176,11 @@ input{
     line-height: 25px;
 }
 
+@media screen and (max-width: 730px){
+    #divAbout{
+        width: 100%;
+    }
+}
 
 
 

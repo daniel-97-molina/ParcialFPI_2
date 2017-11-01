@@ -25,10 +25,10 @@ function generarDivArticuloBig(nArticulo, sAutor, iPuntos) {
     aGenerado.className = "aContenedorArticulo";
     aGenerado.innerHTML = `<div class="contenido">
       <div class="detalles">
-        <p>${sAutor} - puntos: ${iPuntos}</p>
+        <p><span class="icon-user"></span>  ${sAutor}   <span class="icon-stats-dots"></span>  ${iPuntos}</p>
       </div>
       <div class="categoria">
-        <p>${nArticulo.getElementsByTagName("categoria")[0].childNodes[0].nodeValue}</p>
+        <p><span class="icon-list"></span>${nArticulo.getElementsByTagName("categoria")[0].childNodes[0].nodeValue}</p>
       </div>
       <img src="images/imagesArticulos/${nArticulo.getElementsByTagName("img")[0].childNodes[0].nodeValue}" alt="imagen-del-post">
       <h3>${nArticulo.getElementsByTagName("titulo")[0].childNodes[0].nodeValue.substr(0,40)}</h3>
@@ -47,7 +47,7 @@ function generarDivArticuloSmall(nArticulo, sAutor, iPuntos) {
       <img src="images/imagesArticulos/${nArticulo.getElementsByTagName("img")[0].childNodes[0].nodeValue}" alt="imagen-del-post"">
       <h3>${nArticulo.getElementsByTagName("titulo")[0].childNodes[0].nodeValue.substr(0, 30)}</h3>
       <div class="detalles">
-        <p>${nArticulo.getElementsByTagName("categoria")[0].childNodes[0].nodeValue} - ${sAutor} - puntos: ${iPuntos}</p>
+        <p><span class="icon-list"></span>${nArticulo.getElementsByTagName("categoria")[0].childNodes[0].nodeValue} <span class="icon-user"></span>  ${sAutor}   <span class="icon-stats-dots"></span>  ${iPuntos}</p>
       </div>
     </div>
   `;
@@ -103,11 +103,12 @@ function Persona(iId, sNombre) {
 
 
 function imagen(ruta) {//codigo para enviar la imagen al servidor
-    let form = $("#form");
+    let form2 = $("#form");
 
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("post", "imageHandler.php?ruta=" + ruta);
-    xmlhttp.send(new FormData(form));
+    var xmlhtt = new XMLHttpRequest();
+    xmlhtt.open("post", "imageHandler.php?ruta=" + ruta);
+    xmlhtt.setRequestHeader('Cache-Control', 'no-cache');
+    xmlhtt.send(new FormData(form2));
 }
 
 
@@ -169,6 +170,7 @@ function cargarXMLGenerales(idUsuario) {
         }
     };
     xmlhttp.open("GET", "data/usuarios.xml", true);
+    xmlhttp.setRequestHeader('Cache-Control', 'no-cache');
     xmlhttp.send();
 }
 

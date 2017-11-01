@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><articulos ultimo="9">
+<?xml version="1.0" encoding="UTF-8"?><articulos ultimo="14">
     <articulo idArticulo="1" idUsuario="1" puntos="5">
         <titulo>asdf</titulo>
         <contenido>s un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).</contenido>
@@ -15,11 +15,11 @@
         <img>Selection_032.png</img>
         <categoria>Tecnologia</categoria>
         <comentarios>
-            <comentario idUsuario="6">hola</comentario>
-            <comentario idUsuario="5">que ondas man
+            <comentario idUsuario="1">hola</comentario>
+            <comentario idUsuario="2">que ondas man
             </comentario>
-            <comentario idUsuario="5">hahahaha</comentario>
-            <comentario idUsuario="6">alsuave y voos?
+            <comentario idUsuario="2">hahahaha</comentario>
+            <comentario idUsuario="3">alsuave y voos?
             </comentario>
         </comentarios>
     </articulo>
@@ -71,8 +71,15 @@
         <img>1.png</img>
         <categoria>Deportes</categoria>
         <comentarios>
-            <comentario idUsuario="5">bababababa</comentario>
-            <comentario idUsuario="6">holaaaaaaaaaaaaaaa</comentario>
+            <comentario idUsuario="2">bababababa</comentario>
+            <comentario idUsuario="1">holaaaaaaaaaaaaaaa</comentario>
         </comentarios>
     </articulo>
-</articulos>
+    <articulo idArticulo="10" idUsuario="12" puntos="0">
+        <titulo>EEEEEEEEEEEEEEEEE</titulo>
+        <contenido>EEEEEE</contenido>
+        <img>36.png</img>
+        <categoria>Noticias</categoria>
+        <comentarios/>
+    </articulo>
+<articulo idArticulo="11" idUsuario="12" puntos="0"><titulo>ultimo</titulo><contenido>kdkaf daf</contenido><img>3.png</img><categoria>Politica</categoria><comentarios/></articulo><articulo idArticulo="12" idUsuario="12" puntos="0"><titulo>YYYYYYYYYYYyy</titulo><contenido>YYYYYYYYY</contenido><img>19832828_1685682911740181_1884106410_n.png</img><categoria>Espectaculos</categoria><comentarios/></articulo><articulo idArticulo="13" idUsuario="12" puntos="0"><titulo>RRRRRRRRRRRRRRRRRRRRRRRRRRR</titulo><contenido>RR</contenido><img>regulares.jpg</img><categoria>Espectaculos</categoria><comentarios/></articulo><articulo idArticulo="14" idUsuario="12" puntos="0"><titulo>UUU</titulo><contenido>U</contenido><img>undefined</img><categoria>Arte</categoria><comentarios/></articulo></articulos>

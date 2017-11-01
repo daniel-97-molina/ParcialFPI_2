@@ -33,8 +33,8 @@
                 </div>
             </div>
             <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a id="submenu" href="#">Categorías</a>
+                <li><a href="inicio.html" ><span class="icon-home"></span>Inicio</a></li>
+                <li><a id="submenu" href="#"><span class="icon-list"></span>Categorías<span class="icon-circle-down"></span></a>
                     <ul id="submenu2" class="oculto">
                         <li><a href="categoria.html?cat=Arte">Arte</a></li>
                         <li><a href="categoria.html?cat=Tecnologia">Tecnologia</a></li>
@@ -47,9 +47,8 @@
                         <li><a href="categoria.html?cat=Politica">Politica</a></li>
                     </ul>
                 </li>
-                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="about.html"><span class="icon-info"></span>Acerca de</a></li>
             </ul>
-            
         </header>
 
         <div id="wrapper">
@@ -57,17 +56,11 @@
                 <section id="sectionContenido">
 
                     <div id="contenido" class="block">
-                        <p id="tituloPost">Fin del populismo</p>
+                        <p id="tituloPost"></p>
                         <div id="contenedorImagen">
-                            <img src="images/depositphotos_43414399-stock-illustration-wave-seamless-pattern-sea-theme.jpg" alt="No se encontro la imagen">
+                            <img src="images/fondoUsuario.jpg" alt="No se encontro la imagen">
                         </div>
-                        <p id="contenidoArticulo">
-                            Lorem ipsum dolor sit a
-
-                            met, consectetur adipiscing elit. Phasellus augue mi, vehicula sed ex et, imperdiet rutrum ligula. Phasellus condimentum turpis vitae sapien varius rutrum. In et ultricies turpis. In gravida vulputate neque nec posuere. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean condimentum convallis magna et cursus. Integer tincidunt ligula vel sollicitudin vestibulum. Praesent porttitor ipsum eget condimentum tincidunt. Ut non velit condimentum quam sagittis consectetur. Mauris ante magna, efficitur in blandit a, varius vel nibh. Nulla vehicula non lorem at elementum. Quisque lacus sapien, dictum a est a, sollicitudin finibus odio.
-
-                            Suspendisse non iaculis lacus. Etiam sed ultricies tortor. Duis ac nisi aliquam, interdum massa eget, tempus nunc. Vivamus volutpat dolor eget tempus placerat. Donec sit amet lorem sagittis, egestas augue ut, scelerisque nibh. Proin quis ligula aliquet, tincidunt sem tempor, facilisis nulla. Duis tincidunt, nisl tempor fringilla fringilla, ipsum enim pellentesque lorem, sed aliquet velit leo eu sapien. Curabitur condimentum vel neque ut iaculis. Morbi eu diam vitae velit convallis sodales quis sed felis. Donec tincidunt condimentum lobortis. Proin consectetur ipsum a mi dignissim, ac vulputate mauris ullamcorper. Sed accumsan, est quis tincidunt sodales, lacus orci auctor quam, eu tincidunt nisi ipsum eget lorem. Morbi eleifend hendrerit tellus non vulputate. Cras ante orci, maximus et vestibulum at, vulputate eu sapien. Sed tristique sed dolor sit amet elementum. Maecenas pretium quis quam faucibus sagittis.
-                        </p>
+                        <p id="contenidoArticulo"></p>
                         <div id="posibleImagen"></div>
                     </div>
                     <div id="puntaje" class="block">
@@ -97,9 +90,9 @@
                 <section id="comentarios" class="block">
                     <div id="contenedorComentarios">
                         <div id="tituloComentario">
-                            <p>Fin del populismo</p>
+                            <p></p>
                         </div>
-                        
+
                         <div id="contenidoComentarios">
 
                         </div>
@@ -119,42 +112,55 @@
             <aside id="layout-derecha" >
                 <div id="info-usuario" class="block">
                     <div class="imagen-infoUsuario">
-                            <img src="images/depositphotos_43414399-stock-illustration-wave-seamless-pattern-sea-theme.jpg" alt="No se encontro la imagen">
+                        <img src="images/fondoUsuario.jpg" alt="No se encontro la imagen">
+                    </div>
+                    <div class="datos-usuario">
+                        <div class="userName"><span id="nombre"><a href="#"></a></span></div>
+                        <div><span id="correo"></span></div>
+                        <div class="posts">
+                            <span id="nPost"></span><br>
+                            <span class="textoPequenio">POSTS</span>
                         </div>
-                     <div class="datos-usuario">
-                         <div class="userName"><span id="nombre"><a href="#">steven</a></span></div>
-                         <div><span id="correo">correo@gmail.com</span></div>
-                                        <div class="posts">
-                                            <span id="nPost">5</span><br>
-                                        <span class="textoPequenio">POSTS</span>
-                                        </div>
-                                        <div class="puntos">
-                                            <span id="nPuntos">5</span><br>
-                                            <span class="textoPequenio">PUNTOS</span>
-                                        </div>
-                                    </div>
+                        <div class="puntos">
+                            <span id="nPuntos"></span><br>
+                            <span class="textoPequenio">PUNTOS</span>
+                        </div>
+                    </div>
                 </div>
-                
+
                 <p id="tematica">Posts relacionados al articulo</p>
                 <div id="contenedorSmall" class="block">
-                    
+
                 </div>
             </aside>
 
-            
-        </div>
-        
-        <div id="contenedorModal" class="ocultar"> 
-            <div id="modal">
-            <p>Identificate como usuario para realizar la acción.</p>
-            <div id="contenedor-botones-modal">
-            <button id="cerrarModal" class="btnModal">Cerrar</button>
-            <button id="loginModal" class="btnModal">Iniciar Sesión</button>
-            </div>
 
         </div>
+
+        <div id="contenedorModal" class="ocultar"> 
+            <div id="modal">
+                <p>Identificate como usuario para realizar la acción.</p>
+                <div id="contenedor-botones-modal">
+                    <button id="cerrarModal" class="btnModal">Cerrar</button>
+                    <button id="loginModal" class="btnModal">Iniciar Sesión</button>
+                </div>
+
+            </div>
         </div>
         
+        <footer>
+            <div>
+                <a href="about.html" class="paraFooter">Quienes somos</a>
+            </div>
+            <div>
+                <p class="paraFooter">Contactanos:</p>
+                <p>infoblogm@gmail.com</p>  
+            </div>
+            <div>
+                <p>El Salvador</p>
+            </div>
+        </footer>
+
         <script src="scripts/generales.js"></script>
         <!--script src="scripts/inicio.js"></script-->
         <script src="scripts/postViewer.js"></script>

@@ -19,6 +19,7 @@ window.onload = function () {
         }
     };
     xmlhttp.open("GET", "data/usuarios.xml", true);
+    xmlhttp.setRequestHeader('Cache-Control', 'no-cache');
     xmlhttp.send();
 
 };
@@ -47,7 +48,7 @@ function cargarArticulos() {
 
                 for (var j = 0; j < aUsuarios.length; j++) {
                     if (aUsuarios[j].getAttribute("id") === aArticulos[i].getAttribute("idUsuario")) {
-                        sAutor = "Autor: " + aUsuarios[j].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+                        sAutor = aUsuarios[j].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
                         break;
                     }
                 }
@@ -70,7 +71,7 @@ function cargarArticulos() {
                 var iPuntos = aArticulosOrdenado[i].getAttribute("puntos");
                 for (var j = 0; j < aArticulosOrdenado.length; j++) {
                     if (aUsuarios[j].getAttribute("id") === aArticulosOrdenado[i].getAttribute("idUsuario")) {
-                        sAutor = "Autor: " + aUsuarios[j].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+                        sAutor = aUsuarios[j].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
                         break;
                     }
                 }
@@ -81,6 +82,7 @@ function cargarArticulos() {
         }
     };
     xmlhttp.open("GET", "data/articulos.xml", true);
+    xmlhttp.setRequestHeader('Cache-Control', 'no-cache');
     xmlhttp.send();
 
 }

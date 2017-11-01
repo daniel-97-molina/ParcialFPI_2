@@ -12,24 +12,18 @@ body{
     margin: auto;
     /*position: relative;*/
 }
-#imagenUsuario:hover{
+.imagenHover:hover{
     transform: scale(0.98);
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     cursor: pointer;
 }
-.mostrar{
-    display: block;
-}
+
 .ocultar{
     display: none;
 }
-#imagenUsuario > .mensaje{
-    opacity: 0;
 
-}
-
-#imagenUsuario:hover .mensaje{
+.imagenHover:hover .mensaje{
     opacity: 1;
 }
 .mensaje{
@@ -41,6 +35,7 @@ body{
     position: relative;
     font-size: 14px;
     top:65px;
+    opacity: 0;
 }
 
 #layout-izquierda{

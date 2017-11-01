@@ -27,7 +27,7 @@ body{
 .userName a:hover{
     text-decoration: underline;
 }
-a:visited{
+.userName a:visited{
     color: inherit;
 }
 #contenedorImagen > img{

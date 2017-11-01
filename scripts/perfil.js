@@ -6,13 +6,17 @@ window.onload = function () {
     if (!localStorage.usuarioLogueado) {
         location.href = "login.html";
     } else {
+        
         var usuarioVisita=location.href.split("id=")[1];
+        console.log(usuarioVisita);
+        console.log(localStorage.usuarioLogueado);
+        console.log(usuarioVisita!==localStorage.usuarioLogueado);
         visitante=usuarioVisita!==localStorage.usuarioLogueado;
         var x = usuarioVisita || localStorage.usuarioLogueado;
         idUsuario = parseInt(x) - 1;
         cargarXML2(idUsuario);
         if(visitante){
-            $("#imagenUsuario .mensaje").className="ocultar";
+            $("#imagenUsuario").className="ubicarDivsUsuario";
         }
         cargarArticulosUsuario(idUsuario);
     }

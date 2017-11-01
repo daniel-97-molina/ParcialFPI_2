@@ -116,19 +116,3 @@ function agregarArticulo() {
     imagen("imagesArticulos");
 }
 
-
-
-/*<articulos>
- <articulo id="1" idUsuario="5">
- <titulo></titulo>
- <contenido>
- </contenido>
- <imagen>
- </imagen>
- <comentarios>
- <comentario idUsuario="usuario">
- </comentario>
- </comentarios>
- </articulo>
- </articulos> 
- */

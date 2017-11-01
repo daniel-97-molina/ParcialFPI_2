@@ -10,7 +10,6 @@ body{
 #wrapper{
     width: 90%;
     margin: auto;
-    /*position: relative;*/
 }
 .imagenHover:hover{
     transform: scale(0.98);
@@ -39,16 +38,9 @@ body{
 }
 
 #layout-izquierda{
-    /*width: 65%;*/
-    /*border: 1.5px solid teal;*/
-    /*border-radius: 10px;*/
-    /*float: left;*/
-/*    margin: 5px;
-    margin-top: 10px;*/
     padding: 15px 10px 15px 10px;
     background: #fff;
-    /*display: inline-block;*/
-    /*position: absolute;*/
+
 }
 
 #spanTitulo1{
@@ -56,15 +48,12 @@ body{
     font-size: 25px;
     color: #1D5A72;
     font-weight: bold;
-
     display: block;
     margin: auto;
-
     background: #CBE6DE;
     height: 40px;
     padding: 7px;
     border-radius: 10px;
-    /*padding-left: 15px;*/
 }
 
 .divUsuario{
@@ -74,11 +63,8 @@ body{
     height: 210px;
     padding-top: 10px;
     margin: auto;
-    /*padding-left: 15px;*/
     text-align: left; 
-    /*position: relative*/
     border-radius: 10px 10px 0px 0px;
-
 }
 
 #imagenUsuario{
@@ -88,7 +74,6 @@ body{
     margin-top: 5px;
     margin-left: 5%;
     text-align: center;
-    /*display: inline-block;*/
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
@@ -102,14 +87,11 @@ body{
     height: 130px;
     margin-left: 25px;
     margin-top: 15px;
-    /*border: 2px solid activecaption;*/
-
     font-size: 18px;
     text-align: left;
     color: #333;
 }
 #nombreUsuario{
-
     font-weight: bold;
 }
 
@@ -121,20 +103,14 @@ body{
 #divPuntosPosts{
     width: 100%;
     height: 60px;
-
     margin: auto;
     margin-top: 140px;
     background-color: rgba(0,0,0,0.3);
-    /*display: block;*/
-    /*margin-top: 10px;*/
-    /*position: absolute;*/
     text-align: center;
     border-radius: 0px 0px 10px 10px;
-
 }
 
 .ubicarDivsUsuario{
-    /*display: inline-block;*/
     float: left;
 }
 .contenedor{
@@ -156,7 +132,6 @@ body{
 
 #puntosUsuario{
     width: 50%;
-    /*border-radius: 0px 0px 0px 10px;*/
     font-weight: bold;
 }
 
@@ -169,7 +144,6 @@ body{
     font-size: 18px;
     color: #1D5A72;
     font-weight: bold;
-
 }
 
 
@@ -180,12 +154,8 @@ body{
     font-weight: bold;
     margin-left: 5%;
     margin-bottom: 10px;
-
 }
 
-/*#contenedorUsuario > header{
-    width: 100%;
-}*/
 
 #tituloDerecha{
     font-size: 20px;
@@ -196,15 +166,7 @@ body{
 }
 
 #layout-derecha{
-    /*width: 30%;*/
-    /*border: 1.5px solid teal;*/
-    /*border-radius: 10px;*/
-    /*display: inline-block;*/
     background: #fff;
-    /*position: absolute;*/
-    /*border-radius: 10px;*/
-/*    margin: 5px;
-    margin-top: 10px;*/
     padding: 5px 5px 10px 5px;
     border-left: 10px solid #e0e3e4;
 }

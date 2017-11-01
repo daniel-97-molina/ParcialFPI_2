@@ -36,7 +36,6 @@ body{
     object-fit: contain;
 }
 #modal{
-   
     width: 350px; 
     height: 190px; 
     box-shadow: 1px 1px 20px 2px #000;
@@ -49,7 +48,6 @@ body{
     top:50%;
     left: 38%;
     transform: translateY(-50%);
-
 }
 #modal > p{
     position: absolute;
@@ -61,11 +59,10 @@ body{
     height: 100%;
     background-color: rgba(0,0,0,0.8);
     position: fixed;
-      top:0; 
+    top:0; 
     left: 0;
     text-align: center;
     margin: auto;
-    
 }
 .ocultar{
     display: none;
@@ -111,24 +108,18 @@ body{
     height: 100%;
 }
 #sideBar{
-
     margin-top: 20px; 
     width: 25%;
     height: 90%;
     float: left;
-
 }
 #tituloPost{
     font-size: 30px;
     font-weight: bold;
     margin: 5% 0; 
-    
-
 }
 #contenido{
     padding: 20px;
-
-
 }
 #contenido #contenidoArticulo{
     line-height:20px;
@@ -141,8 +132,6 @@ body{
     height: 60px;
     margin: 10px 0;
     padding: 20px;
-
-
 }
 #ul li a,.cajaPuntos{
     color: #0066ff;
@@ -151,20 +140,16 @@ body{
     width: 75%;
     height: 70%;
     float: left;
-
 }
 .cajaPuntos{
     width: 25%;
     float: left;
-
 }
 .hacerVisible{
-
   animation-name: slidein;
   animation-duration: 0.3s;
   animation-direction: normal;
     animation-iteration-count: 1;
-
      display: block;
 }
 
@@ -270,7 +255,7 @@ body{
 
 }
 #correo{
-     font-size: 13px;
+    font-size: 13px;
     color: #aaa;
 }
 .datos-usuario .posts,.datos-usuario .puntos{

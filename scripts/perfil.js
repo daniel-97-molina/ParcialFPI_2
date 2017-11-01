@@ -68,29 +68,6 @@ function cargarDatos2(xml, idUsuario) {
 
 }
 
-//function cargarArticulosUsuario(usuario) {
-//    var xmlHttp = new XMLHttpRequest;
-//    xmlHttp.onreadystatechange = function () {
-//        if (this.readyState === 4 && this.status === 200) {
-//            var xmlDocArticulo = xmlHttp.responseXML;
-//            
-//            var aArticulos = xmlDocArticulo.getElementsByTagName("articulo");
-//            
-//            for (var i = 0; i < aArticulos.length; i++) {
-//                if (usuarios[usuario].getAttribute("id") === aArticulos[i].getAttribute("idUsuario")) {
-//                    var sAutor = usuarios[usuario].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
-//                    $("#layout-izquierda").appendChild(generarDivArticuloBig(aArticulos[i], sAutor));
-//
-//                }
-//            }
-//        }
-//
-//    };
-//
-//    xmlHttp.open("GET", "data/articulos.xml", true);
-//    xmlHttp.send();
-//
-//}
 
 $("#file").onchange = function (e) {
     var permitida = false;

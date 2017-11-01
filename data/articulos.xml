@@ -1,106 +1,93 @@
-<?xml version="1.0" encoding="UTF-8"?><articulos ultimo="13">
+<?xml version="1.0" encoding="UTF-8"?><articulos ultimo="9">
     <articulo idArticulo="1" idUsuario="1" puntos="5">
-        <titulo>asdf</titulo>
-        <contenido>s un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. Muchos paquetes de autoedición y editores de páginas web usan el Lorem Ipsum como su texto por defecto, y al hacer una búsqueda de "Lorem Ipsum" va a dar por resultado muchos sitios web que usan este texto si se encuentran en estado de desarrollo. Muchas versiones han evolucionado a través de los años, algunas veces por accidente, otras veces a propósito (por ejemplo insertándole humor y cosas por el estilo).</contenido>
-        <img>kde-back.png</img>
-        <categoria>Deportes</categoria>
+        <titulo>Computadoras actuales</titulo>
+        <contenido>La computadora​ (del inglés: computer; y este del latín: computare,​ 'calcular'), también denominada computador y ordenador​ (del francés: ordinateur; y éste del latín: ordinator), es una máquina electrónica que recibe y procesa datos, para convertirlos en información conveniente y útil, que posteriormente se envía a las unidades de salida, para que pueda ser analizada y utilizada por humanos. Un ordenador está formado físicamente por numerosos circuitos integrados y muchos componentes de apoyo, extensión y accesorios, que en conjunto pueden ejecutar tareas diversas con suma rapidez y bajo el control de un programa (software).
+            &lt;br&gt;&lt;br&gt;Dos partes esenciales la constituyen, el hardware (hard = duro) que es su estructura física (circuitos electrónicos, cables, gabinete, teclado, etc), y el software que es su parte intangible (programas, datos, información, señales digitales para uso interno, etc).
+            &lt;br&gt;&lt;br&gt;Desde el punto de vista funcional es una máquina que posee, al menos, una unidad central de procesamiento, una memoria principal y algún periférico o dispositivo de entrada y otro de salida. Los dispositivos de entrada permiten el ingreso de datos, la CPU se encarga de su procesamiento (operaciones aritmético-lógicas) y los dispositivos de salida los comunican a otros medios. Es así, que la computadora recibe datos, los procesa y emite la información resultante, la que luego puede ser interpretada, almacenada, transmitida a otra máquina o dispositivo o sencillamente impresa; todo ello a criterio de un operador o usuario y bajo el control de un programa.
+            &lt;br&gt;&lt;br&gt;El hecho de que sea programable, le posibilita realizar una gran diversidad de tareas, esto la convierte en una máquina de propósitos generales (a diferencia, por ejemplo, de una calculadora cuyo único propósito es calcular limitadamente). Es así que, sobre la base de datos de entrada, puede realizar operaciones y resolución de problemas en las más diversas áreas del quehacer humano (administrativas, científicas, de diseño, ingeniería, medicina, comunicaciones, música, etc), incluso muchas cuestiones que directamente no serían resolubles o posibles sin su intervención.
+            &lt;br&gt;&lt;br&gt;Básicamente, la capacidad de una computadora depende de sus componentes hardware, en tanto que la diversidad de tareas radica mayormente en el software que admita ejecutar y contenga instalado.</contenido>
+        <img>computadora.png</img>
+        <categoria>Tecnologia</categoria>
         <comentarios/>
     </articulo>
     <articulo idArticulo="2" idUsuario="1" puntos="14">
-        <titulo>What is JSON?</titulo>
-        <contenido>JSON stands for JavaScript Object Notation
-            JSON is lightweight data interchange format
-            JSON is language independent *
-            JSON is "self-describing" and easy to understand</contenido>
-        <img>Selection_032.png</img>
+        <titulo>Proyecto Debian</titulo>
+        <contenido>Nació como una apuesta por separar en sus versiones el software libre del software no libre. El modelo de desarrollo del proyecto es ajeno a motivos empresariales o comerciales, siendo llevado adelante por los propios usuarios, aunque cuenta con el apoyo de varias empresas en forma de infraestructuras. Debian no vende directamente su software, lo pone a disposición de cualquiera en Internet, aunque sí permite a personas o empresas distribuirlo comercialmente mientras se respete su licencia.
+            &lt;br&gt;&lt;br&gt;La comunidad de desarrolladores del proyecto cuenta con la representación de Software in the Public Interest (del inglés, "software de interés público"),​ una organización sin ánimo de lucro que da cobertura legal a varios proyectos de software libre, con el objetivo inicial de dar cobertura legal al proyecto Debian, tras el fin del patrocinio de la FSF (Free Software Foundation).
+            &lt;br&gt;&lt;br&gt;La primera adaptación del sistema Debian, siendo también la más desarrollada, es Debian GNU/Linux, basada en el núcleo Linux, y como siempre utilizando herramientas de GNU. Existen también otras adaptaciones con diversos núcleos: Hurd (Debian GNU/Hurd); NetBSD (Debian GNU/NetBSD) y FreeBSD (Debian GNU/kFreeBSD).</contenido>
+        <img>debian.png</img>
         <categoria>Tecnologia</categoria>
         <comentarios>
-            <comentario idUsuario="1">hola</comentario>
-            <comentario idUsuario="2">que ondas man
-            </comentario>
-            <comentario idUsuario="2">hahahaha</comentario>
-            <comentario idUsuario="3">alsuave y voos?
-            </comentario>
+            <comentario idUsuario="1">Excelente distribucion de Linux.</comentario>
+            <comentario idUsuario="2">Que bueno que compartan esto aca.</comentario>
+            <comentario idUsuario="2">Mejor distro.</comentario>
+            <comentario idUsuario="3">Sin duda asi es.</comentario>
         </comentarios>
     </articulo>
     <articulo idArticulo="3" idUsuario="1" puntos="6">
-        <titulo>Nueva pub</titulo>
-        <contenido>El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados. Las secciones 1.10.32 y 1.10.33 de "de Finibus Bonorum et Malorum" por Cicero son también reproducidas en su forma original exacta, acompañadas por versiones en Inglés de la traducción realizada en 1914 por H. Rackham.</contenido>
-        <img>Selection_002.png</img>
-        <categoria>Espectaculos</categoria>
+        <titulo>Super Bowl</titulo>
+        <contenido>Super Bowl (también conocido como Supertazón en Hispanoamérica)​ es el nombre que se le da al partido final del campeonato de la National Football League (NFL) —principal campeonato profesional de fútbol americano en los Estados Unidos—, en el que se enfrentan los campeones de la Conferencia Nacional (NFC) y la Conferencia Americana (AFC). El cotejo se disputa el primer domingo del mes de febrero y debe su nombre a Lamar Hunt, antiguo propietario de Kansas City Chiefs, quien lo llamó así tras ver a su hijo jugar con una pelota rebotadora.​
+            &lt;br&gt;&lt;br&gt;El primer Super Bowl se jugó el 15 de enero de 1967 (el primer ganador fue Green Bay) como parte de un acuerdo entre la National Football League y el otro campeonato existente por aquel entonces, la American Football League (AFL), para que los vencedores de cada competición jugaran un partido que decidiera al campeón de Estados Unidos. Cuando la AFL se integró en la NFL, cada liga se convirtió en una conferencia y el juego pasó a ser entre sus campeones. El equipo que más veces ha ganado ha sido Pittsburgh Steelers (seis ocasiones), y solo hay cuatro de las 32 franquicias de la NFL que nunca han jugado la final.3​ El actual campeón son los New England Patriots que ganaron la edición LI el 5 de febrero del 2017, por primera vez en tiempo extra.
+            &lt;br&gt;&lt;br&gt;Al margen del ámbito deportivo, el Super Bowl es una de las retransmisiones por televisión más vistas en los Estados Unidos cada año. Muchos músicos han actuado durante las ceremonias antes del partido y en el descanso, la franja publicitaria es la más cara de todo el año, y el día del partido (conocido como "Super Sunday" —Super Domingo—) está considerado de facto como una fiesta nacional.​ Los estadounidenses consumen más comida y bebida durante el encuentro que en cualquier otra fecha, exceptuando el Día de Acción de Gracias.
+            &lt;br&gt;&lt;br&gt;Por lo que atañe al género de esta palabra en español, si se usa la traducción al castellano de Supertazón debe ser el masculino ya que es el género de la palabra tazón. Si se deja en inglés, es mayoritario el uso en masculino,​ sobre todo en Latinoamérica, por referencia al término partido.​ En España sin embargo es popular el femenino, que puede sobreentender la palabra final.9​</contenido>
+        <img>SuperBowl.jpg</img>
+        <categoria>Deportes</categoria>
         <comentarios/>
     </articulo>
     <articulo idArticulo="4" idUsuario="1" puntos="8">
-        <titulo>El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es </titulo>
-        <contenido>El trozo de texto estándar de Lorem Ipsum usado desde el año 1500 es reproducido debajo para aquellos interesados. Las secciones 1.10.32 y 1.10.33 de "de Finibus Bonorum et Malorum" por Cicero son también reproducidas en su forma original exacta, acompañadas por versiones en Inglés de la traducción realizada en 1914 por H. Rackham.</contenido>
-        <img>Selection_016.png</img>
-        <categoria>Tecnologia</categoria>
+        <titulo>El fútbol</titulo>
+        <contenido>El fútbol o futbol​ (del inglés británico football, traducido como balompié3​) es un deporte de equipo jugado entre dos conjuntos de once jugadores cada uno y algunos árbitros que se ocupan de que las normas se cumplan correctamente. Es ampliamente considerado el deporte más popular del mundo, pues lo practican unas 270 millones de personas.​ También se le conoce como futbol asociación o fútbol asociación, nombre derivado de The Football Association, primera federación oficial del mundo en este deporte y que utilizó ese nombre para distinguirlo de otros deportes que incluyen la palabra "futbol" o "fútbol".​ En algunos países de habla inglesa también se le conoce como soccer, abreviatura de association, puesto que el nombre de football en esos países se asocia mayoritariamente a otros deportes con esa denominación.
+            &lt;br&gt;&lt;br&gt;El terreno de juego es rectangular de césped natural o artificial, con una portería o arco a cada lado del campo. Se juega mediante una pelota que se debe desplazar a través del campo con cualquier parte del cuerpo que no sean los brazos o las manos, y mayoritariamente con los pies (de ahí su nombre). El objetivo es introducirla dentro de la portería o arco contrario, acción que se denomina marcar un gol. El equipo que logre más goles al cabo del partido, de una duración de 90 minutos, es el que resulta ganador del encuentro.
+            &lt;br&gt;&lt;br&gt;El juego moderno fue reinventado en Inglaterra tras la formación de la Football Association, cuyas reglas de 1863 son la base del deporte en la actualidad. El organismo rector del fútbol es la Federación Internacional de Fútbol Asociación, más conocida por su acrónimo FIFA. La competición internacional de fútbol más prestigiosa es la Copa Mundial de Fútbol, organizada cada cuatro años por dicho organismo. Este evento es el más famoso y el que cuenta con mayor cantidad de espectadores del mundo, doblando la audiencia de los Juegos Olímpicos.</contenido>
+        <img>futbol.jpg</img>
+        <categoria>Deportes</categoria>
         <comentarios/>
     </articulo>
     <articulo idArticulo="5" idUsuario="1" puntos="20">
-        <titulo>asdfkdkdkdkdk dkdkd dkdksk a dfkaskfasdkf assfalk alsdf</titulo>
-        <contenido>Cras lorem augue, imperdiet sit amet fermentum sed, auctor ac enim. Etiam tincidunt tellus quam, non commodo sapien gravida nec. Cras ut sagittis ante. Nullam sollicitudin lorem orci. Quisque ante mauris, accumsan sed justo et, hendrerit laoreet erat. Mauris at nulla quis tortor elementum ornare quis imperdiet ligula. Sed viverra nisl sit amet risus egestas, id aliquam mauris tempus. Maecenas tincidunt pharetra lorem sed dignissimCras lorem augue, imperdiet sit amet fermentum sed, auctor ac enim. Etiam tincidunt tellus quam, non commodo sapien gravida nec. Cras ut sagittis ante. Nullam sollicitudin lorem orci. Quisque ante mauris, accumsan sed justo et, hendrerit laoreet erat. Mauris at nulla quis tortor elementum ornare quis imperdiet ligula. Sed viverra nisl sit amet risus egestas, id aliquam mauris tempus. Maecenas tincidunt pharetra lorem sed dignissim</contenido>
-        <img>TIEMPOINICIO.png</img>
-        <categoria>Deportes</categoria>
-        <comentarios/>
-    </articulo>
-    <articulo idArticulo="6" idUsuario="6" puntos="7">
-        <titulo>asdf</titulo>
-        <contenido>asdf</contenido>
-        <img>50.png</img>
-        <categoria>Deportes</categoria>
-        <comentarios/>
-    </articulo>
-    <articulo idArticulo="7" idUsuario="2" puntos="14">
-        <titulo>Este es otro post</titulo>
-        <contenido>eso fue hecho por Daniel...blabla</contenido>
-        <img>AlbumArtSmall.jpg</img>
+        <titulo>Estudia biología</titulo>
+        <contenido>La biología (del griego βίος [bíos], «vida», y -λογία [-logía], «tratado, estudio, ciencia») es la ciencia que estudia a los seres vivos y, más específicamente, su origen, su evolución y sus propiedades: nutrición, morfogénesis, reproducción (asexual y sexual), patogenia, etc. Se ocupa tanto de la descripción de las características y los comportamientos de los organismos individuales, como de las especies en su conjunto, así como de la reproducción de los seres vivos y de las interacciones entre ellos y el entorno. De este modo, trata de estudiar la estructura y la dinámica funcional comunes a todos los seres vivos, con el fin de establecer las leyes generales que rigen la vida orgánica y los principios de esta.
+            &lt;br&gt;&lt;br&gt;En su sentido moderno, la palabra «biología» parece haber sido introducida independientemente por Gottfried Reinhold Treviranus (Biologie oder Philosophie der lebenden Natur, 1802) y por Jean-Baptiste Lamarck (Hydrogéologie, 1802). Generalmente, se dice que el término fue acuñado en 1800 por Karl Friedrich Burdach, aunque se menciona en el título del tercer volumen de Philosophiae naturalis sive physicae dogmaticae: Geología, biología, phytologia generalis et dendrologia, de Michael Christoph Hanow y publicado en 1767.</contenido>
+        <img>biologia.png</img>
         <categoria>Ciencia</categoria>
         <comentarios/>
     </articulo>
-    <articulo idArticulo="8" idUsuario="2" puntos="16">
-        <titulo>post hecho por Maria</titulo>
-        <contenido>este post fue hecho por el usuario DanielRamirez</contenido>
-        <img>AlbumArtSmall.jpg</img>
+    <articulo idArticulo="6" idUsuario="2" puntos="7">
+        <titulo>Lo mejor de la química</titulo>
+        <contenido>La química es la ciencia que estudia tanto la composición, como la estructura y las propiedades de la materia como los cambios que esta experimenta durante las reacciones químicas y su relación con la energía.​ Linus Pauling la define como la ciencia que estudia las sustancias, su estructura (tipos y formas de acomodo de los átomos), sus propiedades y las reacciones que las transforman en otras sustancias en referencia con el tiempo.​
+           &lt;br&gt;&lt;br&gt;La química moderna se desarrolló a partir de la alquimia, una práctica protocientífica de carácter filosófico, que combinaba elementos de la química, la metalurgia, la física, la medicina, la biología, entre otras ciencias y artes. Esta fase termina al ocurrir la llamada Revolución de la química, basada en la ley de conservación de la materia y la teoría de la combustión por oxígeno postuladas por el científico francés Antoine Lavoisier.3
+           &lt;br&gt;&lt;br&gt;Las disciplinas de la química se agrupan según la clase de materia bajo estudio o el tipo de estudio realizado. Entre éstas se encuentran la química inorgánica, que estudia la materia inorgánica; la química orgánica, que estudia la materia orgánica; la bioquímica, que estudia las sustancias existentes en organismos biológicos; la fisicoquímica que comprende los aspectos estructurales y energéticos de sistemas químicos a escalas macroscópica, molecular y atómica, y la química analítica, que analiza muestras de materia y trata de entender su composición y estructura mediante diversos estudios y reacciones.</contenido>
+        <img>quimica.jpg</img>
         <categoria>Ciencia</categoria>
         <comentarios/>
     </articulo>
-    <articulo idArticulo="9" idUsuario="2" puntos="0">
-        <titulo>Titulonamhjdjsj</titulo>
-        <contenido>hahahahahahahahahahahhahhahahahahhahha</contenido>
-        <img>1.png</img>
-        <categoria>Deportes</categoria>
-        <comentarios>
-            <comentario idUsuario="2">bababababa</comentario>
-            <comentario idUsuario="1">holaaaaaaaaaaaaaaa</comentario>
-        </comentarios>
-    </articulo>
-    <articulo idArticulo="10" idUsuario="12" puntos="0">
-        <titulo>EEEEEEEEEEEEEEEEE</titulo>
-        <contenido>EEEEEE</contenido>
-        <img>36.png</img>
-        <categoria>Noticias</categoria>
+    <articulo idArticulo="7" idUsuario="2" puntos="24">
+        <titulo>Las finanzas</titulo>
+        <contenido>Las finanzas son una rama de la economía y administración de empresas que estudia el intercambio de capital entre individuos, empresas, o Estados y con la incertidumbre y el riesgo que estas actividades conllevan.1​ Se dedica al estudio de la obtención de capital para la inversión en bienes productivos y de las decisiones de inversión de los ahorradores. Está relacionado con las transacciones y con la administración del dinero.​ En ese marco se estudia la obtención y gestión, por parte de una compañía, un individuo, o del propio Estado, de los fondos que necesita para cumplir sus objetivos, y de los criterios con que dispone de sus activos; en otras palabras, lo relativo a la obtención y gestión del dinero, así como de otros valores o sucedáneos del dinero, como lo son los títulos, los bonos, etc. Según Bodie y Merton, las finanzas "estudian la manera en que los recursos escasos se asignan a través del tiempo". Las finanzas tratan, por lo tanto, de las condiciones y la oportunidad con que se consigue el capital, de los usos de éste,y los retornos que un inversionista obtiene de sus inversiones.​
+            &lt;br&gt;&lt;br&gt;El estudio académico de las finanzas se divide principalmente en dos ramas,​ que reflejan las posiciones respectivas de aquel que necesita fondos o dinero para realizar una inversión, llamada finanzas corporativas, y de aquel que quiere invertir su dinero dándoselo a alguien que lo quiera usar para invertir, llamada valuación de activos[cita requerida]. El área de finanzas corporativas estudia cómo le conviene más a un inversionista conseguir dinero, por ejemplo, si vendiendo acciones, pidiendo prestado a un banco o vendiendo deuda en el mercado. El área de valuación de activos estudia cómo le conviene más a un inversionista invertir su dinero, por ejemplo, si comprando acciones, prestando/comprando deuda, o acumulado dinero en efectivo.
+            &lt;br&gt;&lt;br&gt;Estas dos ramas de las finanzas se dividen en otras más. Algunas de las áreas más populares dentro del estudio de las finanzas son: Intermediación Financiera, Finanzas Conductistas, Microestructura de los Mercados Financieros, Desarrollo Financiero, Finanzas Internacionales, y Finanzas de Consumidor.​ Una disciplina recientemente creada son las neurofinanzas, rama de la neuroeconomía, encargada del estudio de los sesgos relacionados con el manejo de la economía.
+            &lt;br&gt;&lt;br&gt;Las finanzas personales son la aplicación de las finanzas y sus principios a una persona o familia en su deseo de realizar sus actividades con la mejor distribución de dinero para ello. Así, deben reconocer cómo ocupar sus ingresos en educación, salud, alimentación, vestimenta, seguros, lujos, transporte, etc. Se deben tener en cuenta los ingresos, los gastos, los ahorros y siempre estableciendo los riesgos y los eventos futuros. Parte de las finanzas personales son los cheques, las cuentas de ahorro, las tarjetas de crédito, los préstamos, las inversiones en el mercado de valores, los planes de jubilación, los impuestos, etc.</contenido>
+        <img>finanzas.jpg</img>
+        <categoria>Economia</categoria>
         <comentarios/>
     </articulo>
-    <articulo idArticulo="11" idUsuario="12" puntos="0">
-        <titulo>ultimo</titulo>
-        <contenido>kdkaf daf</contenido>
-        <img>3.png</img>
-        <categoria>Politica</categoria>
+    <articulo idArticulo="8" idUsuario="3" puntos="25">
+        <titulo>Vehículo aéreo no tripulado</titulo>
+        <contenido>Un vehículo aéreo no tripulado (VANT), UAV (Unmanned Aerial Vehicle) o comúnmente dron es una aeronave que vuela sin tripulación. Un VANT es un vehículo sin tripulación reutilizable, capaz de mantener de manera autónoma un nivel de vuelo controlado y sostenido, y propulsado por un motor de explosión, eléctrico, o de reacción.
+            &lt;br&gt;&lt;br&gt;El diseño de los VANT tiene una amplia variedad de formas, tamaños, configuraciones y características. Históricamente surgen como aviones pilotados remotamente (en español: drones),​ aumentando a diario el empleo del control autónomo de los VANT. Existen dos variantes: los controlados desde una ubicación remota, y aquellos de vuelo autónomo a partir de planes de vuelo preprogramados a través de automatización dinámica.
+            &lt;br&gt;&lt;br&gt;Existen VANT de usos tanto civiles como comerciales, pero sus primeros usos fueron en aplicaciones militares, en este caso llamados Vehículos Aéreos de Combate No Tripulados —UCAV en sus siglas en inglés—. Los misiles de crucero no son considerados VANT, ya que aunque son vehículos no tripulados y a veces guiados remotamente, el propio vehículo del misil es un arma no reutilizable. En ese sentido, las aeronaves controladas remotamente (Aeronaves Radiocontroladas o Aeronaves R/C) no se consideran como VANT, al no ser sistemas autónomos que puedan operar sin intervención humana durante su funcionamiento en la misión, es decir, pueden despegar, volar y aterrizar automáticamente.
+            &lt;br&gt;&lt;br&gt;Con la progresiva popularización del uso civil de los drones sus aplicaciones varían, ampliándose el número de consumidores más allá del terreno militar.​ Este crecimiento tan acusado ha llevado a que emerjan cada vez más empresas para beneficiarse de este nicho de mercado, tales como Syma o DJI.
+            &lt;br&gt;&lt;br&gt;Actualmente, los VANT militares realizan tanto misiones de reconocimiento como de ataque.​ Si bien se ha informado de muchos ataques de drones con éxito, también son susceptibles de provocar daños colaterales y/o identificar objetivos erróneos, como con otros tipos de arma.​ Los VANT también son utilizados en un pequeño pero creciente número de aplicaciones civiles, como en labores de lucha contra incendios o seguridad civil, como la vigilancia de los oleoductos. Los vehículos aéreos no tripulados suelen ser preferidos para misiones que son demasiado "aburridas, sucias o peligrosas" para los aviones tripulados.</contenido>
+        <img>vmw.jpg</img>
+        <categoria>Tecnologia</categoria>
         <comentarios/>
     </articulo>
-    <articulo idArticulo="12" idUsuario="12" puntos="0">
-        <titulo>YYYYYYYYYYYyy</titulo>
-        <contenido>YYYYYYYYY</contenido>
-        <img>19832828_1685682911740181_1884106410_n.png</img>
-        <categoria>Espectaculos</categoria>
-        <comentarios/>
-    </articulo>
-    <articulo idArticulo="13" idUsuario="12" puntos="0">
-        <titulo>RRRRRRRRRRRRRRRRRRRRRRRRRRR</titulo>
-        <contenido>RR</contenido>
-        <img>regulares.jpg</img>
-        <categoria>Espectaculos</categoria>
+    <articulo idArticulo="9" idUsuario="4" puntos="26">
+        <titulo>Tesla Inc.</titulo>
+        <contenido>sla, Inc. (estilizado como T☰SLA, anteriormente llamada Tesla Motors) es una compañía estadounidense ubicada en Silicon Valley, California, que diseña, fabrica y vende coches eléctricos, componentes para la propulsión de vehículos eléctricos y sistemas de almacenamiento a baterías. Tesla Motors es una compañía cotizada en bolsa bajo el acrónimo TSLA en el índice NASDAQ, y que ya supera la capitalización bursátil de Ford Motor Company.4​ Tesla es la empresa automovilística que más ha incrementado su valor de marca en 2017 según el índice BrandZ.5​
+            Tesla Motors ganó amplia atención al producir el Tesla Roadster, el primer automóvil de serie deportivo completamente eléctrico.6​ También vende componentes de propulsión eléctrica, incluyendo paquetes de baterías de iones de litio, a otros fabricantes de automóviles, como Daimler y Toyota.7​ El director ejecutivo Elon Musk ha afirmado que Tesla es un fabricante de coches independiente.8​ Ha desarrollado el Tesla Model S, un liftback de lujo totalmente eléctrico. Su objetivo es producir coches eléctricos a un precio que sea accesible para el consumidor medio.
+            Tesla Motors toma el nombre del físico e ingeniero eléctrico de origen serbio Nikola Tesla.</contenido>
+        <img>tesla.jpg</img>
+        <categoria>Tecnologia</categoria>
         <comentarios/>
     </articulo>
 </articulos>

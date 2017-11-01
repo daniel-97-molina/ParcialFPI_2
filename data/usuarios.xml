@@ -1,32 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?><usuarios ultimo="16">
-    <usuario id="1" imagen="IMG-20171024-WA0001.jpg">
-        <nombre>Daniel2</nombre>
-        <correo>molina@hk.com</correo>
-        <password>haha</password>
+<?xml version="1.0" encoding="UTF-8"?><usuarios ultimo="5">
+    <usuario id="1" imagen="animado1.jpeg">
+        <nombre>Daniel Molina</nombre>
+        <correo>molina@gmail.com</correo>
+        <password>path</password>
         <sexo>M</sexo>
     </usuario>
-    <usuario id="2" imagen="aq.jpg">
-        <nombre>Maria2</nombre>
-        <correo>maria2@hk.com</correo>
-        <password>haha2</password>
+    <usuario id="2" imagen="animado2.jpeg">
+        <nombre>Irvin Ayala</nombre>
+        <correo>irvin@gmail.com</correo>
+        <password>path2</password>
         <sexo>F</sexo>
     </usuario>
-    <usuario id="3" imagen="default.jpg">
-        <nombre>Kevin2</nombre>
-        <correo>kevin2@hk.com</correo>
-        <password>haha3</password>
+    <usuario id="3" imagen="animado5.jpg">
+        <nombre>Steven Herrera</nombre>
+        <correo>steven@gmail.com</correo>
+        <password>path3</password>
         <sexo>M</sexo>
     </usuario>
-    <usuario id="4" imagen="default.jpg">
-        <nombre>hola</nombre>
-        <correo>hola@hola</correo>
-        <password>hola</password>
+    <usuario id="4" imagen="animado4.jpg">
+        <nombre>Maria Vasquez</nombre>
+        <correo>maria@gmail.com</correo>
+        <password>path4</password>
+        <sexo>F</sexo>
+    </usuario>
+    <usuario id="5" imagen="animado5.jpg">
+        <nombre>Kevin Garay</nombre>
+        <correo>kevin@gmail.com</correo>
+        <password>path5</password>
         <sexo>M</sexo>
     </usuario>
-    <usuario id="5" imagen="default.jpg">
-        <nombre>a</nombre>
-        <correo>a@a</correo>
-        <password>a</password>
-        <sexo>M</sexo>
-    </usuario>
-<usuario id="6" imagen="default.jpg"><nombre>uihol</nombre><correo>ikhi@kj</correo><password>k</password><sexo>M</sexo></usuario><usuario id="7" imagen="default.jpg"><nombre>hjh</nombre><correo>jkl@j</correo><password>hjk</password><sexo>M</sexo></usuario><usuario id="8" imagen="default.jpg"><nombre>f</nombre><correo>f@f</correo><password>f</password><sexo>M</sexo></usuario><usuario id="9" imagen="default.jpg"><nombre>g</nombre><correo>g@g</correo><password>g</password><sexo>M</sexo></usuario><usuario id="10" imagen="default.jpg"><nombre>d</nombre><correo>d@d</correo><password>d</password><sexo>M</sexo></usuario><usuario id="11" imagen="default.jpg"><nombre>t</nombre><correo>t@t</correo><password>t</password><sexo>M</sexo></usuario><usuario id="12" imagen="default.jpg"><nombre>jjjj</nombre><correo>jj@jj</correo><password>j</password><sexo>M</sexo></usuario><usuario id="13" imagen="default.jpg"><nombre>jl</nombre><correo>kjkj</correo><password>iojk</password><sexo>M</sexo></usuario><usuario id="14" imagen="default.jpg"><nombre>jkjkk</nombre><correo>kjkjkjkhkjgif</correo><password>j</password><sexo>M</sexo></usuario><usuario id="15" imagen="default.jpg"><nombre>gg</nombre><correo>gg</correo><password>t</password><sexo>M</sexo></usuario><usuario id="16" imagen="default.jpg"><nombre>hjk</nombre><correo>ll</correo><password>jk</password><sexo>M</sexo></usuario></usuarios>
+</usuarios>

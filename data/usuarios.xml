@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><usuarios ultimo="7">
+<?xml version="1.0" encoding="UTF-8"?><usuarios ultimo="8">
         <usuario id="1" imagen="a.jpg">
             <nombre>Daniel2</nombre>
             <correo>molina@hk.com</correo>
@@ -40,5 +40,4 @@
             <correo>daniel@gmail.com</correo>
             <password>1234</password>
             <sexo>M</sexo>
-        </usuario>
-    </usuarios>
+        </usuario><usuario id="8" imagen="default.jpg"><nombre>b</nombre><correo>b@b</correo><password>b</password><sexo>M</sexo></usuario></usuarios>

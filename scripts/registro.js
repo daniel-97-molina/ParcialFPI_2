@@ -60,8 +60,9 @@ function subirXML() {
     xmlh.open("POST", "procesarPost.php", true);
     xmlh.setRequestHeader("Content-Type", "text/xml");
 //    console.log(xmlDoc);
+        
     xmlh.send(xmlDoc);
-
+    setTimeout(function(){location.href = "inicio.html";},2000);
 
 }
 
@@ -96,7 +97,7 @@ function agregarUsuario() {
         nSexo.appendChild(cGenero);
 
         nUsuario = xmlDoc.createElement("usuario");
-        nUsuario.setAttribute("id",usuarioActual.id);
+        nUsuario.setAttribute("id", usuarioActual.id);
         nUsuario.setAttribute("imagen", "default.jpg");
         nUsuario.appendChild(nNombre);
         nUsuario.appendChild(nCorreo);
@@ -128,9 +129,9 @@ function usuariosExistentes(usuarios) {
         }
     }
 
-    if (!$("#txtRegistroUsuario").value == "" && !$("#txtRegistroCorreo").value == "" && !$("#txtRegistroPassword").value=="") {
+    if (!$("#txtRegistroUsuario").value == "" && !$("#txtRegistroCorreo").value == "" && !$("#txtRegistroPassword").value == "") {
         if (existeUsuario === false && existeCorreo === false) {
-            location.href = "inicio.html";
+
             siguientePaso = true;
 
         } else if (existeCorreo === true && existeUsuario === true) {

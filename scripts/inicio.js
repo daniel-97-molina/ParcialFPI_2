@@ -9,6 +9,8 @@ window.onload = function () {
         if (this.readyState === 4 && this.status === 200) {
             xmlDocUsuarios = xmlhttp.responseXML;
             if (localStorage.usuarioLogueado) {
+                
+                console.log(xmlDocUsuarios);
                 usuarioActual = xmlDocUsuarios.getElementsByTagName("usuario")[localStorage.usuarioLogueado - 1];
                 $("#divUsuario img").setAttribute("src", "images/imagesPerfil/" + usuarioActual.getAttribute("imagen"));
                 $("#divUsuario h4").innerHTML = usuarioActual.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;

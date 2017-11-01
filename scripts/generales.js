@@ -173,10 +173,11 @@ function cargarXMLGenerales(idUsuario) {
 function cargarDatosGenerales(xml) {
     var xmlDocUsuarios = xml.responseXML;
     var usuarios = xmlDocUsuarios.getElementsByTagName("usuario");
-
+    if(localStorage.usuarioLogueado){
     var usuarioActual = usuarios[localStorage.usuarioLogueado - 1];
     $("#divUsuario img").setAttribute("src", "images/imagesPerfil/" + usuarioActual.getAttribute("imagen"));
     $("#divUsuario h4").innerHTML = usuarioActual.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+}
 
 }
 

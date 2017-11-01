@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><usuarios ultimo="5">
     <usuario id="1" imagen="animado1.jpeg">
         <nombre>Daniel Molina</nombre>
-        <correo>molina@gmail.com</correo>
+        <correo>daniel@gmail.com</correo>
         <password>path</password>
         <sexo>M</sexo>
     </usuario>

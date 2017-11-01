@@ -1,13 +1,19 @@
 var xmlDocUsuarios;
 var idUsuario;
 var usuarios;
+var visitante;
 window.onload = function () {
     if (!localStorage.usuarioLogueado) {
         location.href = "login.html";
     } else {
-        var x = location.href.split("id=")[1] || localStorage.usuarioLogueado;
+        var usuarioVisita=location.href.split("id=")[1];
+        visitante=usuarioVisita!==localStorage.usuarioLogueado;
+        var x = usuarioVisita || localStorage.usuarioLogueado;
         idUsuario = parseInt(x) - 1;
         cargarXML2(idUsuario);
+        if(visitante){
+            $("#imagenUsuario .mensaje").className="ocultar";
+        }
         cargarArticulosUsuario(idUsuario);
     }
 };
@@ -28,7 +34,9 @@ function cargarXML2(idUsuario) {
     xmlhttp.send();
 }
 $("#imagenUsuario").onclick = function () {
+    if(!visitante){
     $("#file").click(console.log(""));
+    }
 };
 
 function cargarDatos2(xml, idUsuario) {
@@ -107,6 +115,7 @@ $("#file").onchange = function (e) {
     }
 
     enviarImagen_Xml();
+    
 };
 
 
@@ -114,6 +123,7 @@ function enviarImagen_Xml() {
     usuarios[idUsuario].setAttribute("imagen", rutaImagen);
     imagen("imagesPerfil");
     subirXMLUsuario();
+    location.reload();    
 }
 
 function subirXMLUsuario() {
@@ -134,7 +144,8 @@ function cargarArticulosUsuario(usuario) {
             var xmlDocArticulos = xmlhttp.responseXML;
             var aArticulos = xmlDocArticulos.getElementsByTagName("articulo");
             var aUsuarios = xmlDocUsuarios.getElementsByTagName("usuario");
-
+            var iNumeroArticulos = 0;
+            var iPuntosPerfil = 0;
             //Para lo de los posts relevantes
             var aArticulosOrdenado = Array.from(aArticulos);
             aArticulosOrdenado.sort(function (a, b) {
@@ -143,8 +154,14 @@ function cargarArticulosUsuario(usuario) {
 
             //Agregar divs de categoría
             var bEncontrados = false;
-
+            for (var i = 0; i < aArticulos.length; i++) {
+                if (aArticulos[i].getAttribute("idUsuario") == usuario+1) {
+                    iNumeroArticulos++;
+                    iPuntosPerfil += parseInt(aArticulos[i].getAttribute("puntos"));
+                }
+            }
             for (var i = aArticulos.length - 1; i >= 0; i--) {
+
                 if (aArticulos.length - i > 15) {
                     break;
                 }
@@ -161,8 +178,12 @@ function cargarArticulosUsuario(usuario) {
                     $("#layout-izquierda").appendChild(generarDivArticuloBig(aArticulos[i], sAutor, iPuntos));
                 }
 //                $("#contenedorDerecha").appendChild(generarDivArticuloSmall(aArticulos[i], sAutor));
+
+
             }
-            
+
+            $(".ubicarPuntosPosts #puntos").innerHTML = iPuntosPerfil;
+            $(".ubicarPuntosPosts #posts").innerHTML = iNumeroArticulos;
             if (!bEncontrados) {
                 var nt = document.createTextNode("No se encontraron publicaciones");
                 var np = document.createElement("p");

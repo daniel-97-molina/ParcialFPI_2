@@ -56,7 +56,7 @@
                 <br>
                 <div class="divUsuario">
                     <div id="imagenUsuario" class="ubicarDivsUsuario">
-                        <label class="mensaje">Seleccionar imagen</label>
+                        <label class="mensaje mostrar">Seleccionar imagen</label>
                     </div>
                     <form id="form">
                         <input name="files" type="file" accept="image/*" id="file" style="display: none">
@@ -69,19 +69,24 @@
                     </div>
 
 
-                    <div id="divPuntosPosts">
-                        <div class="contenedor">
-                            <div id="puntosUsuario" class="ubicarPuntosPosts">
-                                <label>Puntos: <br><b>79</b></label>
-                            </div>
 
-                            <div id="postsUsuario" class="ubicarPuntosPosts">
-                                <label>Posts: <br><b>79</b></label>
+                        <div id="divPuntosPosts">
+                            <div class="contenedor">
+                                <div id="puntosUsuario" class="ubicarPuntosPosts">
+                                    <label>Puntos </label><br>
+                                    <label id="puntos"></label>
+                                </div>
+
+                                <div id="postsUsuario" class="ubicarPuntosPosts">
+                                      <label>Posts </label><br>
+                                    <label id="posts"></label>
+                                </div>
+
                             </div>
                         </div>
                     </div>
 
-                </div>
+                
 
                 <br><br>
                 <span id="spanTitulo2">Actividad reciente del usuario</span><br><br>

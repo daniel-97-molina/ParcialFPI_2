@@ -67,7 +67,11 @@ function subirXMLArticulos() {
     xmlhttp.setRequestHeader('Cache-Control', 'no-cache');
     xmlhttp.setRequestHeader("Content-Type", "text/xml");
     xmlhttp.send(xmlDoc);
-    location.href="postViewer.html?id="+(ultimo+1);
+    setTimeout(function () {
+        location.href="postViewer.html?id="+(ultimo+1);  
+    },100);
+          
+   
 }
 
 //codigo para las imagenes 

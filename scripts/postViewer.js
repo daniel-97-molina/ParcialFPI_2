@@ -60,24 +60,25 @@ function cargarDatosArticulo(articulo) {
             var contenidoArticulo = aArticulos[articulo].getElementsByTagName("contenido")[0].childNodes[0].nodeValue;
             var imgArticulo = "images/imagesArticulos/" + aArticulos[articulo].getElementsByTagName("img")[0].childNodes[0].nodeValue;
             var puntos = aArticulos[articulo].getAttribute("puntos");
-
+            var comentarios = aArticulos[articulo].getElementsByTagName("comentarios")[0].getElementsByTagName("comentario");
 
             var usuario = aArticulos[articulo].getAttribute("idUsuario");
+            $("#tituloComentario p").innerHTML = comentarios.length + " comentarios - " + tituloArticulo;
             $("#tituloPost").innerHTML = tituloArticulo;
             $("#contenidoArticulo").innerHTML = contenidoArticulo;
             $("#contenedorImagen > img").setAttribute("src", imgArticulo);
             $("#puntajes").innerHTML = puntos;
 
 
-            cargarDatosUsuario(aArticulos, articulo, usuario);
+            cargarDatosUsuario(aArticulos, articulo, usuario, comentarios);
         }
     };
     xmlhttp.open("GET", "data/articulos.xml", true);
     xmlhttp.setRequestHeader('Cache-Control', 'no-cache');
     xmlhttp.send();
 }
-function cargarDatosUsuario(aArticulos, articulo, usuario) {
-    var comentarios = aArticulos[articulo].getElementsByTagName("comentarios")[0].getElementsByTagName("comentario");
+function cargarDatosUsuario(aArticulos, articulo, usuario, comentarios) {
+
     var categoria = aArticulos[articulo].getElementsByTagName("categoria")[0].childNodes[0].nodeValue;
     var puntosUsuario = 0;
     var articulosUsuario = 0;
@@ -87,24 +88,29 @@ function cargarDatosUsuario(aArticulos, articulo, usuario) {
         if (this.readyState === 4 && this.status === 200) {
             var xmlDocUsuarios = xmlhttp.responseXML;
             aUsuarios = xmlDocUsuarios.getElementsByTagName("usuario");
-            var rutaImgUsuario = "images/imagesPerfil/" + aUsuarios[usuario-1].getAttribute("imagen");
-            var nombreUsuario = aUsuarios[usuario-1].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
-            var correoUsuario = aUsuarios[usuario-1].getElementsByTagName("correo")[0].childNodes[0].nodeValue;
+            var rutaImgUsuario = "images/imagesPerfil/" + aUsuarios[usuario - 1].getAttribute("imagen");
+            var nombreUsuario = aUsuarios[usuario - 1].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+            var correoUsuario = aUsuarios[usuario - 1].getElementsByTagName("correo")[0].childNodes[0].nodeValue;
             $(".imagen-infoUsuario > img").setAttribute("src", rutaImgUsuario);
-            $(".userName > #nombre").innerHTML = nombreUsuario;
+            $(".userName > a").setAttribute("href", "perfil.html?id=" + usuario);
+            $(".userName > a #nombre").innerHTML = nombreUsuario;
             $("div > #correo").innerHTML = correoUsuario;
             for (var i = 0; i < aArticulos.length; i++) {
                 if (aArticulos[i].getAttribute("idUsuario") === usuario) {
                     articulosUsuario++;
                     puntosUsuario += parseInt(aArticulos[i].getAttribute("puntos"));
                 }
+                if (aArticulos[i].getAttribute("idArticulo") == articulo + 1) {
+                    continue;
+                }
                 if (aArticulos[i].getElementsByTagName("categoria")[0].childNodes[0].nodeValue === categoria) {
-                        var sAutor=aUsuarios[aArticulos[i].getAttribute("idUsuario")-1].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
-                        var iPuntos=aArticulos[articulo].getAttribute("puntos");
-                        $("#contenedorSmall").appendChild(generarDivArticuloSmall(aArticulos[i], sAutor, iPuntos));
+
+                    var sAutor = aUsuarios[aArticulos[i].getAttribute("idUsuario") - 1].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+                    var iPuntos = aArticulos[i].getAttribute("puntos");
+                    $("#contenedorSmall").appendChild(generarDivArticuloSmall(aArticulos[i], sAutor, iPuntos));
                 }
             }
-            
+
             $("#nPost").innerHTML = articulosUsuario;
             $("#nPuntos").innerHTML = puntosUsuario;
             for (var j = 0; j < comentarios.length; j++) {
@@ -130,14 +136,15 @@ function  procesar(puntos, comentar) {
         if (comentar) {
 
             objetoArticulo.agregarComentario(comentar);
-
+            
         } else {
             objetoArticulo.puntuar(puntos);
+            $("#ul").style.display = "none";
+            $("#puntajeBox label").className += " transition";
         }
         subirXMLArticulos();
 
-        $("#ul").style.display = "none";
-        $("#puntajeBox label").className += " transition";
+
     } else {
 
         $("#contenedorModal").className = "hacerVisible";
@@ -177,6 +184,7 @@ function crearDivArticulo(rutaImagen, autor, texto) {
 }
 $(".btnComentar").onclick = function () {
     var msj = $(".areaComentar").value;
+    $(".areaComentar").value="";
     procesar(0, msj);
 
 };

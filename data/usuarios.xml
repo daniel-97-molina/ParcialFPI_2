@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><usuarios ultimo="8">
+<?xml version="1.0" encoding="UTF-8"?><usuarios ultimo="6">
     <usuario id="1" imagen="a.jpg">
         <nombre>Daniel2</nombre>
         <correo>molina@hk.com</correo>
@@ -29,11 +29,10 @@
         <password>a</password>
         <sexo>M</sexo>
     </usuario>
-
     <usuario id="6" imagen="hi.jpg">
         <nombre>hola2</nombre>
         <correo>hola@gmail</correo>
         <password>hola</password>
         <sexo>M</sexo>
     </usuario>
-<usuario id="7" imagen="default.jpg"><nombre>jhj</nombre><correo>j</correo><password/><sexo>M</sexo></usuario><usuario id="8" imagen="default.jpg"><nombre>jj</nombre><correo>h</correo><password></password><sexo>M</sexo></usuario></usuarios>
+</usuarios>

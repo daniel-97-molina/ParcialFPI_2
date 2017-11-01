@@ -1,81 +1,94 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <title>Inicio</title>
-  <link rel="icon" type="image/jpg" href="images/logo2.jpg"/>
-  <meta http-equiv="Expires" content="0">
-  <meta http-equiv="Last-Modified" content="0">
-  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-  <meta http-equiv="Pragma" content="no-cache">
-  <link rel="stylesheet" href="styles/inicio.css">
-  <link rel="stylesheet" href="styles/generales.css">
-  <link rel="stylesheet" href="styles/header.css">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title>Inicio</title>
+        <link rel="icon" type="image/jpg" href="images/logo2.jpg"/>
+        <meta http-equiv="Expires" content="0">
+        <meta http-equiv="Last-Modified" content="0">
+        <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <link rel="stylesheet" href="styles/inicio.css">
+        <link rel="stylesheet" href="styles/generales.css">
+        <link rel="stylesheet" href="styles/header.css">
+    </head>
 
-<body>
-  <header>
-    <div id="logo"></div>
-    <ul>
-      <li><a href="inicio.html">Inicio</a></li>
-      <li><a href="#">Categorías</a>
-        <ul>
-          <li><a href="categoria.html?cat=Arte">Arte</a></li>
-          <li><a href="categoria.html?cat=Tecnologia">Tecnología</a></li>
-          <li><a href="categoria.html?cat=Ciencia">Ciencia</a></li>
-          <li><a href="categoria.html?cat=Entretenimiento">Entretenimiento</a></li>
-          <li><a href="categoria.html?cat=Espectaculos">Espectáculos</a></li>
-          <li><a href="categoria.html?cat=Deportes">Deportes</a></li>
-          <li><a href="categoria.html?cat=Economia">Economía</a></li>
-          <li><a href="categoria.html?cat=Noticias">Noticias</a></li>
-          <li><a href="categoria.html?cat=Politica">Política</a></li>
-        </ul>
-      </li>
-      <li><a href="about.html">Acerca de</a></li>
-    </ul>
-    <div id="divBotonesLogin" class="oculto">
-        <input id="btnIniciarSesion" class="botonTransparente" type="button" value="Iniciar Sesión" >
-        <input id="btnRegistrarme" class="botonTransparente" type="button" value="Registrarme" >
-    </div>
-    <div id="divUsuario" class="">
-        <img src="images/icon_login.jpg" alt="usuario">
-        <h4></h4>
-        <div id="divMenuUsuario">
-        <ul id="menuUsuario" class="oculto">
-            <li><a id="btnPerfil">Mi perfil</a></li>
-            <li><a id="btnCerrarSesion">Cerrar Sesión</a></li>
-        </ul>
-    </div>
-    </div>
-    
-
-  </header>
+    <body>
+        <header>
+            <div id="logo"></div>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="#">Categorías</a>
+                    <ul>
+                        <li><a href="categoria.html?cat=Arte">Arte</a></li>
+                        <li><a href="categoria.html?cat=Tecnologia">Tecnología</a></li>
+                        <li><a href="categoria.html?cat=Ciencia">Ciencia</a></li>
+                        <li><a href="categoria.html?cat=Entretenimiento">Entretenimiento</a></li>
+                        <li><a href="categoria.html?cat=Espectaculos">Espectáculos</a></li>
+                        <li><a href="categoria.html?cat=Deportes">Deportes</a></li>
+                        <li><a href="categoria.html?cat=Economia">Economía</a></li>
+                        <li><a href="categoria.html?cat=Noticias">Noticias</a></li>
+                        <li><a href="categoria.html?cat=Politica">Política</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">Acerca de</a></li>
+            </ul>
+            <div id="divBotonesLogin" class="oculto">
+                <input id="btnIniciarSesion" class="botonTransparente" type="button" value="Iniciar Sesión" >
+                <input id="btnRegistrarme" class="botonTransparente" type="button" value="Registrarme" >
+            </div>
+            <div id="divUsuario" class="">
+                <img src="images/icon_login.jpg" alt="usuario">
+                <h4></h4>
+                <div id="divMenuUsuario">
+                    <ul id="menuUsuario" class="oculto">
+                        <li><a id="btnPerfil">Mi perfil</a></li>
+                        <li><a id="btnCerrarSesion">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
 
 
-  <div id="wrapper">
-    <div id="layout-izquierda">
-      <div class="barra barraIzquierda">
-        PUBLICACIONES RECIENTES
-
-        <input id="btnCrearPublicacion" type="button" class="botonTransparente" value="Crear Publicación">
+        </header>
 
 
-      </div>
-    </div>
-    <div id="layout-derecha">
-      <div class="barra barraDerecha">
-        MÁS DESTACADOS
-      </div>
-      <div id="contenedorDerecha">
+        <div id="wrapper">
+            <div id="layout-izquierda">
+                <div class="barra barraIzquierda">
+                    PUBLICACIONES RECIENTES
 
-      </div>
-    </div>
-  </div>
+                    <input id="btnCrearPublicacion" type="button" class="botonTransparente" value="Crear Publicación">
 
 
-  <script src="scripts/generales.js"></script>
-  <script src="scripts/inicio.js"></script>
-</body>
+                </div>
+            </div>
+            <div id="layout-derecha">
+                <div class="barra barraDerecha">
+                    MÁS DESTACADOS
+                </div>
+                <div id="contenedorDerecha">
+
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div>
+                <a href="about.html" class="paraFooter">Quienes somos</a>
+            </div>
+            <div>
+                <p class="paraFooter">Contactanos:</p>
+                <p>infoblogm@gmail.com</p>  
+            </div>
+            <div>
+                <p>El Salvador</p>
+            </div>
+        </footer>
+
+
+        <script src="scripts/generales.js"></script>
+        <script src="scripts/inicio.js"></script>
+    </body>
 
 </html>

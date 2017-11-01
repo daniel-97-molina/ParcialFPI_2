@@ -3,19 +3,17 @@ var idUsuario;
 var usuarios;
 var visitante;
 window.onload = function () {
-    if (!localStorage.usuarioLogueado) {
-        location.href = "login.html";
-    } else {
-        var usuarioVisita=location.href.split("id=")[1];
-        visitante=usuarioVisita!==localStorage.usuarioLogueado;
-        var x = usuarioVisita || localStorage.usuarioLogueado;
-        idUsuario = parseInt(x) - 1;
-        cargarXML2(idUsuario);
-        if(visitante){
-            $("#imagenUsuario .mensaje").className="ocultar";
-        }
-        cargarArticulosUsuario(idUsuario);
+
+    var usuarioVisita = location.href.split("id=")[1];
+    visitante = usuarioVisita !== localStorage.usuarioLogueado;
+    var x = usuarioVisita || localStorage.usuarioLogueado;
+    idUsuario = parseInt(x) - 1;
+    cargarXML2(idUsuario);
+    if (visitante) {
+        $("#imagenUsuario .mensaje").className = "ocultar";
     }
+    cargarArticulosUsuario(idUsuario);
+
 };
 
 function cargarXML2(idUsuario) {
@@ -34,19 +32,20 @@ function cargarXML2(idUsuario) {
     xmlhttp.send();
 }
 $("#imagenUsuario").onclick = function () {
-    if(!visitante){
-    $("#file").click(console.log(""));
+    if (!visitante) {
+        $("#file").click(console.log(""));
     }
 };
 
 function cargarDatos2(xml, idUsuario) {
     xmlDocUsuarios = xml.responseXML;
     usuarios = xmlDocUsuarios.getElementsByTagName("usuario");
-
-    var usuarioActual = usuarios[localStorage.usuarioLogueado - 1];
-    $("#divUsuario img").setAttribute("src", "images/imagesPerfil/" + usuarioActual.getAttribute("imagen"));
-    $("#divUsuario h4").innerHTML = usuarioActual.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
-
+    if (localStorage.usuarioLogueado) {
+        
+        var usuarioActual = usuarios[localStorage.usuarioLogueado - 1];
+        $("#divUsuario img").setAttribute("src", "images/imagesPerfil/" + usuarioActual.getAttribute("imagen"));
+        $("#divUsuario h4").innerHTML = usuarioActual.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+    }
     var nombre = usuarios[idUsuario].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
     var correo = usuarios[idUsuario].getElementsByTagName("correo")[0].childNodes[0].nodeValue;
     var genero = usuarios[idUsuario].getElementsByTagName("sexo")[0].childNodes[0].nodeValue;
@@ -115,7 +114,7 @@ $("#file").onchange = function (e) {
     }
 
     enviarImagen_Xml();
-    
+
 };
 
 
@@ -123,7 +122,7 @@ function enviarImagen_Xml() {
     usuarios[idUsuario].setAttribute("imagen", rutaImagen);
     imagen("imagesPerfil");
     subirXMLUsuario();
-    location.reload();    
+    location.reload();
 }
 
 function subirXMLUsuario() {
@@ -155,7 +154,7 @@ function cargarArticulosUsuario(usuario) {
             //Agregar divs de categoría
             var bEncontrados = false;
             for (var i = 0; i < aArticulos.length; i++) {
-                if (aArticulos[i].getAttribute("idUsuario") == usuario+1) {
+                if (aArticulos[i].getAttribute("idUsuario") == usuario + 1) {
                     iNumeroArticulos++;
                     iPuntosPerfil += parseInt(aArticulos[i].getAttribute("puntos"));
                 }

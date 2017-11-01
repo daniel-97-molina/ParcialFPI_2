@@ -152,7 +152,8 @@ input{
     margin-top: 25px;
     background-color: #fff;
     margin: auto;
-    
+    box-shadow: 1px 1px 20px 2px #ccc;
+    padding: 10px 0px;
 }
 
 #bodyAbout{

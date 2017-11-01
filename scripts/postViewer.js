@@ -52,6 +52,12 @@ function cargarDatosArticulo(articulo) {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             xmlDocArticulos = xmlhttp.responseXML;
+            
+            usuarioActual = xmlDocUsuarios.getElementsByTagName("usuario")[localStorage.usuarioLogueado - 1];
+            $("#divUsuario img").setAttribute("src", "images/imagesPerfil/" + usuarioActual.getAttribute("imagen"));
+            $("#divUsuario h4").innerHTML = usuarioActual.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+            
+            
             var aArticulos = xmlDocArticulos.getElementsByTagName("articulo");
             //
 //                if (aArticulos[articulo].getAttribute("idArticulo") === articulo) {

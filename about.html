@@ -6,31 +6,19 @@
         <title>Acerca de</title>
         <link rel="icon" type="image/jpg" href="images/logo2.jpg"/>
         <!--link rel="stylesheet" href="styles/inicio.css"-->
-        <link rel="stylesheet" href="styles/generales.css">
         <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/estiloGeneral.css">
+        <link rel="stylesheet" href="styles/generales.css">
         <link rel="stylesheet" href="styles/header.css">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     </head>
 
-    <body>
+    <body id="bodyAbout">
+        <div id="menu">
+            <img class="iconoMenu" src="images/menu.png" alt="-"><h4>Menu</h4>
+        </div>
         <header>
             <div id="logo"></div>
-            <ul>
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="#">Categorías</a>
-                    <ul>
-                        <li><a href="categoria.html?cat=Arte">Arte</a></li>
-                        <li><a href="categoria.html?cat=Tecnología">Tecnología</a></li>
-                        <li><a href="categoria.html?cat=Ciencia">Ciencia</a></li>
-                        <li><a href="categoria.html?cat=Entretenimiento">Entretenimiento</a></li>
-                        <li><a href="categoria.html?cat=Espectáculos">Espectáculos</a></li>
-                        <li><a href="categoria.html?cat=Deportes">Deportes</a></li>
-                        <li><a href="categoria.html?cat=Economía">Economía</a></li>
-                        <li><a href="categoria.html?cat=Noticias">Noticias</a></li>
-                        <li><a href="categoria.html?cat=Política">Política</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Acerca de</a></li>
-            </ul>
             <div id="divBotonesLogin" class="oculto">
                 <input id="btnIniciarSesion" class="botonTransparente" type="button" value="Iniciar Sesión" >
                 <input id="btnRegistrarme" class="botonTransparente" type="button" value="Registrarme" >
@@ -45,7 +33,41 @@
                     </ul>
                 </div>
             </div>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a id="submenu" href="#">Categorías</a>
+                    <ul id="submenu2" class="oculto">
+                        <li><a href="categoria.html?cat=Arte">Arte</a></li>
+                        <li><a href="categoria.html?cat=Tecnologia">Tecnología</a></li>
+                        <li><a href="categoria.html?cat=Ciencia">Ciencia</a></li>
+                        <li><a href="categoria.html?cat=Entretenimiento">Entretenimiento</a></li>
+                        <li><a href="categoria.html?cat=Espectaculos">Espectáculos</a></li>
+                        <li><a href="categoria.html?cat=Deportes">Deportes</a></li>
+                        <li><a href="categoria.html?cat=Economia">Economía</a></li>
+                        <li><a href="categoria.html?cat=Noticias">Noticias</a></li>
+                        <li><a href="categoria.html?cat=Politica">Política</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">Acerca de</a></li>
+            </ul>
+            
         </header>
+
+
+        <div id="divAbout">
+            <h3 id="tituloAbout">Acerca de</h3>
+            <p class="parrafoAbout">Somos una compañia dedicada a promover el acceso a la información y 
+                a los espacios en la web donde se pueda compartir el contenido que se desee, por tanto 
+                esta página web es una de ellas, la cual se describe como blog interactivo, donde varios
+                usuarios pueden compartir sus publicaciones para que otros usuarios la vean, comneten 
+                y puntuen.</p>
+            <p class="parrafoAbout">Nuestra compañia fue fundada en Santa Anta, El Salvador el 25 de 
+                octubre de 2,017. Surgida inicialmente bajo la necesidad de realizar proyectos en la
+                Universidad de El Salvador, Facultad Multidisciplinaria de Occidente, posteriormente
+                formalizada y ampliada para llevar acabo proyectos a nivel web.</p>
+            <p class="parrafoAbout">Nuestra finalidad principal es proporcionar a las personas el espacio
+                idoneo para que puedan utilizarlo de la forma que sea más provechoso para cada uno. </p>
+        </div>
 
 
         <script src="scripts/generales.js"></script>

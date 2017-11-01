@@ -144,6 +144,9 @@ header li > a {
 }
 
 @media screen and (max-width: 730px){
+    body{
+        padding-top: 75px;
+    }
     #menu{
         display: block;
     }

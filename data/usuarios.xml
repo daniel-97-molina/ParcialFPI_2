@@ -5,7 +5,7 @@
         <password>haha</password>
         <sexo>M</sexo>
     </usuario>
-    <usuario id="2" imagen="default.jpg">
+    <usuario id="2" imagen="aq.jpg">
         <nombre>Maria2</nombre>
         <correo>maria2@hk.com</correo>
         <password>haha2</password>

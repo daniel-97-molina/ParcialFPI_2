@@ -7,25 +7,24 @@ body{
     background: #e0e3e4;
 }
 
-#contenedorUsuario{
-    
+#wrapper{
     width: 90%;
     margin: auto;
-   
+    /*position: relative;*/
 }
 #imagenUsuario:hover{
     transform: scale(0.98);
-   -webkit-filter: grayscale(100%);
-filter: grayscale(100%);
-     cursor: pointer;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    cursor: pointer;
 }
 #imagenUsuario > .mensaje{
     opacity: 0;
-   
+
 }
 
 #imagenUsuario:hover .mensaje{
-opacity: 1;
+    opacity: 1;
 }
 .mensaje{
     border-radius: 15px;
@@ -38,22 +37,17 @@ opacity: 1;
     top:65px;
 }
 
-main{
-    width: 72%;
+#layout-izquierda{
+    /*width: 65%;*/
     /*border: 1.5px solid teal;*/
-    border-radius: 10px;
-    float: left;
-    margin: 5px;
-    margin-top: 10px;
-    padding: 5px;
+    /*border-radius: 10px;*/
+    /*float: left;*/
+/*    margin: 5px;
+    margin-top: 10px;*/
+    padding: 15px 10px 15px 10px;
     background: #fff;
-
-}
-
-aside{
-    /*border: 1.5px solid teal;*/
-    border-radius: 10px;
-      background: #fff
+    /*display: inline-block;*/
+    /*position: absolute;*/
 }
 
 #spanTitulo1{
@@ -64,7 +58,7 @@ aside{
 
     display: block;
     margin: auto;
-  
+
     background: #CBE6DE;
     height: 40px;
     padding: 7px;
@@ -73,8 +67,7 @@ aside{
 }
 
 .divUsuario{
-    background-image: url("../images/depositphotos_43414399-stock-illustration-wave-seamless-pattern-sea-theme.jpg");
-    
+    background-image: url("../images/fondoUsuario.jpg");
     background-size: contain;
     width: 100%;
     height: 210px;
@@ -107,9 +100,9 @@ aside{
     width: 40%;
     height: 130px;
     margin-left: 25px;
-  margin-top: 15px;
+    margin-top: 15px;
     /*border: 2px solid activecaption;*/
- 
+
     font-size: 18px;
     text-align: left;
     color: #333;
@@ -127,7 +120,7 @@ aside{
 #divPuntosPosts{
     width: 100%;
     height: 60px;
-   
+
     margin: auto;
     margin-top: 140px;
     background-color: rgba(0,0,0,0.3);
@@ -164,18 +157,18 @@ aside{
     width: 40%;
     /*border-radius: 0px 0px 0px 10px;*/
     font-weight: bold;
- }
+}
 
 #postsUsuario{
     font-weight: bold;
-width: 40%;
+    width: 40%;
 }
 
 #spanTitulo2{
     font-size: 18px;
     color: #1D5A72;
     font-weight: bold;
-   
+
 }
 
 
@@ -189,12 +182,35 @@ width: 40%;
 
 }
 
-#contenedorUsuario > header{
+/*#contenedorUsuario > header{
     width: 100%;
+}*/
+
+#tituloDerecha{
+    font-size: 20px;
+    color: #1D5A72;
+    font-weight: bold;
+    display: block;
+    padding: 10px 10px;
 }
 
+#layout-derecha{
+    /*width: 30%;*/
+    /*border: 1.5px solid teal;*/
+    /*border-radius: 10px;*/
+    /*display: inline-block;*/
+    background: #fff;
+    /*position: absolute;*/
+    /*border-radius: 10px;*/
+/*    margin: 5px;
+    margin-top: 10px;*/
+    padding: 5px 5px 10px 5px;
+    border-left: 10px solid #e0e3e4;
+}
 
-
-
-
-
+.noEncontrado{
+    font-size: 25px;
+    text-align: center;
+    display: block;
+ 
+}

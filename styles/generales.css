@@ -18,7 +18,7 @@ body{
 /*LAYOUT------------------------------------------------------------------------------------------*/
 #wrapper{
   max-width: 1100px;
-  margin: 20px auto 0px auto;
+  margin: 0 auto;
 }
 #layout-izquierda{
     vertical-align: top;

@@ -5,15 +5,51 @@
         <meta charset="utf-8">
         <link rel="icon" type="image/jpg" href="images/logo2.jpg"/>
         <link rel="stylesheet" href="styles/estiloGeneral.css">
+        <link rel="stylesheet" href="styles/generales.css">
+        <link rel="stylesheet" href="styles/header.css">
 
     </head>
-    <body>
+    <body id="bodyRegistro">
+        <header>
+            <div id="logo"></div>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="#">Categorías</a>
+                    <ul>
+                        <li><a href="categoria.html?cat=Arte">Arte</a></li>
+                        <li><a href="categoria.html?cat=Tecnología">Tecnología</a></li>
+                        <li><a href="categoria.html?cat=Ciencia">Ciencia</a></li>
+                        <li><a href="categoria.html?cat=Entretenimiento">Entretenimiento</a></li>
+                        <li><a href="categoria.html?cat=Espectáculos">Espectáculos</a></li>
+                        <li><a href="categoria.html?cat=Deportes">Deportes</a></li>
+                        <li><a href="categoria.html?cat=Economía">Economía</a></li>
+                        <li><a href="categoria.html?cat=Noticias">Noticias</a></li>
+                        <li><a href="categoria.html?cat=Política">Política</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">Acerca de</a></li>
+            </ul>
+            <div id="divBotonesLogin" class="oculto">
+                <input id="btnIniciarSesion" class="botonTransparente" type="button" value="Iniciar Sesión" >
+                <input id="btnRegistrarme" class="botonTransparente" type="button" value="Registrarme" >
+            </div>
+            <div id="divUsuario" class="">
+                <img src="images/icon_login.jpg" alt="usuario">
+                <h4></h4>
+                <div id="divMenuUsuario">
+                    <ul id="menuUsuario" class="oculto">
+                        <li><a id="btnPerfil">Mi perfil</a></li>
+                        <li><a id="btnCerrarSesion">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
 
-      <div id="divRegistro" class="shadow">
-          <p id="tituloFormulario">Únete al blog</p>
-          <p id="parrafoError"></p>
-            
-          <form class="formRegistro" id="formRegistro" method="POST" onsubmit="return false">
+        <div id="divRegistro" class="shadow">
+            <p id="tituloFormulario">Únete al blog</p>
+            <p id="parrafoError"></p>
+
+            <form class="formRegistro" id="formRegistro" method="POST" onsubmit="return false">
                 <input type="text" id="txtRegistroUsuario" name="txtRegistroUsuario" placeholder="Nombre de Usuario" required
                        maxlength="30" pattern="[a-zA-Z0-9-_.]*">
                 <input type="email" id="txtRegistroCorreo" name="txtRegistroCorreo" placeholder="Correo electrónico" required maxlength="80">
@@ -28,6 +64,7 @@
             </form>
         </div>
         <p id="parrafoLogin">¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesión</a></p>
+        
         <script src="scripts/generales.js"></script>
         <script src="scripts/registro.js"></script>
     </body>

@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <link rel="icon" type="image/jpg" href="images/logo2.jpg"/>
         <link rel="stylesheet" href="styles/reset.css">
-        <link rel="stylesheet" href="styles/estiloPerfil.css">
+        <link rel="stylesheet" href="styles/perfil.css">
         <link rel="stylesheet" href="styles/generales.css">
         <link rel="stylesheet" href="styles/header.css">
     </head>
@@ -44,75 +44,56 @@
                 </div>
             </div>
         </header>
-        
-        <div id="contenedorUsuario">
+
+        <!--div id="contenedorUsuario"-->
             <div id="wrapper">
-            <main id="layout-izquierda">
-                <span id="spanTitulo1">Perfil de usuario</span>
-                <br>
-
-                <div class="divUsuario">
-                    
+                <main id="layout-izquierda">
+                    <span id="spanTitulo1">Perfil de usuario</span>
+                    <br>
+                    <div class="divUsuario">
                         <div id="imagenUsuario" class="ubicarDivsUsuario">
-                       
-
-                                <label class="mensaje">Seleccionar imagen</label>
-                            
-
-
+                            <label class="mensaje">Seleccionar imagen</label>
                         </div>
                         <form id="form">
                             <input name="files" type="file" accept="image/*" id="file" style="display: none">
-                           
+
                         </form>  
-                   
-
-                    <div id="datosUsuario" class="ubicarDivsUsuario">
-                        <p id="nombreUsuario"></p>
-                        <p id="correoUsuario"></p>
-                        <p id="generoUsuario"></p>
-                    </div>
+                        <div id="datosUsuario" class="ubicarDivsUsuario">
+                            <p id="nombreUsuario"></p>
+                            <p id="correoUsuario"></p>
+                            <p id="generoUsuario"></p>
+                        </div>
 
 
-                    <div id="divPuntosPosts">
-                        <div class="contenedor">
+                        <div id="divPuntosPosts">
+                            <div class="contenedor">
+                                <div id="puntosUsuario" class="ubicarPuntosPosts">
+                                    <label>Puntos: <br><b>79</b></label>
+                                </div>
 
-                            <div id="puntosUsuario" class="ubicarPuntosPosts">
-                                <label>Puntos: <br><b>79</b></label>
-
-                            </div>
-
-                            <div id="postsUsuario" class="ubicarPuntosPosts">
-                                <label>Posts: <br><b>79</b></label>
+                                <div id="postsUsuario" class="ubicarPuntosPosts">
+                                    <label>Posts: <br><b>79</b></label>
+                                </div>
                             </div>
                         </div>
 
                     </div>
 
-                </div>
-                <br><br>
-                <span id="spanTitulo2">Actividad reciente del usuario</span>
-                <div id="divEntradasUsuario">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <br><br>
+                    <span id="spanTitulo2">Actividad reciente del usuario</span><br><br>
+                    <div id="divEntradasUsuario"></div>
 
-                </div>
-            </main>
+                </main>
 
                 <aside id="layout-derecha">
-              
-                <div>
-                    <div class="agregarImagen"></div>
-                   
-                </div>
-            </aside>
+                    <span id="tituloDerecha">Relevantes</span>
+                </aside>
+
             </div>
+
             <footer></footer>
 
-
-        </div>
+        <!--/div-->
         <script src="scripts/generales.js"></script>
         <!--script src="scripts/inicio.js"></script-->
         <script src="scripts/perfil.js"></script>

@@ -46,8 +46,8 @@
             </div>
         </header>
 
-        <div id="all">
-            <main>
+        <div id="wrapper">
+            <main id="layout-izquierda">
                 <section id="sectionContenido">
 
                     <div id="contenido" class="block">
@@ -67,7 +67,7 @@
                     <div id="puntaje" class="block">
 
                         <div id="puntajeBox">
-                            <label>GRACIAS</label>
+                            <label>Has puntuado el post con exito</label>
                             <ul id="ul">
                                 <li><a onclick="procesar(1)">1</a></li>
                                 <li><a onclick="procesar(2)">2</a></li>
@@ -110,20 +110,43 @@
                 </section>
             </main>
 
-            <aside id="sideBar" class="block">
-
+            <aside id="layout-derecha" >
+                <div id="info-usuario" class="block">
+                    <div class="imagen-infoUsuario">
+                            <img src="images/depositphotos_43414399-stock-illustration-wave-seamless-pattern-sea-theme.jpg" alt="No se encontro la imagen">
+                        </div>
+                     <div class="datos-usuario">
+                         <div class="userName"><span id="nombre"><a href="#">steven</a></span></div>
+                         <div><span id="correo">correo@gmail.com</span></div>
+                                        <div class="posts">
+                                            <span id="nPost">5</span><br>
+                                        <span class="textoPequenio">POSTS</span>
+                                        </div>
+                                        <div class="puntos">
+                                            <span id="nPuntos">5</span><br>
+                                            <span class="textoPequenio">PUNTOS</span>
+                                        </div>
+                                    </div>
+                </div>
+                
+                <p id="tematica">Posts relacionados al articulo</p>
+                <div id="contenedorSmall" class="block">
+                    
+                </div>
             </aside>
 
             
         </div>
         
-        <div id="modal">
+        <div id="contenedorModal" class="ocultar"> 
+            <div id="modal">
             <p>Identificate como usuario para realizar la acción.</p>
             <div id="contenedor-botones-modal">
             <button id="cerrarModal" class="btnModal">Cerrar</button>
             <button id="loginModal" class="btnModal">Iniciar Sesión</button>
             </div>
 
+        </div>
         </div>
         
         <script src="scripts/generales.js"></script>

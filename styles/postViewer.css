@@ -27,24 +27,39 @@ body{
     object-fit: contain;
 }
 #modal{
-    position: fixed;
+   
     width: 350px; 
     height: 190px; 
-    top: 35%; 
-    left: 50%;
     box-shadow: 1px 1px 20px 2px #000;
-    transform: translateX(-50%);
-    font-family:Verdana, Arial, Helvetica, sans-serif; 
     font-size: 20px; 
     font-weight: bold; 
     background-color: #ddd; 
-    display:block;
     text-align: center;
+    display: inline-block;
+    position: absolute;
+    top:50%;
+    left: 38%;
+    transform: translateY(-50%);
+
 }
 #modal > p{
     position: absolute;
-    top: 25%;
-   
+    top: 20%;
+    padding: 20px;
+}
+#contenedorModal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+      top:0; 
+    left: 0;
+    text-align: center;
+    margin: auto;
+    
+}
+.ocultar{
+    display: none;
 }
 #contenedor-botones-modal{
     width: 100%;
@@ -58,6 +73,10 @@ body{
     padding: 15px;
     margin-left: 5px;
 }
+.btnModal:hover{
+    background-color: #0760d5;
+    cursor: pointer;
+}
 #contenedorImagen{
     height: 300px;
 }
@@ -66,28 +85,20 @@ body{
     background-color: #0066ff;
     color: #fff;
     cursor: pointer;
-
 }
 
 
 html,body{
+    margin:0;
     height: 100%;
 }
 
 #all{
     width: 80%;
     height: 100%;
-
-    margin: auto;
+ margin: auto;
 }
-main{
-    width: 65%;
 
-    float: left;
-    margin: 20px;
-
-
-}
 #sectionContenido{
     height: 100%;
 }
@@ -114,7 +125,6 @@ main{
     line-height: 20px;
 }
 .block{
-    border-radius: 10px;
     background-color: #fff;
 }
 #puntaje{
@@ -138,14 +148,41 @@ main{
     float: left;
 
 }
+.hacerVisible{
 
+  animation-name: slidein;
+  animation-duration: 0.3s;
+  animation-direction: normal;
+    animation-iteration-count: 1;
+
+     display: block;
+}
+
+@-webkit-keyframes slidein{
+      from {
+    margin-bottom:100%;
+   
+  }
+      
+  to {
+    margin-bottom:0%;
+  }
+}
+
+@keyframes slidein{
+      from {
+    margin-left:100%;
+    width:300%
+  }
+      
+  to {
+    margin-left:0%;
+    width:100%;
+  }
+}
 #comentarios{
     background: #fff;
     padding-top:15px;
-}
-article{
-    height: auto;
-    width: auto;  
 }
 
 #tituloComentario{
@@ -173,30 +210,93 @@ article{
 }
 
 .autor{
-    color: #1b68dc;
-    font-weight: bold;
+   
     padding-bottom: 10px;
+
+}
+.autor,.userName{
+     color: #1b68dc;
+    font-weight: bold;
+}
+
+
+.userName {
+   font-size: 25px;
+   margin-bottom: 5px;
+}
+#info-usuario{
+    height: 100px;
+     padding:10px;
+       background-color: #ffe;
+           margin-bottom: 20px;
+
+}
+#tematica{
+    padding: 10px;
+    background-color: #cd9595;
+    color: #eee;
+    font-weight: bold;
 }
 .imagen{
     width: 10%;
     height: 1%;
     float: left;
 }
+.imagen-infoUsuario{
+    width: 30%;
+    height: 100%;
+    float: left;
+    margin-right: 10px;
+}
 .imagen img{
     width: 100%;
     height: 100%;
+}
+.imagen-infoUsuario img{
+    width: 100%;
+    height: 100%;
+    
+    object-fit: fill;
+
+}
+#correo{
+     font-size: 13px;
+    color: #aaa;
+}
+.datos-usuario .posts,.datos-usuario .puntos{
+    display: inline-block;
+    margin-top: 1%;
+    margin-right: 5%;
+    padding: 3px;
+    text-align: center;
+    background-color: #ffe;
+}
+.datos-usuario{
+    width: 65%;
+    height: 100%;
+    float: left;
+    
+}
+.textoPequenio{
+    font-size: 10px;
+    color: #aaa;
+}
+.post span{
+    
 }
 #contenidoComentarios{
     height: 80%;  
     padding: 0 20px;
 
 }
+
+
 .contenidoComentario{
     width: 90%;
     float: left;
     padding: 0 10px;
 }
-article,.comentario,.respuesta{
+.comentario,.respuesta{
     height: auto;
     overflow: hidden;
 }
@@ -210,7 +310,6 @@ article,.comentario,.respuesta{
     height: 20%;
     padding: 20px;
     background-color:   #faeedf;
-    border-radius:0 0 10px 10px;
 }
 .areaComentar{
     width: 100%;
@@ -221,7 +320,6 @@ article,.comentario,.respuesta{
     min-height: 100%;
     font-size: 18px;
     border: 1px solid #ccc;
-    border-radius: 10px;
 }
 .areaComentar:focus{
     border-color:   #faa092  ;
@@ -242,6 +340,9 @@ article,.comentario,.respuesta{
     background-color:  #f98775;
     color: #fff;
     cursor: pointer;
+}
+#layout-derecha{
+    padding-left:20px;
 }
 label{
     display: none;

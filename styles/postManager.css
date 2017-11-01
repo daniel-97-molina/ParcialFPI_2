@@ -3,7 +3,7 @@
 }
 input{
     border: 1px solid #ccc;
-    border-radius: 10px;
+   
     display: block;
       width: 100%;
       
@@ -35,7 +35,6 @@ margin-bottom: 35px;
 .contenidoPrincipal input,textArea{
 border: 1px solid #ccc;
 font-size: 25px;
-border-radius: 10px;
 padding: 5px;
 }
 .contenidoPrincipal input:focus,textArea:focus{
@@ -59,7 +58,7 @@ textArea{
    background-color: #fff;
 padding:20px 10px;
 border: 2px dashed #ccc;
-border-radius: 10px;
+
 }
 select{
     width: 100%;
@@ -67,7 +66,7 @@ select{
     background-color: #ccc;
     margin: 15px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
+   
 }
 option{
     background: #e2e6e7;

@@ -1,7 +1,10 @@
 function $(query) {
   return document.querySelector(query);
 }
-
+if (!localStorage.usuarioLogueado) {
+    $("#divUsuario").className = "oculto";
+    $("#divBotonesLogin").className = "";
+}
 function validarInput(input, mensaje) {
   if (input.validity.valueMissing) {
     input.setCustomValidity(mensaje);
